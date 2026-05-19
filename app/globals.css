@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0C2340;
+  --navy-faint: rgba(12, 35, 64, 0.05);
+  --navy-light: rgba(12, 35, 64, 0.10);
+  --navy-medium: rgba(12, 35, 64, 0.35);
+  --bg: #f8f8f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+/* Prevent browser-default black / gray / blue on any element */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, span, li, label, button {
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--navy-light);
+  border-radius: 2px;
+}
+
+::selection {
+  background: rgba(12, 35, 64, 0.10);
+  color: var(--navy);
+}
+
+iframe {
+  border: none;
+  display: block;
+}
+
+/* Suppress Vimeo badge */
+.vimeo-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
