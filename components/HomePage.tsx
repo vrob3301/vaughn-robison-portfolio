@@ -547,7 +547,8 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           .nav-links {
             gap: 20px !important;
           }
-          .nav-links a {
+          .nav-links a,
+          .nav-links button {
             font-size: 10px !important;
             letter-spacing: 0.08em !important;
           }

@@ -13,6 +13,6 @@ export const publications: Publication[] = [
     date: 'August 2025',
     url: 'https://www.revolt.tv/article/kanye-west-life-and-struggles-shown-in-new-doc-teaser',
     excerpt:
-      'Revolt covers the teaser for In Whose Name — the six-year documentary on Kanye West that Vaughn produced — ahead of its September 2025 theatrical debut.',
+      'Revolt covers the teaser for In Whose Name, the six-year documentary on Kanye West that Vaughn produced, ahead of its September 2025 theatrical debut.',
   },
 ]

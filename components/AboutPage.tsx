@@ -26,8 +26,8 @@ function OverviewContent() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
       <p style={bodyStyle}>
         Vaughn Robison is a film producer and creative director whose work spans film, live events,
-        and music. His projects explore the intersection of culture, storytelling, and community,
-        bringing together artists, audiences, and institutions through shared creative experiences.
+        and music. His projects bring artists and audiences together through creative work rooted in
+        culture and community.
       </p>
       <p style={bodyStyle}>
         In recent years, Vaughn has worked closely with Chance the Rapper, producing music videos
@@ -38,8 +38,8 @@ function OverviewContent() {
       </p>
       <p style={bodyStyle}>
         Across film, music, and live production, Vaughn&rsquo;s work seeks to create moments that
-        resonate beyond the screen. His approach emphasizes collaboration, cultural storytelling,
-        and the belief that creative work can serve as a force that brings people together.
+        resonate beyond the screen. He builds his projects on collaboration and cultural storytelling,
+        and on the belief that creative work can bring people together.
       </p>
     </div>
   )
@@ -50,9 +50,8 @@ function EducationContent() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
       <p style={bodyStyle}>
         Vaughn Robison was born in Akron, Ohio and raised in Cincinnati, at the heart of Midwestern
-        culture. From an early age he showed a curiosity for entrepreneurship, innovation, and
-        storytelling, interests that gradually developed into a passion for filmmaking and the
-        creative arts.
+        culture. From an early age he showed a curiosity for entrepreneurship and storytelling,
+        interests that gradually grew into a passion for filmmaking and the creative arts.
       </p>
       <p style={bodyStyle}>
         In 2017, Vaughn launched his YouTube channel VRob, where he began speaking about subjects
@@ -67,8 +66,8 @@ function EducationContent() {
       <p style={bodyStyle}>
         At the end of 2021, after a year and a half of study, Vaughn chose to leave the university
         to pursue his creative career in Chicago. The decision marked a turning point in his path,
-        prioritizing real-world experience and collaboration as his primary education &mdash; a
-        philosophy he describes simply as pursuing exposure as the highest form of learning.
+        prioritizing real-world experience and collaboration as his primary education. He describes
+        it simply as pursuing exposure as the highest form of learning.
       </p>
     </div>
   )
@@ -79,8 +78,8 @@ function FaithContent() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
       <p style={bodyStyle}>
         Vaughn&rsquo;s Catholic faith is the foundation of his life and work. For him, faith
-        provides the root from which creative work grows, shaping both the purpose behind his
-        projects and the way he approaches collaboration, service, and culture.
+        provides the root from which creative work grows, shaping the purpose behind his projects
+        and the way he approaches the people he works with.
       </p>
       <p style={bodyStyle}>
         He often describes the relationship simply: faith is the root, and the work is the branch
