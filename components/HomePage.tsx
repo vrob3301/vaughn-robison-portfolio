@@ -66,6 +66,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
   /* Design & art direction works */
   const bslfPoster     = projects.find((p) => p.id === 'black-star-line-poster')!
   const grammysCampaign = projects.find((p) => p.id === 'grammys-fyc-campaign')!
+  const yeezy          = projects.find((p) => p.id === 'yeezy-stem-player')!
 
   return (
     <motion.div
@@ -166,7 +167,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
         {/*
           5-column salon grid: 1fr 1fr 290px 1fr 1fr
           Row 1: 3333 | NBB | IWN (featured 16:7) | APG | Chicago Bulls
-          Row 2: Together | Chance | identity-block | Pepsi | Stars Out
+          Row 2: Yeezy | Chance | identity-block | Pepsi | Stars Out
           Row 3: Bobby | Just a Drop | [empty] | Victor | Yah Know
 
           Center column width 290px → IWN height = 290 × 7/16 = 126.9px
@@ -235,8 +236,8 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
 
           <motion.div variants={itemVariants}>
             <ProjectCard
-              project={together}
-              isSelected={selectedId === together.id}
+              project={yeezy}
+              isSelected={selectedId === yeezy.id}
               onSelect={onSelect}
             />
           </motion.div>
@@ -474,6 +475,13 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                 <div className="grid-spacer" aria-hidden />
                 <ProjectCard project={blackStarLine} isSelected={selectedId === blackStarLine.id} onSelect={onSelect} />
                 <ProjectCard project={dondaSessions} isSelected={selectedId === dondaSessions.id} onSelect={onSelect} />
+
+                {/* Row 6 */}
+                <ProjectCard project={together} isSelected={selectedId === together.id} onSelect={onSelect} />
+                <div className="grid-spacer" aria-hidden />
+                <div className="grid-spacer" aria-hidden />
+                <div className="grid-spacer" aria-hidden />
+                <div className="grid-spacer" aria-hidden />
               </div>
 
               {/* ── Design & art direction — two works side by side ── */}

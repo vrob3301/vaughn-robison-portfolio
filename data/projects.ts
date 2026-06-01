@@ -14,6 +14,7 @@ export interface Project {
   thumbnailScale?: number    // Zoom the homepage thumbnail (anchored top) to crop edges (default 1)
   posterAspect?: string      // Image-only detail frame aspect (default '2049 / 2561' portrait)
   posterMaxWidth?: number    // Image-only detail frame max width in px (default 500)
+  gallery?: string[]         // Image-only detail page: stacked stills shown below the text
 }
 
 export const projects: Project[] = [
@@ -137,7 +138,7 @@ export const projects: Project[] = [
       'The visual blends performance with archival footage and nostalgic imagery, reinforcing the song\'s themes of family, neighborhood unity, and the preservation of community spaces. Through camera work and editorial structure, the project emphasizes the emotional weight of the track while connecting Chance\'s personal story to broader social themes rooted in Chicago.',
     ],
     youtubeId: 'ZVwTX6WP-MM',
-    thumbnail: '/thumbnails/together.jpg',
+    thumbnail: '/thumbnails/together-portfolio.jpg',
   },
 
   {
@@ -339,5 +340,30 @@ export const projects: Project[] = [
     thumbnail: '/thumbnails/grammys-fyc.jpg',
     posterAspect: '2200 / 1229',
     posterMaxWidth: 900,
+  },
+
+  {
+    id: 'yeezy-stem-player',
+    title: 'YEEZY STEM PLAYER',
+    titleLine2: 'POP-UP ACTIVATION — 3D DESIGN + CONCEPT',
+    subtitle: '3D Design · Concept Development · Activation Design',
+    body: [
+      'Served as one of the lead developers on the design and concept development for the Yeezy Stem Player pop-up activations in 2022, the immersive retail experiences built around Kanye West\'s Stem Player music device.',
+      'My work spanned 3D product renders, spatial concept development, and the design of the activation environments — translating the Stem Player\'s circular, tactile form into a cohesive physical and visual language for the pop-up spaces.',
+      'The concept centered on a cruciform spatial layout, with sculptural booth structures and a controlled lighting program that echoed the device\'s glowing interface. The renders and concept studies guided how visitors would move through, interact with, and experience the Stem Player in person.',
+    ],
+    thumbnail: '/yeezy/stem-spatial-concept.jpg',
+    posterAspect: '16 / 9',
+    posterMaxWidth: 900,
+    gallery: [
+      '/yeezy/01-product.jpg',
+      '/yeezy/02-in-hand.jpg',
+      '/yeezy/03-concept-sketch.jpg',
+      '/yeezy/04-booth-render.jpg',
+      '/yeezy/05-booth-interior.jpg',
+      '/yeezy/06-activation.jpg',
+      '/yeezy/07-event.jpg',
+      '/yeezy/08-spatial-concept.jpg',
+    ],
   },
 ]

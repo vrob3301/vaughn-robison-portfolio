@@ -250,9 +250,53 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           </motion.div>
 
         </div>
+
+        {/* ══════════════════════════════════════
+            GALLERY — stacked stills (image-only projects)
+            ══════════════════════════════════════ */}
+        {project.gallery && project.gallery.length > 0 && (
+          <div className="detail-gallery">
+            {project.gallery.map((src, i) => (
+              <motion.div
+                key={src}
+                className="detail-gallery-item"
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt={`${project.title} — image ${i + 1}`} loading="lazy" />
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
 
       <style>{`
+        /* ── Gallery: stacked stills below the text ── */
+        .detail-gallery {
+          display: flex;
+          flex-direction: column;
+          gap: 48px;
+          margin-top: 96px;
+        }
+        .detail-gallery-item img {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 18px;
+          box-shadow:
+            0 0 0 1px rgba(12,35,64,0.05),
+            0 4px 24px rgba(12,35,64,0.10),
+            0 20px 60px rgba(12,35,64,0.18),
+            0 48px 120px rgba(12,35,64,0.13);
+        }
+        @media (max-width: 600px) {
+          .detail-gallery { gap: 28px; margin-top: 56px; }
+          .detail-gallery-item img { border-radius: 12px; }
+        }
+
         /* ── Desktop: two-column text row ── */
         .detail-text-row {
           display: grid;
