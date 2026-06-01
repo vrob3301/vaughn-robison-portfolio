@@ -28,10 +28,26 @@ export const metadata: Metadata = {
     ],
     apple: '/icon.png',
   },
+  metadataBase: new URL('https://vaughn-robison.com'),
   openGraph: {
     title: 'Vaughn Robison',
     description: 'Producer · Director · Creative Strategist',
     type: 'website',
+    url: 'https://vaughn-robison.com',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vaughn Robison',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Vaughn Robison',
+    description: 'Producer · Director · Creative Strategist',
+    images: ['/og-image.png'],
   },
 }
 
