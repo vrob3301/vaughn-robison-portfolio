@@ -187,7 +187,7 @@ export const projects: Project[] = [
     ],
     thumbnail: '/thumbnails/chance-tour-poster.jpg',
     thumbnailPosition: 'top',
-    thumbnailScale: 1.08,
+    thumbnailScale: 1.2,
   },
 
   {
