@@ -63,6 +63,9 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
   const blackStarLine  = projects.find((p) => p.id === 'black-star-line-festival')!
   const sameDrugsDoc   = projects.find((p) => p.id === 'same-drugs-doc')!
   const dondaSessions  = projects.find((p) => p.id === 'donda-sessions')!
+  /* Design & art direction works */
+  const bslfPoster     = projects.find((p) => p.id === 'black-star-line-poster')!
+  const grammysCampaign = projects.find((p) => p.id === 'grammys-fyc-campaign')!
 
   return (
     <motion.div
@@ -472,6 +475,12 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                 <ProjectCard project={blackStarLine} isSelected={selectedId === blackStarLine.id} onSelect={onSelect} />
                 <ProjectCard project={dondaSessions} isSelected={selectedId === dondaSessions.id} onSelect={onSelect} />
               </div>
+
+              {/* ── Design & art direction — two works side by side ── */}
+              <div className="design-row">
+                <ProjectCard project={bslfPoster} isSelected={selectedId === bslfPoster.id} onSelect={onSelect} />
+                <ProjectCard project={grammysCampaign} isSelected={selectedId === grammysCampaign.id} onSelect={onSelect} />
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -513,6 +522,17 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           transform: translateY(-0.5px);
         }
 
+        /* ── Design works row: two cards, standard thumbnail size, centered ── */
+        .design-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 201px));
+          gap: 22px;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding-top: 22px;
+        }
+
         /* ── Responsive: tablet ── */
         @media (max-width: 960px) {
           .home-grid {
@@ -522,6 +542,10 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           /* Center-column spacer only exists for the 5-col desktop layout */
           .grid-spacer {
             display: none !important;
+          }
+          .design-row {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 16px !important;
           }
           .center-top {
             grid-column: 1 / -1;
@@ -549,6 +573,9 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           .home-grid {
             grid-template-columns: 1fr !important;
             gap: 16px !important;
+          }
+          .design-row {
+            grid-template-columns: 1fr !important;
           }
           .center-top { grid-column: 1 !important; }
           .center-bio { grid-column: 1 !important; }

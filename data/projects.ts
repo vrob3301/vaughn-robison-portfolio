@@ -12,6 +12,8 @@ export interface Project {
   coverScale?: number        // Override iframe scale on detail page (default 1.112 for 16:9→16:10)
   thumbnailPosition?: string // CSS object-position for the thumbnail (default 'center')
   thumbnailScale?: number    // Zoom the homepage thumbnail (anchored top) to crop edges (default 1)
+  posterAspect?: string      // Image-only detail frame aspect (default '2049 / 2561' portrait)
+  posterMaxWidth?: number    // Image-only detail frame max width in px (default 500)
 }
 
 export const projects: Project[] = [
@@ -306,5 +308,36 @@ export const projects: Project[] = [
     ],
     youtubeId: 'jVRz5KWyqcA',
     thumbnail: '/thumbnails/donda-sessions.jpg',
+  },
+
+  // ── Design & Art Direction ──────────────────────────────────────────────────
+
+  {
+    id: 'black-star-line-poster',
+    title: 'BLACK STAR LINE',
+    titleLine2: 'FESTIVAL — POSTER DESIGN',
+    subtitle: 'Poster Design · Creative Direction · Art Direction',
+    body: [
+      'Designed the official poster for the first Black Star Line Festival, the landmark free concert held in Accra, Ghana, headlined by Chance the Rapper and Vic Mensa alongside Erykah Badu, T-Pain, Jeremih, Sarkodie, Tobe Nwigwe, M.anifest, the Asakaa Boys, and more.',
+      'I led the creative direction and art direction for the poster, building a bold, typographic identity around the festival\'s Black Star symbolism and its mission of connecting the African diaspora through music, art, and culture.',
+    ],
+    thumbnail: '/thumbnails/bslf-poster-full.jpg',
+    cardImage: '/thumbnails/bslf-poster-card.jpg',  // Full poster centered on its yellow ground so no text is cropped
+    posterAspect: '1200 / 1500',
+    posterMaxWidth: 520,
+  },
+
+  {
+    id: 'grammys-fyc-campaign',
+    title: 'STAR LINE',
+    titleLine2: 'GRAMMYs — FOR YOUR CONSIDERATION',
+    subtitle: 'Billboard Design · Creative Direction',
+    body: [
+      'Created the billboard campaign for Chance the Rapper\'s "For Your Consideration" GRAMMYs push behind his 2025 album Star Line, designing the out-of-home creative that carried the album into awards season.',
+      'The four-year consideration campaign placed billboards across Nashville, Chicago, New York, and Los Angeles, bringing the Star Line visual world — and its Album of the Year case — to audiences in each city.',
+    ],
+    thumbnail: '/thumbnails/grammys-fyc.jpg',
+    posterAspect: '2200 / 1229',
+    posterMaxWidth: 900,
   },
 ]

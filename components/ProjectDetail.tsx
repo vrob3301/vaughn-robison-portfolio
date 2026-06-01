@@ -115,8 +115,8 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           style={{
             borderRadius: 18,
             overflow: 'hidden',
-            aspectRatio: isImageOnly ? '2049 / 2561' : '16/10',
-            maxWidth: isImageOnly ? 500 : undefined,
+            aspectRatio: isImageOnly ? (project.posterAspect ?? '2049 / 2561') : '16/10',
+            maxWidth: isImageOnly ? (project.posterMaxWidth ?? 500) : undefined,
             margin: isImageOnly ? '0 auto' : undefined,
             position: 'relative',
             background: '#000',
