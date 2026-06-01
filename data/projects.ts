@@ -30,7 +30,7 @@ export const projects: Project[] = [
     ],
     vimeoId: '1171401539',
     thumbnail: '/thumbnails/in-whose-name.png',
-    coverScale: 1.5,  // Theatrical 2.39:1 ratio — needs extra scale to fill 16:10 frame
+    coverScale: 1.35,  // Theatrical 2.39:1 ratio — needs extra scale to fill 16:9 frame
   },
 
   {

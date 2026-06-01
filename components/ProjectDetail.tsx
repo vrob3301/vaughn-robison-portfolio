@@ -115,7 +115,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           style={{
             borderRadius: 18,
             overflow: 'hidden',
-            aspectRatio: isImageOnly ? (project.posterAspect ?? '2049 / 2561') : '16/10',
+            aspectRatio: isImageOnly ? (project.posterAspect ?? '2049 / 2561') : '16/9',
             maxWidth: isImageOnly ? (project.posterMaxWidth ?? 500) : undefined,
             margin: isImageOnly ? '0 auto' : undefined,
             position: 'relative',
@@ -132,10 +132,10 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           transition={{ type: 'spring', stiffness: 200, damping: 28 }}
         >
           {/*
-            Cover technique: container + source iframe scaled to fill.
-            Default scale(1.112) handles 16:9 source in 16:10 container.
+            16:9 frame matches standard video, so the iframe fills exactly at
+            scale(1) — full player controls stay visible, nothing cropped.
             project.coverScale overrides for non-standard ratios
-            (e.g. theatrical 2.39:1 needs scale(1.5) to fill 16:10 frame).
+            (e.g. theatrical 2.39:1 needs scale to fill the 16:9 frame).
           */}
           {project.vimeoId ? (
             <iframe
@@ -145,7 +145,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                 position: 'absolute', inset: 0,
                 width: '100%', height: '100%',
                 border: 'none',
-                transform: `scale(${project.coverScale ?? 1.112})`,
+                transform: `scale(${project.coverScale ?? 1})`,
                 transformOrigin: 'center center',
               }}
               title={project.title}
@@ -159,7 +159,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                 position: 'absolute', inset: 0,
                 width: '100%', height: '100%',
                 border: 'none',
-                transform: `scale(${project.coverScale ?? 1.112})`,
+                transform: `scale(${project.coverScale ?? 1})`,
                 transformOrigin: 'center center',
               }}
               title={project.title}
