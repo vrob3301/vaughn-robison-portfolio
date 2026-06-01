@@ -51,6 +51,15 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
   const victor       = projects.find((p) => p.id === 'victor')!
   const chicagoBulls      = projects.find((p) => p.id === 'chicago-bulls-just-don')!
   const coloringBookPoster = projects.find((p) => p.id === 'coloring-book-poster')!
+  /* STAR LINE YouTube additions */
+  const buriedAlive    = projects.find((p) => p.id === 'buried-alive')!
+  const badBoys2       = projects.find((p) => p.id === 'bad-boys-2')!
+  const highsAndLows   = projects.find((p) => p.id === 'highs-and-lows')!
+  const togetherLive   = projects.find((p) => p.id === 'together-live')!
+  const hipHopNation   = projects.find((p) => p.id === 'hip-hop-nation')!
+  const blackStarLine  = projects.find((p) => p.id === 'black-star-line-festival')!
+  const sameDrugsDoc   = projects.find((p) => p.id === 'same-drugs-doc')!
+  const dondaSessions  = projects.find((p) => p.id === 'donda-sessions')!
 
   return (
     <motion.div
@@ -405,6 +414,78 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               onSelect={onSelect}
             />
           </motion.div>
+
+          {/* ── Row 4 ── (center column kept open as the identity spine) */}
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={badBoys2}
+              isSelected={selectedId === badBoys2.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={buriedAlive}
+              isSelected={selectedId === buriedAlive.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          <div className="grid-spacer" aria-hidden />
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={highsAndLows}
+              isSelected={selectedId === highsAndLows.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={hipHopNation}
+              isSelected={selectedId === hipHopNation.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          {/* ── Row 5 ── */}
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={togetherLive}
+              isSelected={selectedId === togetherLive.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={sameDrugsDoc}
+              isSelected={selectedId === sameDrugsDoc.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          <div className="grid-spacer" aria-hidden />
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={blackStarLine}
+              isSelected={selectedId === blackStarLine.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <ProjectCard
+              project={dondaSessions}
+              isSelected={selectedId === dondaSessions.id}
+              onSelect={onSelect}
+            />
+          </motion.div>
         </div>
       </div>
 
@@ -414,6 +495,10 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           .home-grid {
             grid-template-columns: 1fr 1fr !important;
             gap: 16px !important;
+          }
+          /* Center-column spacer only exists for the 5-col desktop layout */
+          .grid-spacer {
+            display: none !important;
           }
           .center-top {
             grid-column: 1 / -1;
