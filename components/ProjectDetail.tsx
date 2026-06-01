@@ -34,6 +34,7 @@ const lineVariant = {
 }
 
 export default function ProjectDetail({ project, onClose }: ProjectDetailProps) {
+  const isImageOnly = !project.vimeoId && !project.youtubeId
   return (
     /* Full-screen overlay — unchanged */
     <motion.div
@@ -114,7 +115,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           style={{
             borderRadius: 18,
             overflow: 'hidden',
-            aspectRatio: '16/10',
+            aspectRatio: isImageOnly ? '2049 / 2561' : '16/10',
+            maxWidth: isImageOnly ? 500 : undefined,
+            margin: isImageOnly ? '0 auto' : undefined,
             position: 'relative',
             background: '#000',
             width: '100%',
@@ -166,8 +169,8 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               src={project.thumbnail}
               alt={project.title}
               fill
-              style={{ objectFit: 'contain' }}
-              sizes="1200px"
+              style={{ objectFit: 'cover' }}
+              sizes="500px"
               priority
             />
           )}

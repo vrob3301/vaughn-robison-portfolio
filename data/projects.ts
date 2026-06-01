@@ -10,6 +10,7 @@ export interface Project {
   link?: string
   coverScale?: number        // Override iframe scale on detail page (default 1.112 for 16:9→16:10)
   thumbnailPosition?: string // CSS object-position for the thumbnail (default 'center')
+  thumbnailScale?: number    // Zoom the homepage thumbnail (anchored top) to crop edges (default 1)
 }
 
 export const projects: Project[] = [
@@ -186,6 +187,7 @@ export const projects: Project[] = [
     ],
     thumbnail: '/thumbnails/chance-tour-poster.jpg',
     thumbnailPosition: 'top',
+    thumbnailScale: 1.08,
   },
 
   {

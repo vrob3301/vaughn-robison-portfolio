@@ -77,7 +77,11 @@ export default function ProjectCard({
             alt={project.title}
             fill
             className="object-cover"
-            style={{ objectPosition: project.thumbnailPosition ?? 'center' }}
+            style={{
+              objectPosition: project.thumbnailPosition ?? 'center',
+              transform: project.thumbnailScale ? `scale(${project.thumbnailScale})` : undefined,
+              transformOrigin: 'top center',
+            }}
             sizes={variant === 'featured' ? '600px' : '360px'}
             priority={priority || variant === 'featured'}
           />
