@@ -219,7 +219,7 @@ export const projects: Project[] = [
       'I served as lead producer on the video, overseeing the production from planning through final delivery.',
     ],
     youtubeId: '8BjfkpgbAEY',
-    thumbnail: '/thumbnails/buried-alive-armor.jpg',
+    thumbnail: '/thumbnails/buried-alive-armor-v2.jpg',
   },
 
   {
