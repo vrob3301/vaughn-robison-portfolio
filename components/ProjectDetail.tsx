@@ -255,34 +255,68 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
         </div>
 
         {/* ══════════════════════════════════════
-            GALLERY — stacked stills (image-only projects)
+            GALLERY — stills below the text
+            Default: full-width stack. galleryColumns>1: grid.
             ══════════════════════════════════════ */}
         {project.gallery && project.gallery.length > 0 && (
-          <div className="detail-gallery">
-            {project.gallery.map((src, i) => (
-              <motion.div
-                key={src}
-                className="detail-gallery-item"
-                initial={{ opacity: 0, y: 28 }}
+          <div className="detail-gallery-section">
+            {project.galleryLabel && (
+              <motion.p
+                className="detail-gallery-label"
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt={`${project.title} — image ${i + 1}`} loading="lazy" />
-              </motion.div>
-            ))}
+                {project.galleryLabel}
+              </motion.p>
+            )}
+            <div
+              className={`detail-gallery${(project.galleryColumns ?? 1) > 1 ? ' detail-gallery--grid' : ''}`}
+              style={{ ['--gallery-cols' as string]: project.galleryColumns ?? 1 }}
+            >
+              {project.gallery.map((src, i) => (
+                <motion.div
+                  key={src}
+                  className="detail-gallery-item"
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={src} alt={`${project.title} — image ${i + 1}`} loading="lazy" />
+                </motion.div>
+              ))}
+            </div>
           </div>
         )}
       </div>
 
       <style>{`
-        /* ── Gallery: stacked stills below the text ── */
+        /* ── Gallery section ── */
+        .detail-gallery-section { margin-top: 96px; }
+        .detail-gallery-label {
+          font-family: var(--font-inter);
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: rgba(12,35,64,0.55);
+          margin: 0 0 28px;
+        }
+        /* Default: full-width stacked stills */
         .detail-gallery {
           display: flex;
           flex-direction: column;
           gap: 48px;
-          margin-top: 96px;
+        }
+        /* Grid variant: small side-by-side examples */
+        .detail-gallery--grid {
+          display: grid;
+          grid-template-columns: repeat(var(--gallery-cols, 2), 1fr);
+          gap: 32px;
+          align-items: start;
         }
         .detail-gallery-item img {
           display: block;
@@ -296,7 +330,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             0 48px 120px rgba(12,35,64,0.13);
         }
         @media (max-width: 600px) {
-          .detail-gallery { gap: 28px; margin-top: 56px; }
+          .detail-gallery-section { margin-top: 56px; }
+          .detail-gallery { gap: 28px; }
+          .detail-gallery--grid { grid-template-columns: 1fr; gap: 28px; }
           .detail-gallery-item img { border-radius: 12px; }
         }
 

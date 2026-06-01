@@ -16,6 +16,8 @@ export interface Project {
   posterAspect?: string      // Image-only detail frame aspect (default '2049 / 2561' portrait)
   posterMaxWidth?: number    // Image-only detail frame max width in px (default 500)
   gallery?: string[]         // Image-only detail page: stacked stills shown below the text
+  galleryColumns?: number    // Gallery column count (default 1 = full-width stack; 2 = side-by-side)
+  galleryLabel?: string      // Small uppercase heading shown above the gallery
 }
 
 export const projects: Project[] = [
@@ -341,6 +343,9 @@ export const projects: Project[] = [
     thumbnail: '/thumbnails/grammys-fyc.jpg',
     posterAspect: '2200 / 1229',
     posterMaxWidth: 900,
+    galleryLabel: 'Out-of-Home',
+    galleryColumns: 2,
+    gallery: ['/grammys/ooh-01-la.jpg', '/grammys/ooh-02-chicago.jpg'],
   },
 
   {
