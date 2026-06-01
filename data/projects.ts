@@ -372,4 +372,23 @@ export const projects: Project[] = [
       '/yeezy/08-spatial-concept.jpg',
     ],
   },
+
+  {
+    id: 'bearing-witness-cincinnati',
+    title: 'BEARING WITNESS',
+    titleLine2: 'CINCINNATI',
+    subtitle: 'City of Cincinnati · Documentary',
+    body: [
+      'Bearing Witness: Cincinnati is a documentary Vaughn directed and produced for the City of Cincinnati over four months. The film follows families who have lost a loved one to gun violence, and the victim advocates who walk with them through what comes after.',
+      'The work makes visible the labor of accompaniment, the people who refuse to let a victim be reduced to a case number, and the slow work of carrying a grief that does not resolve. It also shows how victim protection and assistance programs provide ongoing services to the families left behind.',
+      'The film premiered at the Ohio Attorney General\'s Two Days in May Conference on Victim Assistance, the state\'s thirty-fourth annual gathering of victim advocates. It was shown during the session led by the City of Cincinnati Police Department Victims Assistance Liaison Unit, before an audience of advocates, prosecutors, law enforcement, and state officials.',
+      'Directed and produced by Vaughn Robison, with co-producer Emma Mitsch and the Cincinnati Police Department.',
+    ],
+    thumbnail: '/thumbnails/bearing-witness-cincinnati.jpg',
+    posterAspect: '3840 / 1330',
+    posterMaxWidth: 900,
+    galleryLabel: 'Stills',
+    galleryColumns: 1,
+    gallery: ['/bearing-witness/water-tower.jpg'],
+  },
 ]
