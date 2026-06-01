@@ -168,7 +168,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           5-column salon grid: 1fr 1fr 290px 1fr 1fr
           Row 1: 3333 | NBB | IWN (featured 16:7) | APG | Chicago Bulls
           Row 2: Yeezy | Chance | identity-block | Pepsi | Stars Out
-          Row 3: Bobby | Just a Drop | [empty] | Victor | Yah Know
+          Row 3: Coloring Book | Just a Drop | [empty] | Victor | Yah Know
 
           Center column width 290px → IWN height = 290 × 7/16 = 126.9px
           Side 1fr cols at max-width ~201px → card height = 201 × 10/16 = 125.6px
@@ -386,8 +386,8 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
 
           <motion.div variants={itemVariants}>
             <ProjectCard
-              project={bobby}
-              isSelected={selectedId === bobby.id}
+              project={coloringBookPoster}
+              isSelected={selectedId === coloringBookPoster.id}
               onSelect={onSelect}
             />
           </motion.div>
@@ -400,13 +400,8 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             />
           </motion.div>
 
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={coloringBookPoster}
-              isSelected={selectedId === coloringBookPoster.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
+          {/* Center column kept clear below the identity block */}
+          <div className="grid-spacer" aria-hidden />
 
           <motion.div variants={itemVariants}>
             <ProjectCard
@@ -476,16 +471,10 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                 <ProjectCard project={blackStarLine} isSelected={selectedId === blackStarLine.id} onSelect={onSelect} />
                 <ProjectCard project={dondaSessions} isSelected={selectedId === dondaSessions.id} onSelect={onSelect} />
 
-                {/* Row 6 */}
+                {/* Row 6 — Together MV + Bobby on the left, design works on the right, center clear */}
                 <ProjectCard project={together} isSelected={selectedId === together.id} onSelect={onSelect} />
+                <ProjectCard project={bobby} isSelected={selectedId === bobby.id} onSelect={onSelect} />
                 <div className="grid-spacer" aria-hidden />
-                <div className="grid-spacer" aria-hidden />
-                <div className="grid-spacer" aria-hidden />
-                <div className="grid-spacer" aria-hidden />
-              </div>
-
-              {/* ── Design & art direction — two works side by side ── */}
-              <div className="design-row">
                 <ProjectCard project={bslfPoster} isSelected={selectedId === bslfPoster.id} onSelect={onSelect} />
                 <ProjectCard project={grammysCampaign} isSelected={selectedId === grammysCampaign.id} onSelect={onSelect} />
               </div>
@@ -530,17 +519,6 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           transform: translateY(-0.5px);
         }
 
-        /* ── Design works row: two cards, standard thumbnail size, centered ── */
-        .design-row {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 201px));
-          gap: 22px;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          padding-top: 22px;
-        }
-
         /* ── Responsive: tablet ── */
         @media (max-width: 960px) {
           .home-grid {
@@ -550,10 +528,6 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           /* Center-column spacer only exists for the 5-col desktop layout */
           .grid-spacer {
             display: none !important;
-          }
-          .design-row {
-            grid-template-columns: 1fr 1fr !important;
-            gap: 16px !important;
           }
           .center-top {
             grid-column: 1 / -1;
@@ -581,9 +555,6 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           .home-grid {
             grid-template-columns: 1fr !important;
             gap: 16px !important;
-          }
-          .design-row {
-            grid-template-columns: 1fr !important;
           }
           .center-top { grid-column: 1 !important; }
           .center-bio { grid-column: 1 !important; }

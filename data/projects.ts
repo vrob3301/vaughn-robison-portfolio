@@ -138,7 +138,7 @@ export const projects: Project[] = [
       'The visual blends performance with archival footage and nostalgic imagery, reinforcing the song\'s themes of family, neighborhood unity, and the preservation of community spaces. Through camera work and editorial structure, the project emphasizes the emotional weight of the track while connecting Chance\'s personal story to broader social themes rooted in Chicago.',
     ],
     youtubeId: 'ZVwTX6WP-MM',
-    thumbnail: '/thumbnails/together-portfolio.jpg',
+    thumbnail: '/thumbnails/together.jpg',
   },
 
   {
