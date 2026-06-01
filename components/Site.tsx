@@ -6,10 +6,12 @@ import { projects } from '@/data/projects'
 import HomePage from './HomePage'
 import ProjectDetail from './ProjectDetail'
 import AboutPage from './AboutPage'
+import PublicationsPage from './PublicationsPage'
 
 export default function Site() {
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [aboutOpen, setAboutOpen] = useState(false)
+  const [publicationsOpen, setPublicationsOpen] = useState(false)
 
   const selectedProject = projects.find((p) => p.id === selectedId) ?? null
 
@@ -20,6 +22,7 @@ export default function Site() {
         selectedId={selectedId}
         onSelect={setSelectedId}
         onAbout={() => setAboutOpen(true)}
+        onPublications={() => setPublicationsOpen(true)}
       />
 
       {/* Project detail overlay */}
@@ -39,6 +42,16 @@ export default function Site() {
           <AboutPage
             key="about"
             onClose={() => setAboutOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Publications page overlay */}
+      <AnimatePresence mode="wait">
+        {publicationsOpen && (
+          <PublicationsPage
+            key="publications"
+            onClose={() => setPublicationsOpen(false)}
           />
         )}
       </AnimatePresence>

@@ -9,6 +9,7 @@ interface HomePageProps {
   selectedId: string | null
   onSelect: (id: string) => void
   onAbout: () => void
+  onPublications: () => void
 }
 
 const NAV_ITEMS = [
@@ -34,7 +35,7 @@ const itemVariants = {
   },
 }
 
-export default function HomePage({ projects, selectedId, onSelect, onAbout }: HomePageProps) {
+export default function HomePage({ projects, selectedId, onSelect, onAbout, onPublications }: HomePageProps) {
   /* Map all 13 project ids */
   const inWhoseName  = projects.find((p) => p.id === 'in-whose-name')!
   const pepsi        = projects.find((p) => p.id === 'pepsi-just-don')!
@@ -105,11 +106,11 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout }: Ho
               transition: 'opacity 0.2s',
               cursor: 'pointer',
             }
-            if (item.label === 'About') {
+            if (item.label === 'About' || item.label === 'Publications') {
               return (
                 <button
                   key={item.label}
-                  onClick={onAbout}
+                  onClick={item.label === 'About' ? onAbout : onPublications}
                   style={{ ...sharedStyle, background: 'none', border: 'none', padding: 0 }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.opacity = '1')}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.opacity = '0.78')}
