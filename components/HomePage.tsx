@@ -96,18 +96,17 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           zIndex: 10,
         }}
       >
-        <span
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/vr-mark.svg"
+          alt="Vaughn Robison"
           style={{
-            fontFamily: 'var(--font-cormorant)',
-            fontSize: 15,
-            fontWeight: 500,
-            letterSpacing: '0.06em',
-            color: '#0C2340',
+            height: 26,
+            width: 'auto',
+            display: 'block',
             flexShrink: 0,
           }}
-        >
-          VR
-        </span>
+        />
         <div className="nav-links" style={{ display: 'flex', gap: 36, alignItems: 'center' }}>
           {NAV_ITEMS.map((item) => {
             const sharedStyle: React.CSSProperties = {
