@@ -94,10 +94,10 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           padding: 'clamp(72px, calc(50vh - 210px), 160px) 64px 100px',
         }}
       >
-        <div className="pub-content-grid">
+        <div className="pub-wrap">
 
-          {/* Left: identity label + title */}
-          <div className="pub-left">
+          {/* Header: identity label + title */}
+          <div className="pub-header">
             <p style={{
               fontFamily: 'var(--font-inter)',
               fontSize: 10,
@@ -111,7 +111,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
             </p>
             <h1 style={{
               fontFamily: 'var(--font-cormorant)',
-              fontSize: 76,
+              fontSize: 'clamp(46px, 8vw, 76px)',
               fontWeight: 400,
               lineHeight: 0.95,
               letterSpacing: '-0.01em',
@@ -122,7 +122,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
             </h1>
           </div>
 
-          {/* Right: article list */}
+          {/* Article list */}
           <motion.div
             className="pub-right"
             variants={listVariants}
@@ -195,14 +195,15 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
 
       {/* ── Responsive styles ── */}
       <style>{`
-        .pub-content-grid {
-          display: grid;
-          grid-template-columns: 280px 1fr;
-          gap: 0 80px;
-          align-items: start;
+        .pub-wrap {
+          display: flex;
+          flex-direction: column;
+        }
+        .pub-header {
+          margin-bottom: 72px;
         }
         .pub-right {
-          max-width: 680px;
+          max-width: 760px;
           display: flex;
           flex-direction: column;
           gap: 44px;
@@ -222,9 +223,8 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           opacity: 0.62;
         }
         @media (max-width: 900px) {
-          .pub-content-grid {
-            grid-template-columns: 1fr !important;
-            gap: 40px 0 !important;
+          .pub-header {
+            margin-bottom: 48px !important;
           }
           .pub-right {
             max-width: 100% !important;
