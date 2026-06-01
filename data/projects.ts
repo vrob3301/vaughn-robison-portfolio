@@ -30,7 +30,7 @@ export const projects: Project[] = [
     body: [
       'In Whose Name is a six-year documentary about the cultural and spiritual influence surrounding Kanye West. I worked in post-production, coordinating story development and the delivery workflows that kept the narrative consistent across the theatrical and streaming versions.',
       'I worked with NB Studios, AMSI Entertainment, and Pace Pictures to streamline the final asset pipeline and the distribution rollout. The film opened nationwide on over 1,000 screens, made more than $1 million at the box office, and landed on the Los Angeles Times Top 10 list for the year.',
-      'I also supported the festival submissions and worked on press and distribution as the film rolled out.',
+      'I organized, managed, and produced all of the press and marketing assets and strategy, as well as distribution, after the film rolled out.',
     ],
     vimeoId: '1171401539',
     thumbnail: '/thumbnails/in-whose-name.png',
