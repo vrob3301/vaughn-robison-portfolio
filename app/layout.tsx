@@ -22,7 +22,11 @@ export const metadata: Metadata = {
   description:
     'Portfolio of Vaughn Robison — Producer, Director, and Creative Strategist behind In Whose Name, Pepsi x Just Don, Chance the Rapper Acid Rap Tour, Abel Paul George, and New Bible Belt.',
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/icon.png',
   },
   openGraph: {
     title: 'Vaughn Robison',
