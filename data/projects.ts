@@ -294,7 +294,7 @@ export const projects: Project[] = [
       'The documentary features live concert footage that I directed and produced from Chance\'s previous arena shows, woven into the retrospective.',
     ],
     youtubeId: '7JEDHWBd3WI',
-    thumbnail: '/thumbnails/same-drugs-doc.jpg',
+    thumbnail: '/thumbnails/same-drugs-10yr.jpg',
   },
 
   {
