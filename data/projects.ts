@@ -242,7 +242,7 @@ export const projects: Project[] = [
       'I served as editor on the video, shaping the final cut and its visual rhythm.',
     ],
     youtubeId: 'uCEv2NMr46E',
-    thumbnail: '/thumbnails/highs-and-lows.jpg',
+    thumbnail: '/thumbnails/highs-and-lows-mv.jpg',
   },
 
   {
