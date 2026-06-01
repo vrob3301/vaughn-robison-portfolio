@@ -361,9 +361,9 @@ export const projects: Project[] = [
     thumbnail: '/yeezy/stem-spatial-concept.jpg',
     posterAspect: '16 / 9',
     posterMaxWidth: 900,
+    galleryColumns: 2,
     gallery: [
       '/yeezy/01-product.jpg',
-      '/yeezy/02-in-hand.jpg',
       '/yeezy/03-concept-sketch.jpg',
       '/yeezy/04-booth-render.jpg',
       '/yeezy/05-booth-interior.jpg',
