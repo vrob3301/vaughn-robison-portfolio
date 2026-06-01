@@ -159,6 +159,30 @@ export default function AboutPage({ onClose }: AboutPageProps) {
         justifyContent: 'center',
       }}
     >
+      {/* ── Monogram ── top-left, returns to portfolio */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.25, duration: 0.4 }}
+        onClick={onClose}
+        aria-label="Back to portfolio"
+        style={{
+          position: 'fixed',
+          top: 26,
+          left: 40,
+          zIndex: 200,
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          cursor: 'pointer',
+          lineHeight: 0,
+        }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/vr-mark.svg" alt="Vaughn Robison" style={{ height: 26, width: 'auto', display: 'block' }} />
+      </motion.button>
+
       {/* ── Back button ── matches ProjectDetail style exactly */}
       <motion.button
         initial={{ opacity: 0 }}
