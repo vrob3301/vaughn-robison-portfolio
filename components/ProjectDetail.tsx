@@ -35,6 +35,7 @@ const lineVariant = {
 
 export default function ProjectDetail({ project, onClose }: ProjectDetailProps) {
   const isImageOnly = !project.vimeoId && !project.youtubeId
+  const isTheatrical = !isImageOnly && !!project.detailAspect
   return (
     /* Full-screen overlay — unchanged */
     <motion.div
@@ -115,7 +116,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           style={{
             borderRadius: 18,
             overflow: 'hidden',
-            aspectRatio: isImageOnly ? (project.posterAspect ?? '2049 / 2561') : '16/9',
+            aspectRatio: isImageOnly
+              ? (project.posterAspect ?? '2049 / 2561')
+              : (project.detailAspect ?? '16/9'),
             maxWidth: isImageOnly ? (project.posterMaxWidth ?? 500) : undefined,
             margin: isImageOnly ? '0 auto' : undefined,
             position: 'relative',
@@ -141,7 +144,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             <iframe
               src={`https://player.vimeo.com/video/${project.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&title=0&portrait=0&color=0C2340&autoplay=1&muted=1`}
               allow="autoplay; fullscreen; picture-in-picture"
-              style={{
+              style={isTheatrical ? theatricalIframe : {
                 position: 'absolute', inset: 0,
                 width: '100%', height: '100%',
                 border: 'none',
@@ -155,7 +158,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               src={`https://www.youtube.com/embed/${project.youtubeId}?rel=0&modestbranding=1&color=white&autoplay=1&mute=1`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              style={{
+              style={isTheatrical ? theatricalIframe : {
                 position: 'absolute', inset: 0,
                 width: '100%', height: '100%',
                 border: 'none',
@@ -330,6 +333,18 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
       `}</style>
     </motion.div>
   )
+}
+
+/* Theatrical: 16:9 player fills container width and is vertically centered,
+   so the scope strip fills the frame and the letterbox bars overflow + clip. */
+const theatricalIframe = {
+  position: 'absolute' as const,
+  left: 0,
+  top: '50%',
+  width: '100%',
+  aspectRatio: '16 / 9',
+  transform: 'translateY(-50%)',
+  border: 'none',
 }
 
 const styles = {

@@ -10,6 +10,7 @@ export interface Project {
   cardImage?: string  // Optional separate image for the homepage card (defaults to thumbnail)
   link?: string
   coverScale?: number        // Override iframe scale on detail page (default 1.112 for 16:9→16:10)
+  detailAspect?: string      // Detail hero aspect for video projects (e.g. '2.39 / 1' theatrical); letterbox-clips the 16:9 player
   thumbnailPosition?: string // CSS object-position for the thumbnail (default 'center')
   thumbnailScale?: number    // Zoom the homepage thumbnail (anchored top) to crop edges (default 1)
   posterAspect?: string      // Image-only detail frame aspect (default '2049 / 2561' portrait)
@@ -31,7 +32,7 @@ export const projects: Project[] = [
     ],
     vimeoId: '1171401539',
     thumbnail: '/thumbnails/in-whose-name.png',
-    coverScale: 1.35,  // Theatrical 2.39:1 ratio — needs extra scale to fill 16:9 frame
+    detailAspect: '2.39 / 1',  // Theatrical scope — show the true ratio, letterbox-clip the 16:9 player
   },
 
   {
