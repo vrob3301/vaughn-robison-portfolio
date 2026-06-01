@@ -281,7 +281,7 @@ export const projects: Project[] = [
       'I served as the on-site producer in Accra, bringing on an entire crew of Ghanaian filmmakers to document the festival. We covered the full week of events, including a discussion between Chance the Rapper and Dave Chappelle at the University of Ghana.',
     ],
     youtubeId: 'cXmS3nC1WVU',
-    thumbnail: '/thumbnails/black-star-line-festival.jpg',
+    thumbnail: '/thumbnails/black-star-line-fest-boat.jpg',
   },
 
   {
