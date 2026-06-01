@@ -7,6 +7,7 @@ export interface Project {
   vimeoId?: string    // Vimeo — enables silent hover video preview on homepage
   youtubeId?: string  // YouTube — detail page embed only (no hover preview)
   thumbnail: string
+  cardImage?: string  // Optional separate image for the homepage card (defaults to thumbnail)
   link?: string
   coverScale?: number        // Override iframe scale on detail page (default 1.112 for 16:9→16:10)
   thumbnailPosition?: string // CSS object-position for the thumbnail (default 'center')
@@ -186,8 +187,8 @@ export const projects: Project[] = [
       'The design spans the full North American tour dates, from Chicago through coast-to-coast dates including New York, Los Angeles, and beyond.',
     ],
     thumbnail: '/thumbnails/chance-tour-poster.jpg',
+    cardImage: '/thumbnails/chance-tour-card.jpg',  // Pre-cropped (above white divider) so the full title stays readable
     thumbnailPosition: 'top',
-    thumbnailScale: 1.2,
   },
 
   {

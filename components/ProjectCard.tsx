@@ -73,7 +73,7 @@ export default function ProjectCard({
           transition={{ duration: 0.55, ease: 'easeInOut' }}
         >
           <Image
-            src={project.thumbnail}
+            src={project.cardImage ?? project.thumbnail}
             alt={project.title}
             fill
             className="object-cover"
