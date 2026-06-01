@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import type { Project } from '@/data/projects'
 import ProjectCard from './ProjectCard'
 
@@ -36,6 +37,8 @@ const itemVariants = {
 }
 
 export default function HomePage({ projects, selectedId, onSelect, onAbout, onPublications }: HomePageProps) {
+  /* Extra STAR LINE videos stay hidden until the viewer expands the gallery */
+  const [expanded, setExpanded] = useState(false)
   /* Map all 13 project ids */
   const inWhoseName  = projects.find((p) => p.id === 'in-whose-name')!
   const pepsi        = projects.find((p) => p.id === 'pepsi-just-don')!
@@ -149,10 +152,12 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
         style={{
           width: '100%',
           maxWidth: 1280,
-          padding: '0 48px',
+          padding: '40px 48px',
           flex: 1,
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         {/*
@@ -414,82 +419,100 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               onSelect={onSelect}
             />
           </motion.div>
-
-          {/* ── Row 4 ── (center column kept open as the identity spine) */}
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={badBoys2}
-              isSelected={selectedId === badBoys2.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={buriedAlive}
-              isSelected={selectedId === buriedAlive.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          <div className="grid-spacer" aria-hidden />
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={highsAndLows}
-              isSelected={selectedId === highsAndLows.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={hipHopNation}
-              isSelected={selectedId === hipHopNation.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          {/* ── Row 5 ── */}
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={togetherLive}
-              isSelected={selectedId === togetherLive.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={sameDrugsDoc}
-              isSelected={selectedId === sameDrugsDoc.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          <div className="grid-spacer" aria-hidden />
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={blackStarLine}
-              isSelected={selectedId === blackStarLine.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <ProjectCard
-              project={dondaSessions}
-              isSelected={selectedId === dondaSessions.id}
-              onSelect={onSelect}
-            />
-          </motion.div>
         </div>
+
+        {/* ── Expand control — reveals the additional STAR LINE videos ── */}
+        <motion.div variants={itemVariants} className="expand-row">
+          <button
+            type="button"
+            className="expand-toggle"
+            onMouseEnter={() => setExpanded(true)}
+            onFocus={() => setExpanded(true)}
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+          >
+            <span className="expand-sign">{expanded ? '–' : '+'}</span>
+            {expanded ? 'Show less' : 'Expand'}
+          </button>
+        </motion.div>
+
+        {/* ── Collapsible second grid (rows 4–5) ── */}
+        <AnimatePresence initial={false}>
+          {expanded && (
+            <motion.div
+              key="extra-grid"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              style={{ overflow: 'hidden', width: '100%' }}
+            >
+              <div
+                className="home-grid extra-grid"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr 290px 1fr 1fr',
+                  gap: 22,
+                  alignItems: 'center',
+                  width: '100%',
+                  paddingTop: 22,
+                }}
+              >
+                {/* Row 4 — center column kept open as the identity spine */}
+                <ProjectCard project={badBoys2} isSelected={selectedId === badBoys2.id} onSelect={onSelect} />
+                <ProjectCard project={buriedAlive} isSelected={selectedId === buriedAlive.id} onSelect={onSelect} />
+                <div className="grid-spacer" aria-hidden />
+                <ProjectCard project={highsAndLows} isSelected={selectedId === highsAndLows.id} onSelect={onSelect} />
+                <ProjectCard project={hipHopNation} isSelected={selectedId === hipHopNation.id} onSelect={onSelect} />
+
+                {/* Row 5 */}
+                <ProjectCard project={togetherLive} isSelected={selectedId === togetherLive.id} onSelect={onSelect} />
+                <ProjectCard project={sameDrugsDoc} isSelected={selectedId === sameDrugsDoc.id} onSelect={onSelect} />
+                <div className="grid-spacer" aria-hidden />
+                <ProjectCard project={blackStarLine} isSelected={selectedId === blackStarLine.id} onSelect={onSelect} />
+                <ProjectCard project={dondaSessions} isSelected={selectedId === dondaSessions.id} onSelect={onSelect} />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <style>{`
+        /* ── Expand control ── */
+        .expand-row {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+        }
+        .expand-toggle {
+          display: inline-flex;
+          align-items: center;
+          gap: 9px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 8px 4px;
+          font-family: var(--font-inter);
+          font-size: 11px;
+          font-weight: 400;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #0C2340;
+          opacity: 0.6;
+          transition: opacity 0.2s ease, letter-spacing 0.3s ease;
+        }
+        .expand-toggle:hover {
+          opacity: 1;
+          letter-spacing: 0.18em;
+        }
+        .expand-sign {
+          font-size: 14px;
+          line-height: 1;
+          font-weight: 300;
+          transform: translateY(-0.5px);
+        }
+
         /* ── Responsive: tablet ── */
         @media (max-width: 960px) {
           .home-grid {

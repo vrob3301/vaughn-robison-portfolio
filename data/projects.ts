@@ -212,8 +212,8 @@ export const projects: Project[] = [
     title: 'BURIED ALIVE',
     subtitle: 'Chance the Rapper — Music Video',
     body: [
-      '"Buried Alive" is an official music video from Chance the Rapper\'s 2024 Star Line project, continuing the album\'s rollout of bold, visually driven singles. The track leans into themes of pressure, perseverance, and renewal that run throughout the record.',
-      'I contributed to the video as part of the Star Line creative team, supporting the production and post-production process that shaped the visual language of the release.',
+      '"Buried Alive" is an official music video from Chance the Rapper\'s 2024 Star Line project, leaning into themes of pressure, perseverance, and renewal that run throughout the record.',
+      'I served as lead producer on the video, overseeing the production from planning through final delivery.',
     ],
     youtubeId: '8BjfkpgbAEY',
     thumbnail: '/thumbnails/buried-alive.jpg',
@@ -225,7 +225,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper ft. Joey Purp — Music Video',
     body: [
       '"Bad Boys 2," featuring fellow Chicago artist Joey Purp, is an official music video released as part of Chance the Rapper\'s 2024 Star Line project. The collaboration reflects the Chicago roots and creative community at the heart of the album.',
-      'I contributed to the video within the Star Line creative team, working across production and editorial to support the energy and visual identity of the release.',
+      'I served as lead producer on the video, leading crew coordination and location scouting, and also handling editing on the final cut.',
     ],
     youtubeId: '_uFMbBVPPWg',
     thumbnail: '/thumbnails/bad-boys-2.jpg',
@@ -237,7 +237,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper ft. Joey Bada$$ — Music Video',
     body: [
       '"The Highs & The Lows," featuring Joey Bada$$, is an official music video from the Star Line project, pairing two of independent hip-hop\'s most distinctive voices. The track explores resilience and reflection through the highs and lows of the artistic journey.',
-      'I contributed to the video as part of the Star Line creative team, supporting the production and post-production that brought the collaboration to screen.',
+      'I served as editor on the video, shaping the final cut and its visual rhythm.',
     ],
     youtubeId: 'uCEv2NMr46E',
     thumbnail: '/thumbnails/highs-and-lows.jpg',
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper — Live Performance',
     body: [
       'A live performance of "Together," the DJ Premier–produced single from Chance the Rapper\'s Star Line project. The performance captures the song\'s themes of family, unity, and community in a live setting.',
-      'I contributed to the visual coverage of the performance as part of the Star Line creative team, helping document the live moment in the same cinematic language as the wider project.',
+      'I served as lead producer on the performance video, overseeing the production of the shoot through its final delivery.',
     ],
     youtubeId: 'bSYYrydVXBs',
     thumbnail: '/thumbnails/together-live.jpg',
@@ -263,7 +263,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper — Virtual Concert (SiriusXM)',
     body: [
       'A virtual concert performance for SiriusXM\'s Hip Hop Nation, filmed live from New York. The set brought Chance the Rapper\'s music to a broadcast and streaming audience through an intimate, performance-focused presentation.',
-      'I contributed to the visual production of the concert, supporting the team that captured and shaped the live performance for release.',
+      'I worked as a camera operator and editor on the performance, helping capture the live set and assemble the final edit.',
     ],
     youtubeId: 'zvVkUPhocEw',
     thumbnail: '/thumbnails/hip-hop-nation.jpg',
@@ -276,7 +276,7 @@ export const projects: Project[] = [
     subtitle: 'Festival Documentation',
     body: [
       'Exclusive footage from the first Black Star Line Festival, the landmark cultural event in Accra, Ghana that brought together music, art, and the African diaspora on an international stage. The festival grew out of the broader vision connecting Chance the Rapper\'s creative work to Ghana and the diaspora.',
-      'I contributed to the documentation of the festival, helping capture the scale and energy of the event as part of the creative team behind its visual coverage.',
+      'I served as the on-site producer in Accra, bringing on an entire crew of Ghanaian filmmakers to document the festival. We covered the full week of events, including a discussion between Chance the Rapper and Dave Chappelle at the University of Ghana.',
     ],
     youtubeId: 'cXmS3nC1WVU',
     thumbnail: '/thumbnails/black-star-line-festival.jpg',
@@ -289,7 +289,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper — Documentary',
     body: [
       'A documentary marking ten years of "Same Drugs," one of the most beloved songs from Chance the Rapper\'s catalog. The film reflects on the decade since the track\'s release and its lasting place in his body of work and in the lives of listeners.',
-      'I contributed to the documentary as part of the creative team, supporting the production and editorial process behind the retrospective.',
+      'The documentary features live concert footage that I directed and produced from Chance\'s previous arena shows, woven into the retrospective.',
     ],
     youtubeId: '7JEDHWBd3WI',
     thumbnail: '/thumbnails/same-drugs-doc.jpg',
@@ -302,7 +302,7 @@ export const projects: Project[] = [
     subtitle: 'Enigma — Episodic Series',
     body: [
       '"The Donda Sessions" is the second episode of eTV, an episodic series produced through Enigma offering a behind-the-scenes look at a defining creative moment. The episode documents the people, process, and atmosphere surrounding the sessions.',
-      'I contributed to the episode within the Enigma creative team, supporting the production and storytelling that shaped the series.',
+      'I worked as a camera operator and editor on the episode, helping capture the sessions and assemble the final cut.',
     ],
     youtubeId: 'jVRz5KWyqcA',
     thumbnail: '/thumbnails/donda-sessions.jpg',
