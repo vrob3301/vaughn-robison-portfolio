@@ -340,6 +340,10 @@ export const projects: Project[] = [
     gallery: [
       '/thumbnails/writings-on-the-wall-miami.jpg',
       '/thumbnails/writings-on-the-wall-la.jpg',
+      '/thumbnails/writings-on-the-wall-chicago.jpg',
+      '/thumbnails/writings-on-the-wall-atlanta.jpg',
+      '/thumbnails/writings-on-the-wall-nyc.jpg',
+      '/thumbnails/writings-on-the-wall-minneapolis.jpg',
     ],
   },
 
