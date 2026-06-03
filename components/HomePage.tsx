@@ -584,10 +584,6 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             grid-template-columns: 1fr !important;
             gap: 16px !important;
           }
-          /* Extra works auto-reveal on scroll, so the manual toggle is hidden */
-          .expand-row {
-            display: none !important;
-          }
           .center-top { grid-column: 1 !important; }
           .center-bio { grid-column: 1 !important; }
           .gallery-wrap {
