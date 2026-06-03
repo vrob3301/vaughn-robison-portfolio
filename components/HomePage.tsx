@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Project } from '@/data/projects'
 import ProjectCard from './ProjectCard'
@@ -39,6 +39,25 @@ const itemVariants = {
 export default function HomePage({ projects, selectedId, onSelect, onAbout, onPublications }: HomePageProps) {
   /* Extra STAR LINE videos stay hidden until the viewer expands the gallery */
   const [expanded, setExpanded] = useState(false)
+  /* On mobile, the extra grid reveals itself once the viewer scrolls to the bottom */
+  const revealRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!window.matchMedia('(max-width: 600px)').matches) return
+    const el = revealRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setExpanded(true)
+          obs.disconnect()
+        }
+      },
+      { rootMargin: '0px 0px -8% 0px' },
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
   /* Map all 13 project ids */
   const inWhoseName  = projects.find((p) => p.id === 'in-whose-name')!
   const pepsi        = projects.find((p) => p.id === 'pepsi-just-don')!
@@ -420,13 +439,14 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           </motion.div>
         </div>
 
-        {/* ── Expand control — reveals the additional STAR LINE videos ── */}
+        {/* Sentinel — on mobile, scrolling this into view auto-reveals the extra grid */}
+        <div ref={revealRef} aria-hidden style={{ width: '100%', height: 1 }} />
+
+        {/* ── Expand control — click to reveal the additional works (desktop) ── */}
         <motion.div variants={itemVariants} className="expand-row">
           <button
             type="button"
             className="expand-toggle"
-            onMouseEnter={() => setExpanded(true)}
-            onFocus={() => setExpanded(true)}
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
           >
@@ -563,6 +583,10 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           .home-grid {
             grid-template-columns: 1fr !important;
             gap: 16px !important;
+          }
+          /* Extra works auto-reveal on scroll, so the manual toggle is hidden */
+          .expand-row {
+            display: none !important;
           }
           .center-top { grid-column: 1 !important; }
           .center-bio { grid-column: 1 !important; }
