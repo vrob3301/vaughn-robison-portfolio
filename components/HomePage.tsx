@@ -36,6 +36,31 @@ const itemVariants = {
   },
 }
 
+/* Expand reveal — container orchestrates a gentle staggered fade-in of each card */
+const extraContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.055, delayChildren: 0.12 },
+  },
+  exit: {
+    transition: { staggerChildren: 0.02, staggerDirection: -1 },
+  },
+}
+
+const extraItemVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  },
+  exit: {
+    opacity: 0,
+    y: 12,
+    transition: { duration: 0.25, ease: [0.4, 0, 1, 1] as [number, number, number, number] },
+  },
+}
+
 export default function HomePage({ projects, selectedId, onSelect, onAbout, onPublications }: HomePageProps) {
   /* Extra STAR LINE videos stay hidden until the viewer expands the gallery */
   const [expanded, setExpanded] = useState(false)
@@ -465,11 +490,18 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                height: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+                opacity: { duration: 0.4, ease: 'easeOut' },
+              }}
               style={{ overflow: 'hidden', width: '100%' }}
             >
-              <div
+              <motion.div
                 className="home-grid extra-grid"
+                variants={extraContainerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr 290px 1fr 1fr',
@@ -480,33 +512,59 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                 }}
               >
                 {/* Row 4 — center column kept open as the identity spine */}
-                <ProjectCard project={badBoys2} isSelected={selectedId === badBoys2.id} onSelect={onSelect} />
-                <ProjectCard project={buriedAlive} isSelected={selectedId === buriedAlive.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={badBoys2} isSelected={selectedId === badBoys2.id} onSelect={onSelect} />
+                </motion.div>
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={buriedAlive} isSelected={selectedId === buriedAlive.id} onSelect={onSelect} />
+                </motion.div>
                 <div className="grid-spacer" aria-hidden />
-                <ProjectCard project={highsAndLows} isSelected={selectedId === highsAndLows.id} onSelect={onSelect} />
-                <ProjectCard project={hipHopNation} isSelected={selectedId === hipHopNation.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={highsAndLows} isSelected={selectedId === highsAndLows.id} onSelect={onSelect} />
+                </motion.div>
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={hipHopNation} isSelected={selectedId === hipHopNation.id} onSelect={onSelect} />
+                </motion.div>
 
                 {/* Row 5 */}
-                <ProjectCard project={togetherLive} isSelected={selectedId === togetherLive.id} onSelect={onSelect} />
-                <ProjectCard project={sameDrugsDoc} isSelected={selectedId === sameDrugsDoc.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={togetherLive} isSelected={selectedId === togetherLive.id} onSelect={onSelect} />
+                </motion.div>
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={sameDrugsDoc} isSelected={selectedId === sameDrugsDoc.id} onSelect={onSelect} />
+                </motion.div>
                 <div className="grid-spacer" aria-hidden />
-                <ProjectCard project={blackStarLine} isSelected={selectedId === blackStarLine.id} onSelect={onSelect} />
-                <ProjectCard project={dondaSessions} isSelected={selectedId === dondaSessions.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={blackStarLine} isSelected={selectedId === blackStarLine.id} onSelect={onSelect} />
+                </motion.div>
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={dondaSessions} isSelected={selectedId === dondaSessions.id} onSelect={onSelect} />
+                </motion.div>
 
                 {/* Row 6 — Together MV + Bobby on the left, design works on the right, center clear */}
-                <ProjectCard project={together} isSelected={selectedId === together.id} onSelect={onSelect} />
-                <ProjectCard project={bobby} isSelected={selectedId === bobby.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={together} isSelected={selectedId === together.id} onSelect={onSelect} />
+                </motion.div>
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={bobby} isSelected={selectedId === bobby.id} onSelect={onSelect} />
+                </motion.div>
                 <div className="grid-spacer" aria-hidden />
-                <ProjectCard project={bslfPoster} isSelected={selectedId === bslfPoster.id} onSelect={onSelect} />
-                <ProjectCard project={grammysCampaign} isSelected={selectedId === grammysCampaign.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={bslfPoster} isSelected={selectedId === bslfPoster.id} onSelect={onSelect} />
+                </motion.div>
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={grammysCampaign} isSelected={selectedId === grammysCampaign.id} onSelect={onSelect} />
+                </motion.div>
 
                 {/* Row 7 — Bearing Witness under Together in the left column */}
-                <ProjectCard project={bearingWitness} isSelected={selectedId === bearingWitness.id} onSelect={onSelect} />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={bearingWitness} isSelected={selectedId === bearingWitness.id} onSelect={onSelect} />
+                </motion.div>
                 <div className="grid-spacer" aria-hidden />
                 <div className="grid-spacer" aria-hidden />
                 <div className="grid-spacer" aria-hidden />
                 <div className="grid-spacer" aria-hidden />
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
