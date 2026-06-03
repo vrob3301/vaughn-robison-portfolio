@@ -273,7 +273,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             )}
             <div
               className={`detail-gallery${(project.galleryColumns ?? 1) > 1 ? ' detail-gallery--grid' : ''}`}
-              style={{ ['--gallery-cols' as string]: project.galleryColumns ?? 1 }}
+              style={{
+                ['--gallery-cols' as string]: project.galleryColumns ?? 1,
+                ...(project.galleryMaxWidth
+                  ? { maxWidth: project.galleryMaxWidth, marginLeft: 'auto', marginRight: 'auto' }
+                  : {}),
+              }}
             >
               {project.gallery.map((src, i) => (
                 <motion.div

@@ -18,6 +18,7 @@ export interface Project {
   gallery?: string[]         // Image-only detail page: stacked stills shown below the text
   galleryColumns?: number    // Gallery column count (default 1 = full-width stack; 2 = side-by-side)
   galleryLabel?: string      // Small uppercase heading shown above the gallery
+  galleryMaxWidth?: number   // Constrain + center the gallery (e.g. a single cover art shown like a record)
 }
 
 export const projects: Project[] = [
@@ -101,9 +102,13 @@ export const projects: Project[] = [
       'Shot and edited Chance the Rapper\'s music video for "Stars Out," a 2024 single from his Star Line era. It\'s a confident, celebratory record, and the video plays to that.',
       'Filmed in Atlanta and Chicago. The idea was a cinematic portrait of Chance stepping back into the spotlight, with nightlife energy running underneath it.',
       'Between the camera work and the edit, the goal was something bold and immediate that matched the momentum around his return.',
+      'Vaughn also designed the cover art for the single.',
     ],
     youtubeId: 'ywSYgBVkocM',
     thumbnail: '/thumbnails/stars-out.png',
+    galleryLabel: 'Cover Art',
+    galleryMaxWidth: 460,
+    gallery: ['/thumbnails/stars-out-cover.jpg'],
   },
 
   {
@@ -232,9 +237,13 @@ export const projects: Project[] = [
     body: [
       '"Bad Boys 2," featuring fellow Chicago artist Joey Purp, is an official music video from Chance the Rapper\'s 2024 Star Line project. The collaboration speaks to the Chicago roots at the heart of the album.',
       'Vaughn was the lead producer on the video, handling crew coordination and location scouting and editing the final cut.',
+      'Vaughn also designed the cover art for the "Bad Boys 2" single.',
     ],
     youtubeId: '_uFMbBVPPWg',
     thumbnail: '/thumbnails/bad-boys-2.jpg',
+    galleryLabel: 'Cover Art',
+    galleryMaxWidth: 460,
+    gallery: ['/thumbnails/bad-boys-2-cover.jpg'],
   },
 
   {
