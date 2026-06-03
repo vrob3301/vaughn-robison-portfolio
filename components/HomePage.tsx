@@ -447,6 +447,8 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           <button
             type="button"
             className="expand-toggle"
+            onMouseEnter={() => setExpanded(true)}
+            onFocus={() => setExpanded(true)}
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
           >
