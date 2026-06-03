@@ -311,7 +311,7 @@ export const projects: Project[] = [
       'Worked as a camera operator and editor on the episode, helping capture the sessions and assemble the final cut.',
     ],
     youtubeId: 'jVRz5KWyqcA',
-    thumbnail: '/thumbnails/donda-sessions.jpg',
+    thumbnail: '/thumbnails/donda-sessions-card.png',
   },
 
   // ── Design & Art Direction ──────────────────────────────────────────────────
@@ -340,7 +340,8 @@ export const projects: Project[] = [
       'Created the billboard campaign for Chance the Rapper\'s "For Your Consideration" GRAMMYs push behind his 2025 album Star Line, designing the out-of-home creative that carried the album into awards season.',
       'The For Your Consideration campaign put billboards up across Nashville, Chicago, New York, and Los Angeles, bringing the Star Line visual world and its Album of the Year case to each city.',
     ],
-    thumbnail: '/thumbnails/grammys-fyc.jpg',
+    thumbnail: '/thumbnails/grammys-fyc.jpg',  // Detail-page poster — stays the billboard image
+    cardImage: '/thumbnails/grammys-fyc-card.jpg',  // Homepage card — Star Line FYC artwork only
     posterAspect: '2200 / 1229',
     posterMaxWidth: 900,
     galleryLabel: 'Out-of-Home',
