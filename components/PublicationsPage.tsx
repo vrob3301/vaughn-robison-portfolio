@@ -109,13 +109,13 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
 
       {/* ── Page body ── */}
       <motion.div
+        className="pub-body"
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         style={{
           maxWidth: 1280,
           width: '100%',
-          padding: 'clamp(72px, calc(50vh - 210px), 160px) 64px 100px',
         }}
       >
         <div className="pub-wrap">
@@ -230,6 +230,9 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
 
       {/* ── Responsive styles ── */}
       <style>{`
+        .pub-body {
+          padding: clamp(72px, calc(50vh - 210px), 160px) 64px 100px;
+        }
         .pub-wrap {
           display: flex;
           flex-direction: column;
@@ -283,6 +286,9 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           min-width: 0;
         }
         @media (max-width: 900px) {
+          .pub-body {
+            padding: clamp(64px, calc(50vh - 210px), 160px) 40px 88px;
+          }
           .pub-header {
             margin-bottom: 48px !important;
           }
@@ -291,6 +297,9 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           }
         }
         @media (max-width: 620px) {
+          .pub-body {
+            padding: clamp(56px, calc(50vh - 210px), 160px) 26px 80px;
+          }
           .pub-item {
             flex-direction: column;
             align-items: flex-start;
