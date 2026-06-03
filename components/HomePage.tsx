@@ -112,6 +112,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
   const grammysCampaign = projects.find((p) => p.id === 'grammys-fyc-campaign')!
   const yeezy          = projects.find((p) => p.id === 'yeezy-stem-player')!
   const bearingWitness = projects.find((p) => p.id === 'bearing-witness-cincinnati')!
+  const writingsOnTheWall = projects.find((p) => p.id === 'writings-on-the-wall')!
 
   return (
     <motion.div
@@ -536,11 +537,13 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                   <ProjectCard project={grammysCampaign} isSelected={selectedId === grammysCampaign.id} onSelect={onSelect} />
                 </motion.div>
 
-                {/* Row 7 — Bearing Witness under Together in the left column */}
+                {/* Row 7 — Bearing Witness + Writings on the Wall in the left columns */}
                 <motion.div variants={extraItemVariants}>
                   <ProjectCard project={bearingWitness} isSelected={selectedId === bearingWitness.id} onSelect={onSelect} />
                 </motion.div>
-                <div className="grid-spacer" aria-hidden />
+                <motion.div variants={extraItemVariants}>
+                  <ProjectCard project={writingsOnTheWall} isSelected={selectedId === writingsOnTheWall.id} onSelect={onSelect} />
+                </motion.div>
                 <div className="grid-spacer" aria-hidden />
                 <div className="grid-spacer" aria-hidden />
                 <div className="grid-spacer" aria-hidden />

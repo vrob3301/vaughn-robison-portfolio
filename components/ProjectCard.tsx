@@ -25,8 +25,8 @@ export default function ProjectCard({
   const [videoReady, setVideoReady] = useState(false)
   const handleHoverStart = () => {
     setHovered(true)
-    // Only lazy-load video preview for Vimeo projects
-    if (!videoLoaded && project.vimeoId) setVideoLoaded(true)
+    // Lazy-load the silent hover preview for Vimeo or YouTube projects
+    if (!videoLoaded && (project.vimeoId || project.youtubeId)) setVideoLoaded(true)
   }
 
   const handleHoverEnd = () => {
@@ -113,6 +113,37 @@ export default function ProjectCard({
                 height: '100%',
                 border: 'none',
                 transform: `scale(${variant === 'featured' ? 1.286 : 1.112})`,
+                transformOrigin: 'center center',
+                pointerEvents: 'none',
+              }}
+              onLoad={() => {
+                setTimeout(() => setVideoReady(true), 600)
+              }}
+            />
+          </motion.div>
+        )}
+
+        {/* YouTube silent hover preview — YouTube projects without a Vimeo ID.
+            Same cover technique and pointerEvents:'none' guard as the Vimeo path,
+            so the card's onClick always drives navigation, never the player. */}
+        {videoLoaded && project.youtubeId && !project.vimeoId && (
+          <motion.div
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: hovered && videoReady ? 1 : 0 }}
+            transition={{ duration: 0.55, ease: 'easeInOut' }}
+            style={{ pointerEvents: 'none' }}
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1&mute=1&loop=1&controls=0&playsinline=1&modestbranding=1&rel=0&showinfo=0&playlist=${project.youtubeId}`}
+              allow="autoplay; fullscreen"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none',
+                transform: `scale(${variant === 'featured' ? 1.5 : 1.34})`,
                 transformOrigin: 'center center',
                 pointerEvents: 'none',
               }}

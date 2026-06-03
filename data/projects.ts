@@ -5,7 +5,7 @@ export interface Project {
   subtitle: string
   body: string[]
   vimeoId?: string    // Vimeo — enables silent hover video preview on homepage
-  youtubeId?: string  // YouTube — detail page embed only (no hover preview)
+  youtubeId?: string  // YouTube — detail page embed; also enables silent hover video preview on homepage when no vimeoId is set
   thumbnail: string
   cardImage?: string  // Optional separate image for the homepage card (defaults to thumbnail)
   link?: string
@@ -321,6 +321,26 @@ export const projects: Project[] = [
     ],
     youtubeId: 'jVRz5KWyqcA',
     thumbnail: '/thumbnails/donda-sessions-card.png',
+  },
+
+  {
+    id: 'writings-on-the-wall',
+    title: 'WRITINGS ON THE WALL',
+    titleLine2: 'A STAR LINE LISTENING EXPERIENCE',
+    subtitle: 'Chance the Rapper · Listening Experience · Documentary',
+    body: [
+      'Writings on the Wall was an experimental Star Line listening experience Chance the Rapper hosted from 2024 through 2025. The tour ran more than twenty shows across the country for his most dedicated fans, with tickets given out through geolocated activations on his Community text platform.',
+      'Vaughn helped develop the concept and documented the full tour. This short piece is a trailer for the larger documentary that came out of it.',
+      'Vaughn also hired local crews in each city and led the creative direction and design for all of the flyers and branding.',
+    ],
+    youtubeId: 'wueSv3Kl8Mo',
+    thumbnail: '/thumbnails/writings-on-the-wall.jpg',
+    galleryLabel: 'Flyers',
+    galleryColumns: 2,
+    gallery: [
+      '/thumbnails/writings-on-the-wall-miami.jpg',
+      '/thumbnails/writings-on-the-wall-la.jpg',
+    ],
   },
 
   // ── Design & Art Direction ──────────────────────────────────────────────────
