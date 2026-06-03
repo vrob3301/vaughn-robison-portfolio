@@ -366,26 +366,6 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               }}
             >
               <a
-                href="mailto:info@vaughn-robison.com"
-                style={{
-                  fontFamily: 'var(--font-inter)',
-                  fontSize: 10,
-                  fontWeight: 400,
-                  color: 'rgba(12,35,64,0.75)',
-                  textDecoration: 'none',
-                  letterSpacing: '0.04em',
-                  transition: 'color 0.2s',
-                }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = '#0C2340')
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = 'rgba(12,35,64,0.75)')
-                }
-              >
-                info@vaughn-robison.com
-              </a>
-              <a
                 href="https://newbiblebelt.org"
                 target="_blank"
                 rel="noopener noreferrer"
