@@ -76,7 +76,7 @@ export const publications: Publication[] = [
     title: 'Chance the Rapper Taps Joey Bada$$ for New Single ‘The Highs & The Lows’',
     date: 'June 2022',
     url: 'https://www.rollingstone.com/music/music-news/chance-the-rapper-the-highs-the-lows-1369989/',
-    image: '/thumbnails/highs-and-lows-mv.jpg',
+    image: '/thumbnails/highs-and-lows-press.jpg',
     excerpt:
       'Rolling Stone premieres “The Highs & The Lows,” the Joey Bada$$ collaboration and visual that first debuted during Art Basel.',
   },
