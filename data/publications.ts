@@ -22,7 +22,7 @@ export const publications: Publication[] = [
     title: 'The 10 Best Movies of 2025',
     date: 'December 2025',
     url: 'https://www.latimes.com/entertainment-arts/movies/story/2025-12-05/best-movies-2025-where-to-find-them-sinners-hedda-eddington-one-battle-naked-gun-sirat',
-    image: '/thumbnails/in-whose-name.png',
+    image: '/thumbnails/in-whose-name-sun.jpg',
     excerpt:
       'Critic Amy Nicholson names In Whose Name? one of the ten best films of the year, ranking it among 2025’s most essential cinema.',
   },
@@ -31,7 +31,7 @@ export const publications: Publication[] = [
     title: '‘In Whose Name?’ Review: An Intimate Yet Frustrating Look Inside the Wild World of Kanye West',
     date: 'September 2025',
     url: 'https://variety.com/2025/film/reviews/in-whose-name-review-kanye-west-1236523453/',
-    image: '/thumbnails/in-whose-name.png',
+    image: '/thumbnails/in-whose-name-night.jpg',
     excerpt:
       'Variety reviews the documentary cut from more than 3,000 hours of footage, calling it a rare unguarded portrait of one of music’s most scrutinized figures.',
   },
@@ -40,7 +40,7 @@ export const publications: Publication[] = [
     title: 'Kanye West Doc ‘In Whose Name?’ To Make Streaming Debut',
     date: 'December 2025',
     url: 'https://deadline.com/2025/12/kanye-west-doc-in-whose-name-global-streaming-debut-1236647983/',
-    image: '/thumbnails/in-whose-name.png',
+    image: '/thumbnails/in-whose-name-service.jpg',
     excerpt:
       'Deadline notes the film opened on roughly 1,000 screens and held the No. 1 documentary spot for two weeks before its global streaming release.',
   },
