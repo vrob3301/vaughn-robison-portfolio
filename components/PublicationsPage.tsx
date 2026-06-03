@@ -162,54 +162,65 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
                 variants={itemVariant}
                 className="pub-item"
               >
-                <span style={{
-                  fontFamily: 'var(--font-inter)',
-                  fontSize: 10,
-                  fontWeight: 500,
-                  letterSpacing: '0.16em',
-                  textTransform: 'uppercase',
-                  color: 'rgba(12,35,64,0.55)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                }}>
-                  {pub.outlet}
-                  <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(12,35,64,0.35)' }} />
-                  {pub.date}
-                </span>
-
-                <h2 style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontSize: 'clamp(24px, 2.6vw, 34px)',
-                  fontWeight: 400,
-                  lineHeight: 1.15,
-                  letterSpacing: '0.01em',
-                  color: '#0C2340',
-                  margin: '12px 0 0',
-                  display: 'inline-flex',
-                  alignItems: 'flex-start',
-                  gap: 10,
-                }}>
-                  {pub.title}
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" strokeWidth="1.8"
-                    style={{ flexShrink: 0, marginTop: 8, opacity: 0.55 }}>
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </h2>
-
-                {pub.excerpt && (
-                  <p style={{
-                    fontFamily: 'var(--font-inter)',
-                    fontSize: 14,
-                    fontWeight: 300,
-                    lineHeight: 1.8,
-                    color: 'rgba(12,35,64,0.78)',
-                    margin: '14px 0 0',
-                  }}>
-                    {pub.excerpt}
-                  </p>
+                {/* Left: artwork thumbnail */}
+                {pub.image && (
+                  <div className="pub-thumb">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={pub.image} alt="" aria-hidden />
+                  </div>
                 )}
+
+                {/* Right: text */}
+                <div className="pub-text">
+                  <span style={{
+                    fontFamily: 'var(--font-inter)',
+                    fontSize: 10,
+                    fontWeight: 500,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: 'rgba(12,35,64,0.55)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                  }}>
+                    {pub.outlet}
+                    <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(12,35,64,0.35)' }} />
+                    {pub.date}
+                  </span>
+
+                  <h2 style={{
+                    fontFamily: 'var(--font-cormorant)',
+                    fontSize: 'clamp(22px, 2.4vw, 31px)',
+                    fontWeight: 400,
+                    lineHeight: 1.18,
+                    letterSpacing: '0.01em',
+                    color: '#0C2340',
+                    margin: '11px 0 0',
+                    display: 'inline-flex',
+                    alignItems: 'flex-start',
+                    gap: 10,
+                  }}>
+                    {pub.title}
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" strokeWidth="1.8"
+                      style={{ flexShrink: 0, marginTop: 7, opacity: 0.55 }}>
+                      <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </h2>
+
+                  {pub.excerpt && (
+                    <p style={{
+                      fontFamily: 'var(--font-inter)',
+                      fontSize: 14,
+                      fontWeight: 300,
+                      lineHeight: 1.8,
+                      color: 'rgba(12,35,64,0.78)',
+                      margin: '13px 0 0',
+                    }}>
+                      {pub.excerpt}
+                    </p>
+                  )}
+                </div>
               </motion.a>
             ))}
           </motion.div>
@@ -227,15 +238,17 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           margin-bottom: 72px;
         }
         .pub-right {
-          max-width: 760px;
+          max-width: 880px;
           display: flex;
           flex-direction: column;
-          gap: 44px;
+          gap: 40px;
         }
         .pub-item {
-          display: block;
+          display: flex;
+          align-items: center;
+          gap: 32px;
           text-decoration: none;
-          padding-bottom: 44px;
+          padding-bottom: 40px;
           border-bottom: 1px solid rgba(12,35,64,0.12);
           transition: opacity 0.2s ease;
         }
@@ -246,12 +259,47 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
         .pub-item:hover {
           opacity: 0.62;
         }
+        .pub-thumb {
+          flex: 0 0 auto;
+          width: 150px;
+          height: 150px;
+          border-radius: 10px;
+          overflow: hidden;
+          background: #0C2340;
+          box-shadow: 0 0 0 1px rgba(12,35,64,0.07), 0 8px 28px rgba(12,35,64,0.12);
+        }
+        .pub-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .pub-item:hover .pub-thumb img {
+          transform: scale(1.05);
+        }
+        .pub-text {
+          flex: 1 1 auto;
+          min-width: 0;
+        }
         @media (max-width: 900px) {
           .pub-header {
             margin-bottom: 48px !important;
           }
           .pub-right {
             max-width: 100% !important;
+          }
+        }
+        @media (max-width: 620px) {
+          .pub-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+          }
+          .pub-thumb {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
           }
         }
       `}</style>
