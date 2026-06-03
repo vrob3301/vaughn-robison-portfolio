@@ -32,9 +32,9 @@ function OverviewContent() {
       <p style={bodyStyle}>
         In recent years, Vaughn has worked closely with Chance the Rapper, producing music videos
         and contributing creatively to tours and cultural events. His work includes contributions to
-        projects such as the Black Star Line Festival in Ghana and the Acid Rap 10-Year Anniversary
-        Tour, as well as producing In Whose Name, a theatrical documentary exploring the cultural
-        and spiritual influence surrounding Kanye West.
+        projects such as the <em>Black Star Line Festival</em> in Ghana and the{' '}
+        <em>Acid Rap 10-Year Anniversary Tour</em>, as well as producing <em>In Whose Name</em>,
+        a theatrical documentary exploring the cultural and spiritual influence surrounding Kanye West.
       </p>
       <p style={bodyStyle}>
         Across film, music, and live production, Vaughn&rsquo;s work seeks to create moments that
