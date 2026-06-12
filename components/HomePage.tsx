@@ -229,9 +229,12 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             width: '100%',
           }}
         >
-          {/* ── Row 1 ── */}
+          {/* ── Row 1 ──
+              alignSelf:'start' keeps every top-row card sharing the same top edge.
+              The featured center card is taller, so it extends downward only — it
+              never sits higher than the standard cards beside it. */}
 
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} style={{ alignSelf: 'start' }}>
             <ProjectCard
               project={p3333}
               isSelected={selectedId === p3333.id}
@@ -240,7 +243,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             />
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} style={{ alignSelf: 'start' }}>
             <ProjectCard
               project={nbb}
               isSelected={selectedId === nbb.id}
@@ -250,7 +253,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           </motion.div>
 
           {/* IWN — featured card, center col row 1 */}
-          <motion.div variants={itemVariants} className="center-top">
+          <motion.div variants={itemVariants} className="center-top" style={{ alignSelf: 'start' }}>
             <ProjectCard
               project={inWhoseName}
               isSelected={selectedId === inWhoseName.id}
@@ -259,7 +262,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             />
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} style={{ alignSelf: 'start' }}>
             <ProjectCard
               project={apg}
               isSelected={selectedId === apg.id}
@@ -268,7 +271,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             />
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} style={{ alignSelf: 'start' }}>
             <ProjectCard
               project={chicagoBulls}
               isSelected={selectedId === chicagoBulls.id}
