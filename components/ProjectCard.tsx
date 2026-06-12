@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useSpring } from 'framer-motion'
 import type { Project } from '@/data/projects'
 
 interface ProjectCardProps {
@@ -23,6 +23,26 @@ export default function ProjectCard({
   const [hovered, setHovered] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [videoReady, setVideoReady] = useState(false)
+
+  // ── Subtle cursor-tracking 3D tilt ──
+  // The area under the cursor recedes; max ~5° of rotation, spring-eased back to flat.
+  const cardRef = useRef<HTMLDivElement>(null)
+  const TILT_MAX = 5 // degrees
+  const tiltX = useMotionValue(0)
+  const tiltY = useMotionValue(0)
+  const springX = useSpring(tiltX, { stiffness: 200, damping: 22, mass: 0.4 })
+  const springY = useSpring(tiltY, { stiffness: 200, damping: 22, mass: 0.4 })
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const el = cardRef.current
+    if (!el) return
+    const r = el.getBoundingClientRect()
+    const px = (e.clientX - r.left) / r.width - 0.5  // -0.5 (left) … 0.5 (right)
+    const py = (e.clientY - r.top) / r.height - 0.5  // -0.5 (top)  … 0.5 (bottom)
+    tiltY.set(px * 2 * TILT_MAX)   // cursor on right → right edge tilts back
+    tiltX.set(-py * 2 * TILT_MAX)  // cursor on top   → top edge tilts back
+  }
+
   const handleHoverStart = () => {
     setHovered(true)
     // Lazy-load the silent hover preview for Vimeo or YouTube projects
@@ -31,6 +51,8 @@ export default function ProjectCard({
 
   const handleHoverEnd = () => {
     setHovered(false)
+    tiltX.set(0)
+    tiltY.set(0)
   }
 
   return (
@@ -44,6 +66,7 @@ export default function ProjectCard({
       }}
     >
       <motion.div
+        ref={cardRef}
         layoutId={`card-${project.id}`}
         className="relative cursor-pointer overflow-hidden"
         style={{
@@ -51,9 +74,14 @@ export default function ProjectCard({
           aspectRatio: variant === 'featured' ? '16/7' : '16/10',
           background: '#000',
           willChange: 'transform',
+          rotateX: springX,
+          rotateY: springY,
+          transformPerspective: 900,
+          transformStyle: 'preserve-3d',
         }}
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
+        onPointerMove={handlePointerMove}
         onClick={() => onSelect(project.id)}
         animate={{
           scale: hovered ? 1.025 : 1,

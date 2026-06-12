@@ -353,7 +353,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                 lineHeight: 1.8,
               }}
             >
-              Producer · Director · Creative Strategist
+              Producer · Director · Strategist
             </p>
 
             {/* Links */}
