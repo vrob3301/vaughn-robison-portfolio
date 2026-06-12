@@ -27,7 +27,7 @@ export default function ProjectCard({
   // ── Subtle cursor-tracking 3D tilt ──
   // The area under the cursor recedes; max ~5° of rotation, spring-eased back to flat.
   const cardRef = useRef<HTMLDivElement>(null)
-  const TILT_MAX = 11 // degrees
+  const TILT_MAX = 8 // degrees
   const tiltX = useMotionValue(0)
   const tiltY = useMotionValue(0)
   const springX = useSpring(tiltX, { stiffness: 260, damping: 20, mass: 0.4 })
