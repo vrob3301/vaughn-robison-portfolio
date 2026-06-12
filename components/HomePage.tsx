@@ -330,7 +330,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             <h1
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(22px, 2vw, 30px)',
+                fontSize: 27,
                 fontWeight: 400,
                 letterSpacing: '0.05em',
                 color: '#0C2340',

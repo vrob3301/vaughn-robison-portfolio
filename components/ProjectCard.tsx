@@ -27,11 +27,11 @@ export default function ProjectCard({
   // ── Subtle cursor-tracking 3D tilt ──
   // The area under the cursor recedes; max ~5° of rotation, spring-eased back to flat.
   const cardRef = useRef<HTMLDivElement>(null)
-  const TILT_MAX = 5 // degrees
+  const TILT_MAX = 11 // degrees
   const tiltX = useMotionValue(0)
   const tiltY = useMotionValue(0)
-  const springX = useSpring(tiltX, { stiffness: 200, damping: 22, mass: 0.4 })
-  const springY = useSpring(tiltY, { stiffness: 200, damping: 22, mass: 0.4 })
+  const springX = useSpring(tiltX, { stiffness: 260, damping: 20, mass: 0.4 })
+  const springY = useSpring(tiltY, { stiffness: 260, damping: 20, mass: 0.4 })
 
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     const el = cardRef.current
@@ -76,7 +76,7 @@ export default function ProjectCard({
           willChange: 'transform',
           rotateX: springX,
           rotateY: springY,
-          transformPerspective: 900,
+          transformPerspective: 600,
           transformStyle: 'preserve-3d',
         }}
         onHoverStart={handleHoverStart}
