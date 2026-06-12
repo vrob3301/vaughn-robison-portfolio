@@ -49,10 +49,15 @@ export default function ProjectCard({
     if (!videoLoaded && (project.vimeoId || project.youtubeId)) setVideoLoaded(true)
   }
 
-  const handleHoverEnd = () => {
-    setHovered(false)
+  // Spring the card back to a flat resting position
+  const resetTilt = () => {
     tiltX.set(0)
     tiltY.set(0)
+  }
+
+  const handleHoverEnd = () => {
+    setHovered(false)
+    resetTilt()
   }
 
   return (
@@ -82,6 +87,7 @@ export default function ProjectCard({
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
         onPointerMove={handlePointerMove}
+        onPointerLeave={resetTilt}
         onClick={() => onSelect(project.id)}
         animate={{
           scale: hovered ? 1.025 : 1,
