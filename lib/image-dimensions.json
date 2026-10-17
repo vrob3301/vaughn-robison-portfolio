@@ -238,5 +238,20 @@
     "width": 3840,
     "height": 1728,
     "encodingFormat": "image/jpeg"
+  },
+  "/photos/vaughn-robison-soldier-field-chicago.jpg": {
+    "width": 1800,
+    "height": 2400,
+    "encodingFormat": "image/jpeg"
+  },
+  "/in-whose-name/in-whose-name-theatrical-poster.jpg": {
+    "width": 1440,
+    "height": 1799,
+    "encodingFormat": "image/jpeg"
+  },
+  "/in-whose-name/in-whose-name-production-photo.jpg": {
+    "width": 1440,
+    "height": 1799,
+    "encodingFormat": "image/jpeg"
   }
 }

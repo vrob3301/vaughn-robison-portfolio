@@ -40,6 +40,12 @@ export default async function ProjectPage({ params }: Props) {
       url,
       image: images,
       contributor: { '@id': personId, '@type': 'Person', name: 'Vaughn Robison', url: siteUrl },
+      ...(project.linkLabel && project.link ? { subjectOf: {
+        '@type': 'SocialMediaPosting', url: project.link,
+        headline: project.linkLabel,
+        author: { '@id': personId, '@type': 'Person', name: 'Vaughn Robison' },
+        about: { '@id': `${url}#work` },
+      } } : {}),
     },
   }} />
 }

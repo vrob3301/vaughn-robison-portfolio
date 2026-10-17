@@ -227,7 +227,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                     el.style.letterSpacing = '0.10em'
                   }}
                 >
-                  Visit Site
+                  {project.linkLabel || 'Visit Site'}
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="1.8"
                     style={{ marginLeft: 7, display: 'inline-block' }}>
@@ -292,6 +292,11 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={src} alt={galleryImageAlt(project, src, i)} loading="lazy" />
+                  {project.galleryCaptions?.[src] && (
+                    <p style={{ ...styles.bodyText, marginTop: 18, marginBottom: 0 }}>
+                      {project.galleryCaptions[src]}
+                    </p>
+                  )}
                 </motion.div>
               ))}
             </div>

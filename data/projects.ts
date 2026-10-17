@@ -9,6 +9,8 @@ export interface Project {
   thumbnail: string
   cardImage?: string  // Optional separate image for the homepage card (defaults to thumbnail)
   link?: string
+  linkLabel?: string
+  galleryCaptions?: Record<string, string>
   coverScale?: number        // Override iframe scale on detail page (default 1.112 for 16:9→16:10)
   detailAspect?: string      // Detail hero aspect for video projects (e.g. '2.39 / 1' theatrical); letterbox-clips the 16:9 player
   thumbnailPosition?: string // CSS object-position for the thumbnail (default 'center')
@@ -35,6 +37,15 @@ export const projects: Project[] = [
     ],
     vimeoId: '1171401539',
     thumbnail: '/thumbnails/in-whose-name.png',
+    link: 'https://www.instagram.com/vaughn.robison/p/DOpMegZDL-H/',
+    linkLabel: 'Vaughn’s film announcement',
+    galleryLabel: 'Film & Production',
+    galleryColumns: 2,
+    gallery: ['/in-whose-name/in-whose-name-theatrical-poster.jpg', '/in-whose-name/in-whose-name-production-photo.jpg'],
+    galleryCaptions: {
+      '/in-whose-name/in-whose-name-theatrical-poster.jpg': 'In Whose Name? theatrical poster — Vaughn Robison, associate producer.',
+      '/in-whose-name/in-whose-name-production-photo.jpg': 'Behind the scenes of In Whose Name? — from associate producer Vaughn Robison’s film announcement.',
+    },
     detailAspect: '2.39 / 1',  // Theatrical scope — show the true ratio, letterbox-clip the 16:9 player
   },
 
@@ -419,6 +430,8 @@ export const projects: Project[] = [
       'Directed and produced by Vaughn Robison, with co-producer Emma Mitsch and the Cincinnati Police Department.',
     ],
     thumbnail: '/thumbnails/bearing-witness-cincinnati.jpg',
+    link: 'https://www.linkedin.com/posts/vaughn-robison-783ab61b0_my-most-recent-documentary-bearing-witness-activity-7464646679997231104-0aHw',
+    linkLabel: 'Vaughn’s documentary announcement',
     posterAspect: '3840 / 1330',
     posterMaxWidth: 900,
     galleryLabel: 'Stills',
