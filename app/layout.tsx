@@ -16,10 +16,12 @@ export const metadata: Metadata = {
     'Portfolio of Vaughn Robison — Producer, Director, and Creative Strategist behind In Whose Name, Pepsi x Just Don, Chance the Rapper Acid Rap Tour, Abel Paul George, and New Bible Belt.',
   icons: {
     icon: [
-      { url: '/favicon.ico?v=brown-20261017', sizes: 'any' },
-      { url: '/favicon.svg?v=brown-20261017', type: 'image/svg+xml' },
+      { url: '/favicon-brown.ico', type: 'image/x-icon', sizes: '16x16 32x32 48x48 64x64 128x128 256x256' },
+      { url: '/favicon-brown-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-brown.svg', type: 'image/svg+xml', sizes: 'any' },
       { url: '/icon-brown.png', type: 'image/png', sizes: '512x512' },
     ],
+    shortcut: '/favicon-brown.ico',
     apple: [{ url: '/apple-touch-icon-brown.png', sizes: '180x180', type: 'image/png' }],
   },
   alternates: { canonical: '/' },
@@ -62,6 +64,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head><link rel="mask-icon" href="/favicon-brown.svg" color="#4A3226" /></head>
       <body>{children}<Site /></body>
     </html>
   )
