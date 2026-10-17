@@ -15,22 +15,30 @@ export const metadata: Metadata = {
     'Portfolio of Vaughn Robison — Producer, Director, and Creative Strategist behind In Whose Name, Pepsi x Just Don, Chance the Rapper Acid Rap Tour, Abel Paul George, and New Bible Belt.',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=brown-20261017', sizes: 'any' },
+      { url: '/favicon.svg?v=brown-20261017', type: 'image/svg+xml' },
+      { url: '/icon-brown.png', type: 'image/png', sizes: '512x512' },
     ],
-    apple: '/icon.png',
+    apple: [{ url: '/apple-touch-icon-brown.png', sizes: '180x180', type: 'image/png' }],
   },
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
+  authors: [{ name: 'Vaughn Robison', url: 'https://vaughn-robison.com' }],
+  creator: 'Vaughn Robison',
+  verification: { google: 'lJKvgxb6wMjcqptOk5LKqH4A6FNCmvS2xR-PacC4Npk' },
   metadataBase: new URL('https://vaughn-robison.com'),
   openGraph: {
     title: 'Vaughn Robison',
     description: 'Producer · Director · Creative Strategist',
     type: 'website',
+    siteName: 'Vaughn Robison',
+    locale: 'en_US',
     url: 'https://vaughn-robison.com',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/og-image-brown.png',
+        width: 2400,
+        height: 1260,
         alt: 'Vaughn Robison',
       },
     ],
@@ -39,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Vaughn Robison',
     description: 'Producer · Director · Creative Strategist',
-    images: ['/og-image.png'],
+    images: ['/og-image-brown.png'],
   },
 }
 
