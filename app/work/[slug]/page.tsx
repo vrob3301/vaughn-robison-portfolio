@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { projects } from '@/data/projects'
 import StructuredData from '@/components/StructuredData'
-import { pageMetadata, personId, projectDescription, projectName, siteUrl } from '@/lib/seo'
+import { pageMetadata, personId, profileUrls, projectDescription, projectName, siteUrl } from '@/lib/seo'
+import { projectImageSchema } from '@/lib/project-image-schema'
 
 export const dynamicParams = false
 export function generateStaticParams() { return projects.map(project => ({ slug: project.id })) }
@@ -20,6 +21,7 @@ export default async function ProjectPage({ params }: Props) {
   const project = projects.find(item => item.id === slug)
   if (!project) notFound()
   const url = `${siteUrl}/work/${project.id}`
+  const images = projectImageSchema(project)
   return <StructuredData data={{
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -27,13 +29,16 @@ export default async function ProjectPage({ params }: Props) {
     url,
     name: projectName(project),
     description: projectDescription(project),
+    primaryImageOfPage: images[0],
+    author: { '@id': personId, '@type': 'Person', name: 'Vaughn Robison', url: siteUrl, sameAs: profileUrls },
     isPartOf: { '@id': `${siteUrl}/#website` },
     mainEntity: {
       '@type': 'CreativeWork',
+      '@id': `${url}#work`,
       name: projectName(project),
       description: project.body.join('\n\n'),
       url,
-      image: [project.thumbnail, ...(project.gallery || [])].map(image => `${siteUrl}${image}`),
+      image: images,
       contributor: { '@id': personId, '@type': 'Person', name: 'Vaughn Robison', url: siteUrl },
     },
   }} />

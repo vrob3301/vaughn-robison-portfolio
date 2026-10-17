@@ -3,6 +3,16 @@ import type { Project } from '@/data/projects'
 
 export const siteUrl = 'https://vaughn-robison.com'
 export const personId = `${siteUrl}/#person`
+export const profileUrls = [
+  'https://www.linkedin.com/in/vaughn-robison-783ab61b0',
+  'https://www.instagram.com/vaughn.robison',
+  'https://x.com/vrob330',
+  'https://www.youtube.com/@V_ROB',
+]
+
+export function projectImagePaths(project: Project) {
+  return [...new Set([project.thumbnail, project.cardImage, ...(project.gallery || [])].filter((image): image is string => !!image))]
+}
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {
   const image = { url: '/og-image-brown.png', width: 2400, height: 1260, alt: 'Vaughn Robison monogram' }
