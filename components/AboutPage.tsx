@@ -179,7 +179,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/vr-mark.svg" alt="Vaughn Robison" style={{ height: 26, width: 'auto', display: 'block' }} />
+        <img src="/vr-monogram-vector.svg" alt="Vaughn Robison" style={{ height: 26, width: 'auto', display: 'block' }} />
       </motion.button>
 
       {/* ── Back button ── matches ProjectDetail style exactly */}
