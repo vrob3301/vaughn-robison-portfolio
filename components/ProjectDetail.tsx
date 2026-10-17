@@ -73,7 +73,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           border: 'none',
           cursor: 'pointer',
           padding: '6px 0',
-          color: '#0C2340',
+          color: '#4A3226',
           opacity: 0.6,
           transition: 'opacity 0.2s',
         }}
@@ -125,10 +125,10 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             background: '#000',
             width: '100%',
             boxShadow: [
-              '0 0 0 1px rgba(12,35,64,0.05)',
-              '0 4px 24px rgba(12,35,64,0.10)',
-              '0 20px 60px rgba(12,35,64,0.18)',
-              '0 48px 120px rgba(12,35,64,0.13)',
+              '0 0 0 1px rgba(74,50,38,0.05)',
+              '0 4px 24px rgba(74,50,38,0.10)',
+              '0 20px 60px rgba(74,50,38,0.18)',
+              '0 48px 120px rgba(74,50,38,0.13)',
             ].join(', '),
             willChange: 'transform',
           }}
@@ -142,7 +142,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           */}
           {project.vimeoId ? (
             <iframe
-              src={`https://player.vimeo.com/video/${project.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&title=0&portrait=0&color=0C2340&autoplay=1&muted=1`}
+              src={`https://player.vimeo.com/video/${project.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&title=0&portrait=0&color=4A3226&autoplay=1&muted=1`}
               allow="autoplay; fullscreen; picture-in-picture"
               style={isTheatrical ? theatricalIframe : {
                 position: 'absolute', inset: 0,
@@ -307,7 +307,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           font-weight: 500;
           letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: rgba(12,35,64,0.55);
+          color: rgba(74,50,38,0.55);
           margin: 0 0 28px;
         }
         /* Default: full-width stacked stills */
@@ -329,10 +329,10 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           height: auto;
           border-radius: 18px;
           box-shadow:
-            0 0 0 1px rgba(12,35,64,0.05),
-            0 4px 24px rgba(12,35,64,0.10),
-            0 20px 60px rgba(12,35,64,0.18),
-            0 48px 120px rgba(12,35,64,0.13);
+            0 0 0 1px rgba(74,50,38,0.05),
+            0 4px 24px rgba(74,50,38,0.10),
+            0 20px 60px rgba(74,50,38,0.18),
+            0 48px 120px rgba(74,50,38,0.13);
         }
         @media (max-width: 600px) {
           .detail-gallery-section { margin-top: 56px; }
@@ -395,23 +395,23 @@ const styles = {
     fontWeight: 500,
     letterSpacing: '0.16em',
     textTransform: 'uppercase' as const,
-    color: 'rgba(12,35,64,0.65)',
+    color: 'rgba(74,50,38,0.65)',
     marginBottom: 16,
   },
   title: {
-    fontFamily: 'var(--font-cormorant)',
+    fontFamily: 'var(--font-editorial)',
     fontSize: 'clamp(34px, 3.8vw, 58px)',
     fontWeight: 400,
     letterSpacing: '0.02em',
-    color: '#0C2340',
+    color: '#4A3226',
     lineHeight: 1.05,
   },
   titleLine2: {
-    fontFamily: 'var(--font-cormorant)',
+    fontFamily: 'var(--font-editorial)',
     fontSize: 'clamp(16px, 2.2vw, 26px)',
     fontWeight: 300,
     letterSpacing: '0.04em',
-    color: '#0C2340',
+    color: '#4A3226',
     marginTop: 6,
     lineHeight: 1.2,
   },
@@ -420,7 +420,7 @@ const styles = {
     fontSize: 14,
     fontWeight: 300,
     lineHeight: 1.88,
-    color: '#0C2340',
+    color: '#4A3226',
     marginBottom: 18,
   },
   link: {
@@ -429,7 +429,7 @@ const styles = {
     fontWeight: 400,
     letterSpacing: '0.10em',
     textTransform: 'uppercase' as const,
-    color: '#0C2340',
+    color: '#4A3226',
     textDecoration: 'none',
     opacity: 0.6,
     transition: 'opacity 0.2s, letter-spacing 0.3s',

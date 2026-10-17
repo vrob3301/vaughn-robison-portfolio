@@ -161,7 +161,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               fontWeight: 400,
               letterSpacing: '0.10em',
               textTransform: 'uppercase',
-              color: '#0C2340',
+              color: '#4A3226',
               textDecoration: 'none',
               opacity: 0.78,
               transition: 'opacity 0.2s',
@@ -332,11 +332,11 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             {/* Name */}
             <h1
               style={{
-                fontFamily: 'var(--font-cormorant)',
+                fontFamily: 'var(--font-editorial)',
                 fontSize: 27,
                 fontWeight: 400,
                 letterSpacing: '0.05em',
-                color: '#0C2340',
+                color: '#4A3226',
                 lineHeight: 1.05,
               }}
             >
@@ -350,7 +350,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
                 fontSize: 10,
                 fontWeight: 400,
                 letterSpacing: '0.12em',
-                color: 'rgba(12,35,64,0.78)',
+                color: 'rgba(74,50,38,0.78)',
                 textTransform: 'uppercase' as const,
                 marginTop: 10,
                 lineHeight: 1.8,
@@ -359,38 +359,47 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               Producer · Director · Strategist
             </p>
 
-            {/* Links */}
+            {/* Affiliated organizations */}
             <div
               style={{
                 display: 'flex',
-                flexDirection: 'column',
-                gap: 4,
+                justifyContent: 'center',
+                flexWrap: 'wrap',
+                columnGap: 10,
+                rowGap: 4,
                 marginTop: 14,
                 alignItems: 'center',
               }}
             >
-              <a
-                href="https://newbiblebelt.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontFamily: 'var(--font-inter)',
-                  fontSize: 10,
-                  fontWeight: 400,
-                  color: 'rgba(12,35,64,0.75)',
-                  textDecoration: 'none',
-                  letterSpacing: '0.04em',
-                  transition: 'color 0.2s',
-                }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = '#0C2340')
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = 'rgba(12,35,64,0.75)')
-                }
-              >
-                newbiblebelt.org
-              </a>
+              {[
+                { href: 'https://www.newbiblebelt.org', label: 'New Bible Belt' },
+                { href: 'https://www.americanchristianfuturists.com', label: 'American Christian Futurists' },
+              ].map(({ href, label }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: 'var(--font-inter)',
+                    fontSize: 10,
+                    fontWeight: 400,
+                    color: 'rgba(74,50,38,0.75)',
+                    textDecoration: 'none',
+                    letterSpacing: '0.04em',
+                    whiteSpace: 'nowrap',
+                    transition: 'color 0.2s',
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = '#4A3226')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color = 'rgba(74,50,38,0.75)')
+                  }
+                >
+                  {label}
+                </a>
+              ))}
             </div>
           </motion.div>
 
@@ -577,7 +586,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
           font-weight: 400;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: #0C2340;
+          color: #4A3226;
           opacity: 0.6;
           transition: opacity 0.2s ease, letter-spacing 0.3s ease;
         }
@@ -640,7 +649,11 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
         /* ── Very small screens ── */
         @media (max-width: 400px) {
           .nav-links {
-            display: none !important;
+            gap: 12px !important;
+          }
+          .nav-links a,
+          .nav-links button {
+            font-size: 9px !important;
           }
         }
       `}</style>
@@ -671,14 +684,14 @@ function SocialIcon({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'rgba(12,35,64,0.68)',
+        color: 'rgba(74,50,38,0.68)',
         transition: 'color 0.2s, opacity 0.2s',
       }}
       onMouseEnter={(e) =>
-        ((e.currentTarget as HTMLElement).style.color = '#0C2340')
+        ((e.currentTarget as HTMLElement).style.color = '#4A3226')
       }
       onMouseLeave={(e) =>
-        ((e.currentTarget as HTMLElement).style.color = 'rgba(12,35,64,0.68)')
+        ((e.currentTarget as HTMLElement).style.color = 'rgba(74,50,38,0.68)')
       }
     >
       {children}

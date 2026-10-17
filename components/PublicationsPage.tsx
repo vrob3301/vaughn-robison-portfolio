@@ -86,7 +86,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           border: 'none',
           cursor: 'pointer',
           padding: '6px 0',
-          color: '#0C2340',
+          color: '#4A3226',
           opacity: 0.6,
           transition: 'opacity 0.2s',
         }}
@@ -128,18 +128,18 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
               fontWeight: 400,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: 'rgba(12,35,64,0.55)',
+              color: 'rgba(74,50,38,0.55)',
               margin: '0 0 18px',
             }}>
               Press &amp; Features
             </p>
             <h1 style={{
-              fontFamily: 'var(--font-cormorant)',
+              fontFamily: 'var(--font-editorial)',
               fontSize: 'clamp(46px, 8vw, 76px)',
               fontWeight: 400,
               lineHeight: 0.95,
               letterSpacing: '-0.01em',
-              color: '#0C2340',
+              color: '#4A3226',
               margin: 0,
             }}>
               PUBLICATIONS
@@ -178,23 +178,23 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
                     fontWeight: 500,
                     letterSpacing: '0.16em',
                     textTransform: 'uppercase',
-                    color: 'rgba(12,35,64,0.55)',
+                    color: 'rgba(74,50,38,0.55)',
                     display: 'flex',
                     alignItems: 'center',
                     gap: 10,
                   }}>
                     {pub.outlet}
-                    <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(12,35,64,0.35)' }} />
+                    <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(74,50,38,0.35)' }} />
                     {pub.date}
                   </span>
 
                   <h2 style={{
-                    fontFamily: 'var(--font-cormorant)',
+                    fontFamily: 'var(--font-editorial)',
                     fontSize: 'clamp(22px, 2.4vw, 31px)',
                     fontWeight: 400,
                     lineHeight: 1.18,
                     letterSpacing: '0.01em',
-                    color: '#0C2340',
+                    color: '#4A3226',
                     margin: '11px 0 0',
                     display: 'inline-flex',
                     alignItems: 'flex-start',
@@ -214,7 +214,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
                       fontSize: 14,
                       fontWeight: 300,
                       lineHeight: 1.8,
-                      color: 'rgba(12,35,64,0.78)',
+                      color: 'rgba(74,50,38,0.78)',
                       margin: '13px 0 0',
                     }}>
                       {pub.excerpt}
@@ -252,7 +252,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           gap: 32px;
           text-decoration: none;
           padding-bottom: 40px;
-          border-bottom: 1px solid rgba(12,35,64,0.12);
+          border-bottom: 1px solid rgba(74,50,38,0.12);
           transition: opacity 0.2s ease;
         }
         .pub-right .pub-item:last-child {
@@ -268,8 +268,8 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
           height: 150px;
           border-radius: 10px;
           overflow: hidden;
-          background: #0C2340;
-          box-shadow: 0 0 0 1px rgba(12,35,64,0.07), 0 8px 28px rgba(12,35,64,0.12);
+          background: #4A3226;
+          box-shadow: 0 0 0 1px rgba(74,50,38,0.07), 0 8px 28px rgba(74,50,38,0.12);
         }
         .pub-thumb img {
           width: 100%;

@@ -92,8 +92,8 @@ export default function ProjectCard({
         animate={{
           scale: hovered ? 1.025 : 1,
           boxShadow: hovered
-            ? '0 0 0 1px rgba(12,35,64,0.07), 0 20px 60px rgba(12,35,64,0.18), 0 0 80px rgba(12,35,64,0.08)'
-            : '0 0 0 1px rgba(12,35,64,0.06), 0 8px 32px rgba(12,35,64,0.10), 0 0 40px rgba(12,35,64,0.04)',
+            ? '0 0 0 1px rgba(74,50,38,0.07), 0 20px 60px rgba(74,50,38,0.18), 0 0 80px rgba(74,50,38,0.08)'
+            : '0 0 0 1px rgba(74,50,38,0.06), 0 8px 32px rgba(74,50,38,0.10), 0 0 40px rgba(74,50,38,0.04)',
         }}
         transition={{
           scale: { type: 'spring', stiffness: 280, damping: 28 },

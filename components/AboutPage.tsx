@@ -17,7 +17,7 @@ const bodyStyle: React.CSSProperties = {
   fontFamily: 'var(--font-inter)',
   fontSize: 15,
   lineHeight: 1.8,
-  color: '#0C2340',
+  color: '#4A3226',
   margin: 0,
 }
 
@@ -92,7 +92,7 @@ function FaithContent() {
       {/* Prayer stanzas */}
       <div style={{
         paddingLeft: 24,
-        borderLeft: '1.5px solid rgba(12,35,64,0.2)',
+        borderLeft: '1.5px solid rgba(74,50,38,0.2)',
         display: 'flex',
         flexDirection: 'column',
         gap: 20,
@@ -202,7 +202,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
           border: 'none',
           cursor: 'pointer',
           padding: '6px 0',
-          color: '#0C2340',
+          color: '#4A3226',
           opacity: 0.6,
           transition: 'opacity 0.2s',
         }}
@@ -258,11 +258,11 @@ export default function AboutPage({ onClose }: AboutPageProps) {
                   fontWeight: 400,
                   letterSpacing: '0.10em',
                   textTransform: 'uppercase',
-                  color: '#0C2340',
-                  border: `1px solid ${isActive ? '#0C2340' : 'rgba(12,35,64,0.28)'}`,
+                  color: '#4A3226',
+                  border: `1px solid ${isActive ? '#4A3226' : 'rgba(74,50,38,0.28)'}`,
                   borderRadius: 999,
                   padding: '10px 24px',
-                  background: isActive ? 'rgba(12,35,64,0.07)' : 'transparent',
+                  background: isActive ? 'rgba(74,50,38,0.07)' : 'transparent',
                   cursor: 'pointer',
                   transition: 'background 0.18s ease, border-color 0.18s ease, opacity 0.18s ease',
                   opacity: isActive ? 1 : 0.65,
@@ -291,18 +291,18 @@ export default function AboutPage({ onClose }: AboutPageProps) {
               fontWeight: 400,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: 'rgba(12,35,64,0.55)',
+              color: 'rgba(74,50,38,0.55)',
               margin: '0 0 18px',
             }}>
               Vaughn Robison / V-Rob
             </p>
             <h1 style={{
-              fontFamily: 'var(--font-cormorant)',
+              fontFamily: 'var(--font-editorial)',
               fontSize: 76,
               fontWeight: 400,
               lineHeight: 0.95,
               letterSpacing: '-0.01em',
-              color: '#0C2340',
+              color: '#4A3226',
               margin: 0,
             }}>
               ABOUT

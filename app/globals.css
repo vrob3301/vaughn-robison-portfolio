@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0C2340;
-  --navy-faint: rgba(12, 35, 64, 0.05);
-  --navy-light: rgba(12, 35, 64, 0.10);
-  --navy-medium: rgba(12, 35, 64, 0.35);
+  --font-editorial: "Times New Roman", Times, serif;
+  --ink: #4A3226;
+  --ink-faint: rgba(74,50,38, 0.05);
+  --ink-light: rgba(74,50,38, 0.10);
+  --ink-medium: rgba(74,50,38, 0.35);
   --bg: #f8f8f6;
 }
 
@@ -22,7 +23,7 @@ html {
 
 body {
   background: var(--bg);
-  color: var(--navy);
+  color: var(--ink);
   overflow-x: hidden;
 }
 
@@ -47,13 +48,13 @@ p, span, li, label, button {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--navy-light);
+  background: var(--ink-light);
   border-radius: 2px;
 }
 
 ::selection {
-  background: rgba(12, 35, 64, 0.10);
-  color: var(--navy);
+  background: rgba(74,50,38, 0.10);
+  color: var(--ink);
 }
 
 iframe {

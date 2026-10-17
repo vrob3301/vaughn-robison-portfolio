@@ -89,7 +89,7 @@ export const projects: Project[] = [
     ],
     vimeoId: '1171405239',
     thumbnail: '/thumbnails/nbb.jpg',
-    link: 'https://newbiblebelt.org',
+    link: 'https://www.newbiblebelt.org',
   },
 
   // ── New Additions ─────────────────────────────────────────────────────────
