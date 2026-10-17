@@ -144,7 +144,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/vr-mark.svg"
+          src="/vr-monogram-vector.svg"
           alt="Vaughn Robison"
           style={{
             height: 26,
