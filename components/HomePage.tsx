@@ -377,7 +377,7 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
               }}
             >
               {[
-                { href: 'https://www.newbiblebelt.org', label: 'New Bible Belt' },
+                { href: 'https://www.filmtools.org', label: 'Film Tools' },
                 { href: 'https://www.americanchristianfuturists.com', label: 'American Christian Futurists' },
               ].map(({ href, label }) => (
                 <a

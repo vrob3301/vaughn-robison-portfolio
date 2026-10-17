@@ -1,3 +1,4 @@
+import { profileUrls } from '@/lib/seo'
 
 const identity = {
   '@context': 'https://schema.org',
@@ -9,12 +10,7 @@ const identity = {
       url: 'https://vaughn-robison.com/',
       jobTitle: ['Producer', 'Director', 'Creative Strategist'],
       email: 'info@vaughn-robison.com',
-      sameAs: [
-        'https://www.linkedin.com/in/vaughn-robison-783ab61b0',
-        'https://www.instagram.com/vaughn.robison',
-        'https://x.com/vrob330',
-        'https://www.youtube.com/@V_ROB',
-      ],
+      sameAs: profileUrls,
     },
     {
       '@type': 'WebSite',

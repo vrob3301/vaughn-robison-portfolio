@@ -8,6 +8,7 @@ export const profileUrls = [
   'https://www.instagram.com/vaughn.robison',
   'https://x.com/vrob330',
   'https://www.youtube.com/@V_ROB',
+  'https://www.imdb.com/name/nm13486031/',
 ]
 
 export function projectImagePaths(project: Project) {

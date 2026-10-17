@@ -1,5 +1,5 @@
 import StructuredData from '@/components/StructuredData'
-import { pageMetadata, personId, siteUrl } from '@/lib/seo'
+import { pageMetadata, personId, profileUrls, siteUrl } from '@/lib/seo'
 
 export const metadata = pageMetadata(
   'About Vaughn Robison | Producer & Creative Strategist',
@@ -14,7 +14,7 @@ export default function About() {
     name: 'About Vaughn Robison',
     mainEntity: { '@id': personId, '@type': 'Person', name: 'Vaughn Robison', url: siteUrl,
       jobTitle: ['Producer', 'Creative Strategist'],
-      sameAs: ['https://www.linkedin.com/in/vaughn-robison-783ab61b0', 'https://www.instagram.com/vaughn.robison', 'https://x.com/vrob330', 'https://www.youtube.com/@V_ROB'],
+      sameAs: profileUrls,
     },
     isPartOf: { '@id': `${siteUrl}/#website` },
   }} />
