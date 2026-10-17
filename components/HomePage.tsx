@@ -14,8 +14,8 @@ interface HomePageProps {
 }
 
 const NAV_ITEMS = [
-  { label: 'About', href: '#' },
-  { label: 'Publications', href: '#' },
+  { label: 'About', href: '/about' },
+  { label: 'Publications', href: '/publications' },
   { label: 'Inquiries', href: 'mailto:info@vaughn-robison.com' },
 ]
 
@@ -169,15 +169,20 @@ export default function HomePage({ projects, selectedId, onSelect, onAbout, onPu
             }
             if (item.label === 'About' || item.label === 'Publications') {
               return (
-                <button
+                <a
                   key={item.label}
-                  onClick={item.label === 'About' ? onAbout : onPublications}
+                  href={item.href}
+                  onClick={(event) => {
+                    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+                    event.preventDefault()
+                    ;(item.label === 'About' ? onAbout : onPublications)()
+                  }}
                   style={{ ...sharedStyle, background: 'none', border: 'none', padding: 0 }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.opacity = '1')}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.opacity = '0.78')}
                 >
                   {item.label}
-                </button>
+                </a>
               )
             }
             return (

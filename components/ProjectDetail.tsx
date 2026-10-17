@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { projectImageAlt, galleryImageAlt } from '@/lib/seo'
 import type { Project } from '@/data/projects'
 
 interface ProjectDetailProps {
@@ -170,7 +171,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           ) : (
             <Image
               src={project.thumbnail}
-              alt={project.title}
+              alt={projectImageAlt(project)}
               fill
               style={{ objectFit: 'cover' }}
               sizes="500px"
@@ -290,7 +291,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={src} alt={`${project.title} — image ${i + 1}`} loading="lazy" />
+                  <img src={src} alt={galleryImageAlt(project, src, i)} loading="lazy" />
                 </motion.div>
               ))}
             </div>

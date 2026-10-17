@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { projectImageAlt } from '@/lib/seo'
 import type { Project } from '@/data/projects'
 
 interface ProjectCardProps {
@@ -26,14 +27,14 @@ export default function ProjectCard({
 
   // ── Subtle cursor-tracking 3D tilt ──
   // The area under the cursor recedes; max ~5° of rotation, spring-eased back to flat.
-  const cardRef = useRef<HTMLDivElement>(null)
+  const cardRef = useRef<HTMLAnchorElement>(null)
   const TILT_MAX = 8 // degrees
   const tiltX = useMotionValue(0)
   const tiltY = useMotionValue(0)
   const springX = useSpring(tiltX, { stiffness: 260, damping: 20, mass: 0.4 })
   const springY = useSpring(tiltY, { stiffness: 260, damping: 20, mass: 0.4 })
 
-  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+  const handlePointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
     const el = cardRef.current
     if (!el) return
     const r = el.getBoundingClientRect()
@@ -70,11 +71,14 @@ export default function ProjectCard({
         pointerEvents: isSelected ? 'none' : 'auto',
       }}
     >
-      <motion.div
+      <motion.a
+        href={`/work/${project.id}`}
+        aria-label={`${project.title} — ${project.subtitle}`}
         ref={cardRef}
         layoutId={`card-${project.id}`}
         className="relative cursor-pointer overflow-hidden"
         style={{
+          display: 'block',
           borderRadius: 16,
           aspectRatio: variant === 'featured' ? '16/7' : '16/10',
           background: '#000',
@@ -88,7 +92,11 @@ export default function ProjectCard({
         onHoverEnd={handleHoverEnd}
         onPointerMove={handlePointerMove}
         onPointerLeave={resetTilt}
-        onClick={() => onSelect(project.id)}
+        onClick={(event) => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+          event.preventDefault()
+          onSelect(project.id)
+        }}
         animate={{
           scale: hovered ? 1.025 : 1,
           boxShadow: hovered
@@ -108,7 +116,7 @@ export default function ProjectCard({
         >
           <Image
             src={project.cardImage ?? project.thumbnail}
-            alt={project.title}
+            alt={projectImageAlt(project)}
             fill
             className="object-cover"
             style={{
@@ -188,7 +196,7 @@ export default function ProjectCard({
           </motion.div>
         )}
 
-      </motion.div>
+      </motion.a>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { AnimatePresence, LayoutGroup } from 'framer-motion'
 import { projects } from '@/data/projects'
 import HomePage from './HomePage'
@@ -9,20 +9,24 @@ import AboutPage from './AboutPage'
 import PublicationsPage from './PublicationsPage'
 
 export default function Site() {
-  const [selectedId, setSelectedId] = useState<string | null>(null)
-  const [aboutOpen, setAboutOpen] = useState(false)
-  const [publicationsOpen, setPublicationsOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
+  const selectedProject = projects.find(project => pathname === `/work/${project.id}`) ?? null
+  const selectedId = selectedProject?.id ?? null
+  const aboutOpen = pathname === '/about'
+  const publicationsOpen = pathname === '/publications'
+  const close = () => router.push('/', { scroll: false })
 
-  const selectedProject = projects.find((p) => p.id === selectedId) ?? null
+  if (pathname !== '/' && !selectedProject && !aboutOpen && !publicationsOpen) return null
 
   return (
     <LayoutGroup>
       <HomePage
         projects={projects}
         selectedId={selectedId}
-        onSelect={setSelectedId}
-        onAbout={() => setAboutOpen(true)}
-        onPublications={() => setPublicationsOpen(true)}
+        onSelect={id => router.push(`/work/${id}`, { scroll: false })}
+        onAbout={() => router.push('/about', { scroll: false })}
+        onPublications={() => router.push('/publications', { scroll: false })}
       />
 
       {/* Project detail overlay */}
@@ -31,7 +35,7 @@ export default function Site() {
           <ProjectDetail
             key={selectedProject.id}
             project={selectedProject}
-            onClose={() => setSelectedId(null)}
+            onClose={close}
           />
         )}
       </AnimatePresence>
@@ -41,7 +45,7 @@ export default function Site() {
         {aboutOpen && (
           <AboutPage
             key="about"
-            onClose={() => setAboutOpen(false)}
+            onClose={close}
           />
         )}
       </AnimatePresence>
@@ -51,7 +55,7 @@ export default function Site() {
         {publicationsOpen && (
           <PublicationsPage
             key="publications"
-            onClose={() => setPublicationsOpen(false)}
+            onClose={close}
           />
         )}
       </AnimatePresence>

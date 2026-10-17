@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Site from '@/components/Site'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,7 +26,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   authors: [{ name: 'Vaughn Robison', url: 'https://vaughn-robison.com' }],
   creator: 'Vaughn Robison',
-  verification: { google: 'lJKvgxb6wMjcqptOk5LKqH4A6FNCmvS2xR-PacC4Npk' },
+  verification: {
+    google: 'lJKvgxb6wMjcqptOk5LKqH4A6FNCmvS2xR-PacC4Npk',
+    other: { 'msvalidate.01': '1FAB2C0864A4FAE16F387C74CF29086A' },
+  },
   metadataBase: new URL('https://vaughn-robison.com'),
   openGraph: {
     title: 'Vaughn Robison',
@@ -58,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body>{children}<Site /></body>
     </html>
   )
 }

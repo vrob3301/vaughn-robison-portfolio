@@ -1,4 +1,3 @@
-import Site from '@/components/Site'
 
 const identity = {
   '@context': 'https://schema.org',
@@ -39,7 +38,6 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(identity).replace(/</g, '\\u003c') }} />
-      <Site />
     </>
   )
 }
