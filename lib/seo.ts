@@ -34,7 +34,7 @@ export function projectName(project: Project) {
 
 export function projectDescription(project: Project) {
   if (project.id === 'bearing-witness-cincinnati') return 'Bearing Witness: Cincinnati, directed and produced by Vaughn Robison with co-producer Emma Mitsch, follows families affected by violence and Cincinnati victim advocates.'
-  if (project.id === 'in-whose-name') return 'In Whose Name? — Vaughn Robison, producer. Explore the Kanye West documentary, theatrical poster, production photograph, and Vaughn’s film announcement.'
+  if (project.id === 'in-whose-name') return 'In Whose Name? — Vaughn Robison, producer. Explore the Kanye West documentary, theatrical poster, and production photograph.'
   const sentence = project.body[0].match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || project.body[0]
   return `${project.subtitle}. ${sentence}`
 }
