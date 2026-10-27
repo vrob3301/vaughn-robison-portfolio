@@ -34,20 +34,18 @@ export const projects: Project[] = [
     subtitle: 'Feature-Length Documentary',
     body: [
       "A six-year portrait of Kanye West, In Whose Name? examines the tensions between creative ambition, belief, and public life.",
-      "My production work connected the creative edit to the practical requirements of release. Working across postproduction, distribution, and legal teams, I coordinated story-development workflows, theatrical DCP delivery, and materials needed for legal review, alongside press and marketing production."
+      "Connected the creative edit to the practical requirements of release. Coordinated story-development workflows, theatrical DCP delivery, and materials needed for legal review, alongside press and marketing production."
 ],
     role: "Producer",
     context: {"text":"No. 8 in Amy Nicholson’s best films of 2025.","sourceLabel":"Los Angeles Times","sourceUrl":"https://www.latimes.com/entertainment-arts/movies/story/2025-12-05/best-movies-2025-where-to-find-them-sinners-hedda-eddington-one-battle-naked-gun-sirat"},
     vimeoId: '1171401539',
     thumbnail: '/thumbnails/in-whose-name.png',
-    link: 'https://www.instagram.com/vaughn.robison/p/DOpMegZDL-H/',
-    linkLabel: 'Vaughn’s film announcement',
     galleryLabel: 'Film & Production',
     galleryColumns: 2,
     gallery: ['/in-whose-name/in-whose-name-theatrical-poster.jpg', '/in-whose-name/in-whose-name-production-photo.jpg'],
     galleryCaptions: {
       '/in-whose-name/in-whose-name-theatrical-poster.jpg': 'In Whose Name? theatrical poster — Vaughn Robison, producer.',
-      '/in-whose-name/in-whose-name-production-photo.jpg': 'Behind the scenes of In Whose Name? — from producer Vaughn Robison’s film announcement.',
+      '/in-whose-name/in-whose-name-production-photo.jpg': 'Behind the scenes of In Whose Name?',
     },
     detailAspect: '2.39 / 1',  // Theatrical scope — show the true ratio, letterbox-clip the 16:9 player
   },
@@ -72,7 +70,7 @@ export const projects: Project[] = [
     subtitle: 'Acid Rap 10 Arena Tour Production',
     body: [
       "Ten years after Acid Rap, Chance the Rapper brought the mixtape back to audiences in Chicago, New York, and Los Angeles.",
-      "I assembled and led the visual-production team documenting the anniversary shows. The work preserved the live performances and the audience response as a new chapter in the project's history."
+      "Assembled and led the visual-production team documenting the anniversary shows. The work preserved the live performances and the audience response as a new chapter in the project's history."
 ],
     role: "Visual Documentation Producer",
     context: {"text":"Original mixtape · Acid Rap ranked No. 12 in Pitchfork’s albums of 2013.","sourceLabel":"Pitchfork","sourceUrl":"https://pitchfork.com/features/lists-and-guides/9293-the-top-50-albums-of-2013/?page=6"},
@@ -86,7 +84,7 @@ export const projects: Project[] = [
     subtitle: 'Merchandise Commercial Campaign',
     body: [
       "A limited garment release unfolds across three films. For Abel Paul George and Enigma Curation, the campaign uses Serra Retreat's architecture and mountain setting to give the collection a contemplative visual language.",
-      "I directed and produced the series, using place and pacing to introduce the work."
+      "Directed and produced the series, using place and pacing to introduce the work."
 ],
     role: "Director · Producer",
     vimeoId: '1171404959',
@@ -99,7 +97,7 @@ export const projects: Project[] = [
     subtitle: 'NYFW Activation + Production',
     body: [
       "A fashion-week activation built around giving clothes away. New Bible Belt's first public gathering paired a free clothing giveaway with a meeting place for artists and designers in September 2024.",
-      "Created with Realtree, the pop-up gave the group a physical space for creative exchange. I helped produce and document the gathering."
+      "Created with Realtree, the pop-up gave the group a physical space for creative exchange. Helped produce and document the gathering."
 ],
     role: "Production · Documentation",
     vimeoId: '1171405239',
@@ -115,7 +113,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper · Music Video',
     body: [
       "“Stars Out” extends one visual direction across moving image and cover art. Filmed in Atlanta and Chicago, the video brings nightlife and performance into Chance the Rapper's Star Line rollout.",
-      "I shaped the camerawork, edit, and single artwork as connected parts of the release."
+      "Shaped the camerawork, edit, and single artwork as connected parts of the release."
 ],
     role: "Camera · Editing · Cover Art",
     youtubeId: 'ywSYgBVkocM',
@@ -131,7 +129,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper · Music Video',
     body: [
       "A real landscape becomes the basis for a speculative world. At Vasquez Rocks, the terrain and open scale give “Just a Drop” its otherworldly setting.",
-      "Developed through conversations with Chance the Rapper about Star Line, the concept made location a creative tool. I secured the site and carried the film through production and editing."
+      "Developed through conversations with Chance the Rapper about Star Line, the concept made location a creative tool. Secured the site and carried the film through production and editing."
 ],
     role: "Producer · Editor",
     youtubeId: 'FqofHYrDqMU',
@@ -240,7 +238,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper · Music Video',
     body: [
       "“Buried Alive” gives visual form to the pressure and perseverance running through Chance the Rapper's song.",
-      "I led production from planning through final delivery, bringing the concept, crew, and finished film into alignment."
+      "Led production from planning through final delivery, bringing the concept, crew, and finished film into alignment."
 ],
     role: "Lead Producer",
     youtubeId: '8BjfkpgbAEY',
@@ -283,7 +281,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper · Live Performance',
     body: [
       "A live setting gives “Together” a direct, shared expression of its themes of family and community.",
-      "I led production of the performance film from the shoot through final delivery."
+      "Led production of the performance film from the shoot through final delivery."
 ],
     role: "Lead Producer",
     youtubeId: 'bSYYrydVXBs',
@@ -311,7 +309,7 @@ export const projects: Project[] = [
     subtitle: 'Festival Documentation',
     body: [
       "The first Black Star Line Festival called for a record of the whole gathering, beyond the concert alone.",
-      "I assembled a crew of Ghanaian filmmakers and produced a week of on-site documentation in Accra, including Chance the Rapper's conversation with Dave Chappelle at the University of Ghana. The coverage holds the performances, conversations, and encounters within the same record."
+      "Assembled a crew of Ghanaian filmmakers and produced a week of on-site documentation in Accra, including Chance the Rapper's conversation with Dave Chappelle at the University of Ghana. The coverage holds the performances, conversations, and encounters within the same record."
 ],
     role: "On-site Documentation Producer",
     context: {"text":"Festival context · Free gathering in Accra, with 52,000 attendees reported by Pollstar.","sourceLabel":"Pollstar","sourceUrl":"https://news.pollstar.com/2023/03/01/miracle-man-how-chance-the-rapper-produced-a-free-festival-in-ghana-for-52k-fans/"},
@@ -326,7 +324,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper · Documentary',
     body: [
       "Concert documentation becomes part of a longer cultural record in this tenth-anniversary look at “Same Drugs.”",
-      "Live footage I directed and produced at Chance the Rapper's earlier arena shows gives the documentary a way to revisit the song through its performance and audience."
+      "Live footage Directed and produced at Chance the Rapper's earlier arena shows gives the documentary a way to revisit the song through its performance and audience."
 ],
     role: "Director · Producer, featured concert footage",
     youtubeId: '7JEDHWBd3WI',
@@ -340,7 +338,7 @@ export const projects: Project[] = [
     subtitle: 'Enigma · Episodic Series',
     body: [
       "The second episode of Enigma's eTV series documents the people and working process behind the Donda sessions.",
-      "My camera and editing work helped carry that behind-the-scenes material into the finished episode."
+      "Camera and editing work helped carry that behind-the-scenes material into the finished episode."
 ],
     role: "Camera Operator · Editor",
     context: {"text":"Album context · Donda became Kanye West’s tenth No. 1 album on the Billboard 200.","sourceLabel":"Pitchfork","sourceUrl":"https://pitchfork.com/news/kanye-west-donda-debuts-at-no-1-in-biggest-week-for-any-album-in-2021/"},
@@ -355,7 +353,7 @@ export const projects: Project[] = [
     subtitle: 'Chance the Rapper · Listening Experience · Documentary',
     body: [
       "We turned unreleased music into a shared physical experience. Across more than 20 shows in 2024, Writings on the Wall paired sound, visuals, and beanbag seating in an immersive listening environment.",
-      "New Bible Belt's creative community helped crew the tour city by city, connecting the music to local filmmakers and audiences. I helped develop the concept, documented the tour, and led its creative direction and branding."
+      "New Bible Belt's creative community helped crew the tour city by city, connecting the music to local filmmakers and audiences. Helped develop the concept, documented the tour, and led its creative direction and branding."
 ],
     role: "Concept Development · Documentary Production · Creative Direction",
     youtubeId: 'wueSv3Kl8Mo',
@@ -414,7 +412,7 @@ export const projects: Project[] = [
     subtitle: '3D Design · Concept Development · Activation Design',
     body: [
       "The Stem Player's interface became the starting point for a space people could enter. Its circular form, tactile controls, and illuminated surface informed the 2022 pop-up concept.",
-      "Through 3D renders, sculptural booth studies, and a cruciform layout, I explored how the product's visual language could guide movement and hands-on interaction."
+      "Explored through 3D renders, sculptural booth studies, and a cruciform layout how the product's visual language could guide movement and hands-on interaction."
 ],
     role: "3D Design · Spatial Concept Development",
     context: {"text":"Device recognition · Stem Player received a Special Mention in TIME’s Best Inventions of 2022.","sourceLabel":"TIME","sourceUrl":"https://time.com/collections/best-inventions-2022/6230491/stem-player/"},

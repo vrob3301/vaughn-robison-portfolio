@@ -61,7 +61,7 @@ export default function HomePage({ projects }: Props) {
           <Link href="/publications" scroll={false} onClick={() => setMenuOpen(false)}>Publications</Link>
           <a href="mailto:info@vaughn-robison.com">Inquiries</a>
           <a href="https://filmtools.org/" target="_blank" rel="noopener noreferrer" aria-label="Film Tools, opens in a new tab">Film Tools</a>
-          <a href="https://americanchristianfuturists.com/" target="_blank" rel="noopener noreferrer" aria-label="American Christian Futurists, opens in a new tab">ACF</a>
+          <a href="https://americanchristianfuturists.com/" target="_blank" rel="noopener noreferrer" aria-label="American Christian Futurists, opens in a new tab">American Christian Futurists</a>
         </nav>}
       </div>
     </header>

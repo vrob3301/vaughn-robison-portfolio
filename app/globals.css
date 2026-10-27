@@ -113,7 +113,12 @@ button { font:inherit; cursor:pointer; }
 .focus-footer a { min-height:44px;display:flex;align-items:center; }
 .project-role { font:400 11px/1.7 var(--font-inter),sans-serif;letter-spacing:.04em;margin-bottom:18px; }
 .profile-links { display:flex;flex-wrap:wrap;gap:8px 20px;font:400 11px var(--font-inter),sans-serif; }
-.profile-links a { display:flex;align-items:center;min-height:44px; }
+.profile-links a { display:flex;align-items:center;justify-content:center;min-height:44px;min-width:44px; }
+.profile-links svg { width:20px;height:20px; }
+.imdb-icon { display:block;width:28px;height:20px;background:var(--ink);mask:url(/brands/imdb.svg) center/contain no-repeat; }
+.about-title { font-size:70px!important;display:flex;align-items:center;gap:16px;white-space:nowrap; }
+.tau-icon { display:inline-block;flex:0 0 24px;width:24px;height:28px;background:var(--ink);mask:url(/brands/tau.svg) center/contain no-repeat; }
+@media(max-width:600px) { .about-title { font-size:64px!important;gap:12px; }.tau-icon { flex-basis:20px;width:20px;height:24px; } }
 .pub-header h1 { font-size:clamp(36px,8vw,76px)!important; }
 .project-context { display:block;border-block:1px solid var(--ink-light);padding:14px 0;margin-top:24px;font:400 12px/1.7 var(--font-inter),sans-serif; }
 .project-context small { display:block;font-size:10px;margin-top:5px; }

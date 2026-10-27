@@ -26,3 +26,18 @@ Previous production commit: `2b32ce9fbcc06c50521a57470361bb8ccdafbbb5`.
 Rollback branch: `rollback/pre-focus-2026-10-27`.
 Previous Netlify deploy: `6ad3de93a53347afb95a2a53`.
 For immediate recovery, republish that prior deploy in Netlify. For a durable source rollback, revert the Focus release commit on `main`, preserving subsequent unrelated changes.
+
+
+## Preview refinement — 2026-10-27
+
+Production remains on hold. This revision targets PR #1 only.
+
+- Removed the duplicate four-arm Stem reference; retained the official eight-arm Stem mark and separate Yeezy wordmark.
+- NBA and Pepsi retain source vector paths with native luminance knockouts; removed color-matrix rasterization.
+- Chicago Bulls uses the supplied 1081 × 1081 monochrome PNG, with dark strokes tinted and white made transparent. The SVG is a raster presentation wrapper, not vector artwork.
+- Roc Nation uses its official opaque 160 × 24 wordmark, at 64 × 9.6 CSS pixels maximum. It supports this small 2× presentation but is not a genuine vector.
+- AMSI and BET Awards use supplied raster artwork; Revolt uses the official 513px R icon; The Shade Room uses its official transparent wordmark. Original geometry is retained.
+- About restores the four existing social SVGs plus Simple Icons’ IMDb path (https://github.com/simple-icons/simple-icons/blob/develop/icons/imdb.svg), with original profile URLs and 44px targets.
+- Supplied Tau shape appears beside About in every section; original PNG is preserved locally and presented through a transparent mask.
+- All 27 project bodies audited for self-referential I/my/Vaughn. Prayer and factual credits preserved. IWN’s film-announcement hyperlink removed; photo retained.
+- Default local Turbopack build hit an OS port-binding restriction; `npm run build -- --webpack` passed, including TypeScript and all 34 pages. Netlify retains its existing build command.

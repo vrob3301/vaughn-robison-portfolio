@@ -31,7 +31,7 @@
     "slug": "yeezy",
     "asset": "/brands/yeezy.png",
     "height": 12,
-    "context": "Yeezy Stem Player \u00b7 Spatial concept development.",
+    "context": "Yeezy Stem Player · Spatial concept development.",
     "href": "/work/yeezy-stem-player",
     "source": "Artwork supplied by Vaughn Robison."
   },
@@ -40,25 +40,16 @@
     "slug": "stem",
     "asset": "/brands/stem.svg",
     "height": 17,
-    "context": "Stem Player \u00b7 Spatial concept development.",
+    "context": "Stem Player · Spatial concept development.",
     "href": "/work/yeezy-stem-player",
     "source": "https://www.stem.fm/logo.svg"
-  },
-  {
-    "name": "Stem / YZY \u2014 supplied reference",
-    "slug": "supplied-cross",
-    "asset": "/brands/supplied-cross.svg",
-    "height": 17,
-    "context": "Stem / YZY project reference.",
-    "href": "/work/yeezy-stem-player",
-    "source": "Artwork supplied by Vaughn Robison."
   },
   {
     "name": "Pepsi",
     "slug": "pepsi",
     "asset": "/brands/pepsi.svg",
-    "height": 18,
-    "context": "Pepsi \u00d7 Just Don campaign",
+    "height": 20,
+    "context": "Pepsi × Just Don campaign",
     "href": "/work/pepsi-just-don",
     "source": "https://commons.wikimedia.org/wiki/File:Pepsi_2023.svg"
   },
@@ -75,19 +66,19 @@
     "name": "Chicago Bulls",
     "slug": "chicago-bulls",
     "asset": "/brands/chicago-bulls.svg",
-    "height": 18,
+    "height": 20,
     "context": "Chicago Bulls campaign",
     "href": "/work/chicago-bulls-just-don",
-    "source": "https://en.wikipedia.org/wiki/File:Chicago_Bulls_logo.svg"
+    "source": "Monochrome artwork supplied by Vaughn Robison."
   },
   {
     "name": "Roc Nation",
     "slug": "roc-nation",
     "asset": "/brands/roc-nation.svg",
-    "height": 8,
+    "height": 10,
     "context": "Victor album trailer rollout",
     "href": "/work/victor",
-    "source": "https://www.rocnation.com/"
+    "source": "https://www.rocnation.com/wp-content/themes/rocnation/assets/images/new-roc-nation-logo-2020-160x24-black.png"
   },
   {
     "name": "SiriusXM",
@@ -103,7 +94,7 @@
     "slug": "amc",
     "asset": "/brands/amc.svg",
     "height": 12,
-    "context": "Theatrical exhibition \u00b7 In Whose Name?",
+    "context": "Theatrical exhibition · In Whose Name?",
     "href": "/work/in-whose-name",
     "source": "https://commons.wikimedia.org/wiki/File:AMC_Theatres_logo_(2).svg"
   },
@@ -112,7 +103,7 @@
     "slug": "apple-tv",
     "asset": "/brands/apple-tv.svg",
     "height": 16,
-    "context": "Film availability \u00b7 In Whose Name?",
+    "context": "Film availability · In Whose Name?",
     "href": "/work/in-whose-name",
     "source": "https://tv.apple.com/"
   },
@@ -146,11 +137,11 @@
   {
     "name": "AMSI Entertainment",
     "slug": "amsi-entertainment",
-    "asset": null,
-    "height": 10,
-    "context": "Distribution \u00b7 In Whose Name?",
+    "asset": "/brands/amsi-entertainment.svg",
+    "height": 16,
+    "context": "Distribution · In Whose Name?",
     "href": "/work/in-whose-name",
-    "source": "Typeset entity name; not an official logo."
+    "source": "Artwork supplied by Vaughn Robison."
   },
   {
     "name": "SeatGeek",
@@ -164,29 +155,29 @@
   {
     "name": "BET Awards",
     "slug": "bet-awards",
-    "asset": null,
-    "height": 10,
+    "asset": "/brands/bet-awards.svg",
+    "height": 18,
     "context": "Selected professional work.",
     "href": null,
-    "source": "Typeset entity name; not an official logo."
+    "source": "BET Awards artwork supplied by Vaughn Robison."
   },
   {
     "name": "Revolt",
     "slug": "revolt",
-    "asset": null,
-    "height": 10,
+    "asset": "/brands/revolt.svg",
+    "height": 16,
     "context": "Selected professional work.",
     "href": null,
-    "source": "Typeset entity name; not an official logo."
+    "source": "https://www.revolt.tv/icons/revolt-r-logo-513x513.png"
   },
   {
     "name": "The Shade Room",
     "slug": "the-shade-room",
-    "asset": null,
-    "height": 10,
+    "asset": "/brands/the-shade-room.webp",
+    "height": 8,
     "context": "Selected project and media context.",
     "href": null,
-    "source": "Typeset entity name; not an official logo."
+    "source": "https://theshaderoom.com/wp-content/uploads/2024/06/TSR_text_logo_red-transparent.webp"
   },
   {
     "name": "Live Nation",
