@@ -261,7 +261,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
               color: '#4A3226',
               margin: 0,
             }}>
-              ABOUT <span className="tau-icon" aria-hidden="true"/>
+              ABOUT
             </h1>
           </div>
 
