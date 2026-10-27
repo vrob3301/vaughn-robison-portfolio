@@ -4,6 +4,8 @@ export interface Project {
   titleLine2?: string
   subtitle: string
   body: string[]
+  role?: string
+  context?: { text: string; sourceLabel: string; sourceUrl: string }
   vimeoId?: string    // Vimeo — enables silent hover video preview on homepage
   youtubeId?: string  // YouTube — detail page embed; also enables silent hover video preview on homepage when no vimeoId is set
   thumbnail: string
@@ -28,23 +30,22 @@ export const projects: Project[] = [
 
   {
     id: 'in-whose-name',
-    title: 'IN WHOSE NAME',
+    title: 'IN WHOSE NAME?',
     subtitle: 'Feature-Length Documentary',
     body: [
-      'In Whose Name is a six-year documentary about the cultural and spiritual influence surrounding Kanye West. Vaughn worked in post-production, coordinating story development and the delivery workflows that kept the narrative consistent across the theatrical and streaming versions.',
-      'Worked with NB Studios, AMSI Entertainment, and Pace Pictures to streamline the final asset pipeline and the distribution rollout. The film opened nationwide on over 1,000 screens, made more than $1 million at the box office, and landed on the Los Angeles Times Top 10 list for the year.',
-      'Organized, managed, and produced all of the press and marketing assets and strategy, as well as distribution, after the film rolled out.',
-    ],
+      "A six-year portrait of Kanye West, In Whose Name? examines the tensions between creative ambition, belief, and public life.",
+      "Connected the creative edit to the practical requirements of release. Coordinated story-development workflows, theatrical DCP delivery, and materials needed for legal review, alongside press and marketing production."
+],
+    role: "Producer",
+    context: {"text":"No. 8 in Amy Nicholson’s best films of 2025.","sourceLabel":"Los Angeles Times","sourceUrl":"https://www.latimes.com/entertainment-arts/movies/story/2025-12-05/best-movies-2025-where-to-find-them-sinners-hedda-eddington-one-battle-naked-gun-sirat"},
     vimeoId: '1171401539',
     thumbnail: '/thumbnails/in-whose-name.png',
-    link: 'https://www.instagram.com/vaughn.robison/p/DOpMegZDL-H/',
-    linkLabel: 'Vaughn’s film announcement',
     galleryLabel: 'Film & Production',
     galleryColumns: 2,
     gallery: ['/in-whose-name/in-whose-name-theatrical-poster.jpg', '/in-whose-name/in-whose-name-production-photo.jpg'],
     galleryCaptions: {
-      '/in-whose-name/in-whose-name-theatrical-poster.jpg': 'In Whose Name? theatrical poster — Vaughn Robison, associate producer.',
-      '/in-whose-name/in-whose-name-production-photo.jpg': 'Behind the scenes of In Whose Name? — from associate producer Vaughn Robison’s film announcement.',
+      '/in-whose-name/in-whose-name-theatrical-poster.jpg': 'In Whose Name? theatrical poster — Vaughn Robison, producer.',
+      '/in-whose-name/in-whose-name-production-photo.jpg': 'Behind the scenes of In Whose Name?',
     },
     detailAspect: '2.39 / 1',  // Theatrical scope — show the true ratio, letterbox-clip the 16:9 player
   },
@@ -54,10 +55,10 @@ export const projects: Project[] = [
     title: 'PEPSI × JUST DON',
     subtitle: 'Commercial Production',
     body: [
-      'Produced this campaign film with Pepsi and Chicago designer Just Don through his production company XPOSURE. It marked the start of football season and the connection between sports and the city of Chicago.',
-      'Shot at the end of 2024 as a kickoff to the season. The goal was to put Pepsi and Just Don together on something that felt true to Chicago and its sports culture.',
-      'The campaign premiered at a Pepsi event at the DuSable Black History Museum and Education Center in Chicago.',
-    ],
+      "Pepsi and Just Don meet through Chicago's sports culture in a campaign film produced through XPOSURE.",
+      "The film premiered at a Pepsi event at the DuSable Black History Museum and Education Center, placing the collaboration in the city that shaped it."
+],
+    role: "Producer",
     vimeoId: '1171401895',
     thumbnail: '/thumbnails/pepsi.jpg',
   },
@@ -68,10 +69,11 @@ export const projects: Project[] = [
     titleLine2: 'ACID RAP 10 ARENA TOUR',
     subtitle: 'Acid Rap 10 Arena Tour Production',
     body: [
-      'In 2023 Vaughn produced the visual documentation of Chance the Rapper\'s Acid Rap 10 Year Anniversary Tour. Acid Rap came out in 2013 and became one of the defining mixtapes of the decade, and the tour brought it back ten years later.',
-      'The anniversary run played sold-out arenas in Chicago, New York, and Los Angeles.',
-      'Led production for the tour\'s visual coverage, put the creative team together, and oversaw how the live shows were documented.',
-    ],
+      "Ten years after Acid Rap, Chance the Rapper brought the mixtape back to audiences in Chicago, New York, and Los Angeles.",
+      "Assembled and led the visual-production team documenting the anniversary shows. The work preserved the live performances and the audience response as a new chapter in the project's history."
+],
+    role: "Visual Documentation Producer",
+    context: {"text":"Original mixtape · Acid Rap ranked No. 12 in Pitchfork’s albums of 2013.","sourceLabel":"Pitchfork","sourceUrl":"https://pitchfork.com/features/lists-and-guides/9293-the-top-50-albums-of-2013/?page=6"},
     vimeoId: '1171402172',
     thumbnail: '/thumbnails/chance.jpg',
   },
@@ -81,10 +83,10 @@ export const projects: Project[] = [
     title: 'ABEL PAUL GEORGE',
     subtitle: 'Merchandise Commercial Campaign',
     body: [
-      'Directed and produced a three-part commercial campaign for designer Abel Paul George, made with Enigma Curation to introduce a limited hoodie release.',
-      'Filmed at Serra Retreat, a Franciscan monastery in Malibu. The architecture and the quiet mountain setting shaped the tone of the films and gave the campaign a contemplative feel that matched the work.',
-      'The three episodes were the main commercial rollout for the collaboration, and the series got a strong response online.',
-    ],
+      "A limited garment release unfolds across three films. For Abel Paul George and Enigma Curation, the campaign uses Serra Retreat's architecture and mountain setting to give the collection a contemplative visual language.",
+      "Directed and produced the series, using place and pacing to introduce the work."
+],
+    role: "Director · Producer",
     vimeoId: '1171404959',
     thumbnail: '/thumbnails/apg.jpg',
   },
@@ -94,10 +96,10 @@ export const projects: Project[] = [
     title: 'NEW BIBLE BELT',
     subtitle: 'NYFW Activation + Production',
     body: [
-      'During New York Fashion Week in September 2024, Vaughn helped produce and document the first public activation for New Bible Belt. It was the group\'s debut event.',
-      'The activation partnered with Realtree on a pop-up gathering built around community and creative exchange. It brought together artists and designers during one of the biggest weeks in fashion.',
-      'More than 150 pounds of clothing was given away for free to the people who came through, and the event drew over 300 attendees. It was New Bible Belt\'s first real presence at New York Fashion Week.',
-    ],
+      "A fashion-week activation built around giving clothes away. New Bible Belt's first public gathering paired a free clothing giveaway with a meeting place for artists and designers in September 2024.",
+      "Created with Realtree, the pop-up gave the group a physical space for creative exchange. Helped produce and document the gathering."
+],
+    role: "Production · Documentation",
     vimeoId: '1171405239',
     thumbnail: '/thumbnails/nbb.jpg',
     link: 'https://www.newbiblebelt.org',
@@ -110,11 +112,10 @@ export const projects: Project[] = [
     title: 'STARS OUT',
     subtitle: 'Chance the Rapper · Music Video',
     body: [
-      'Shot and edited Chance the Rapper\'s music video for "Stars Out," a 2024 single from his Star Line era. It\'s a confident, celebratory record, and the video plays to that.',
-      'Filmed in Atlanta and Chicago. The idea was a cinematic portrait of Chance stepping back into the spotlight, with nightlife energy running underneath it.',
-      'Between the camera work and the edit, the goal was something bold and immediate that matched the momentum around his return.',
-      'Vaughn also designed the cover art for the single.',
-    ],
+      "“Stars Out” extends one visual direction across moving image and cover art. Filmed in Atlanta and Chicago, the video brings nightlife and performance into Chance the Rapper's Star Line rollout.",
+      "Shaped the camerawork, edit, and single artwork as connected parts of the release."
+],
+    role: "Camera · Editing · Cover Art",
     youtubeId: 'ywSYgBVkocM',
     thumbnail: '/thumbnails/stars-out.png',
     galleryLabel: 'Cover Art',
@@ -127,10 +128,10 @@ export const projects: Project[] = [
     title: 'JUST A DROP',
     subtitle: 'Chance the Rapper · Music Video',
     body: [
-      'Produced and edited Chance the Rapper\'s music video for "Just a Drop," one of the key visuals from his album Star Line.',
-      'Filmed at Vasquez Rocks outside Los Angeles, using the desert to build a futuristic, almost sci-fi world. That came out of an early conversation between Chance and Vaughn about building a larger visual universe for the Star Line era.',
-      'Vaughn also found and secured the location, which ended up shaping a lot of the look. The terrain and the scale of the place carried the song\'s themes of reflection and resilience.',
-    ],
+      "A real landscape becomes the basis for a speculative world. At Vasquez Rocks, the terrain and open scale give “Just a Drop” its otherworldly setting.",
+      "Developed through conversations with Chance the Rapper about Star Line, the concept made location a creative tool. Secured the site and carried the film through production and editing."
+],
+    role: "Producer · Editor",
     youtubeId: 'FqofHYrDqMU',
     thumbnail: '/thumbnails/just-a-drop.jpg',
   },
@@ -140,10 +141,10 @@ export const projects: Project[] = [
     title: 'YAH KNOW',
     subtitle: 'Chance the Rapper · Music Video',
     body: [
-      'Edited and operated camera on Chance the Rapper\'s "YAH Know," an art project made with visual artist Mia Lee and featuring Ghanaian singer King Promise. It\'s part of his Star Line rollout, which pulls music, film, and art into one body of work.',
-      'Filmed in Accra, Chicago, and Los Angeles, which speaks to the project\'s connection to the African diaspora. The piece sits somewhere between a music video and a gallery installation.',
-      '"YAH Know" was also part of how Chance announced his cultural work connected to Ghana, and it pointed toward what became the Black Star Line Festival in Accra.',
-    ],
+      "“YAH Know” brings painting into the music-video format through Chance the Rapper's collaboration with artist Mia Lee and Ghanaian singer King Promise.",
+      "Camera and editing work connect material filmed in Accra, Chicago, and Los Angeles, giving the Star Line project a visual form across places and disciplines."
+],
+    role: "Camera Operator · Editor",
     youtubeId: 'bcZsfqcBiog',
     thumbnail: '/thumbnails/yah-know.png',
   },
@@ -153,9 +154,10 @@ export const projects: Project[] = [
     title: 'TOGETHER',
     subtitle: 'Chance the Rapper · Music Video',
     body: [
-      'Edited and ran lead camera on Chance the Rapper\'s music video for "Together," a single produced by DJ Premier for the Star Line project.',
-      'The video mixes performance with archival footage to get at what the song is about: family, the neighborhood, and holding onto community spaces. The edit was built to carry the emotional weight of the track and tie Chance\'s own story back to Chicago.',
-    ],
+      "“Together” uses archival footage alongside new performance to place a song inside a community's memory.",
+      "The edit connects Chance the Rapper's family and neighborhood to the spaces the DJ Premier-produced track asks people to hold onto."
+],
+    role: "Lead Camera Operator · Editor",
     youtubeId: 'ZVwTX6WP-MM',
     thumbnail: '/thumbnails/together.jpg',
   },
@@ -165,9 +167,10 @@ export const projects: Project[] = [
     title: 'BOBBY',
     subtitle: 'Bobby Beats · Album Trailer',
     body: [
-      'Through his production company XPOSURE, Vaughn produced an album trailer for Chicago producer Bobby Beats. He\'s worked with a lot of artists and collectives around the city, including projects tied to Joey Purp and the Forever Band collective.',
-      'Filmed in Lincoln Park, using the open space and the city around it to set the tone. The trailer works as a short cinematic intro to the album and to where his sound is headed.',
-    ],
+      "Chicago's Lincoln Park provides the setting for this introduction to Bobby Beats' album.",
+      "Produced through XPOSURE, the trailer places the music within the city's open spaces and everyday surroundings."
+],
+    role: "Producer",
     vimeoId: '1171417204',
     thumbnail: '/thumbnails/bobby.png',
   },
@@ -177,10 +180,10 @@ export const projects: Project[] = [
     title: '3333',
     subtitle: 'Chance the Rapper · Music Video',
     body: [
-      'Vaughn was the main camera operator and editor on Chance the Rapper\'s music video for "3333," filmed during his set at the Minnesota State Fair Grandstand. It captures a real moment between Chance and his fans that matches the gratitude in the song.',
-      'Shot while he was traveling the country hosting his "Writings on the Wall" listening experiences, an important stretch in the Star Line rollout.',
-      'The camera stayed handheld and close to the performance so the crowd\'s energy carried the video. It documents a point where Chance reconnected with his fanbase.',
-    ],
+      "A live performance became the music video. Shot at the Minnesota State Fair, “3333” uses close, handheld camerawork to keep Chance the Rapper and the crowd in the same exchange.",
+      "The edit lets that real audience response carry the song's gratitude."
+],
+    role: "Lead Camera Operator · Editor",
     youtubeId: 'ifRwRfdKrOE',
     thumbnail: '/thumbnails/3333.webp',
   },
@@ -190,10 +193,10 @@ export const projects: Project[] = [
     title: 'VICTOR',
     subtitle: 'Roc Nation · Album Trailer',
     body: [
-      'Through his production company XPOSURE, Vaughn produced the official album trailer for Vic Mensa\'s 2023 album Victor. It was the main visual for Roc Nation\'s rollout around the release.',
-      'Filmed in New York City with Vic Mensa and actor Omari Hardwick. The trailer works as a cinematic intro to the album and sets up its emotional direction.',
-      'It ran across Roc Nation\'s social and marketing channels as the central promo video for the campaign.',
-    ],
+      "Vic Mensa and Omari Hardwick introduce the world of Victor in this album trailer filmed in New York.",
+      "Produced through XPOSURE for the 2023 release, the film gives the album a cinematic introduction across Roc Nation's rollout."
+],
+    role: "Producer",
     vimeoId: '1171416679',
     thumbnail: '/thumbnails/victor.png',
   },
@@ -204,10 +207,10 @@ export const projects: Project[] = [
     titleLine2: 'TEN YEAR ANNIVERSARY TOUR',
     subtitle: 'Concert Poster Design',
     body: [
-      'Designed the official concert poster for Chance the Rapper\'s Coloring Book Ten Year Anniversary Tour, ten years after one of the most acclaimed projects in independent hip-hop.',
-      'Coloring Book came out in 2016 and was the first streaming-only album to win a Grammy. The poster draws on the look of the original project with a bold, typographic treatment that could hold up at arena scale.',
-      'The design covers the full North American run, with dates in Chicago, New York, Los Angeles, and beyond.',
-    ],
+      "Coloring Book's visual identity is reworked as a typographic tour poster. The design carries recognition of the original project into a composition built to read at concert scale, with North American dates integrated into the artwork."
+],
+    role: "Poster Design",
+    context: {"text":"Album recognition · Coloring Book won Best Rap Album at the 2017 GRAMMYs.","sourceLabel":"Recording Academy","sourceUrl":"https://www.grammy.com/artists/chancelor-bennett/19614/"},
     thumbnail: '/thumbnails/chance-tour-poster.jpg',
     cardImage: '/thumbnails/chance-tour-card.jpg',  // Pre-cropped (above white divider) so the full title stays readable
     thumbnailPosition: 'top',
@@ -219,10 +222,10 @@ export const projects: Project[] = [
     titleLine2: 'JUST DON',
     subtitle: 'Commercial Production',
     body: [
-      'Through his production company XPOSURE, Vaughn produced a commercial campaign for the Chicago Bulls, Mitchell & Ness, and Just Don around the cultural legacy of basketball in Chicago. The film supported the brands\' Fall 2024 collection of hats and merch.',
-      'Shot in Chicago and built around the childlike imagination that basketball brings out across the city, and the way the Bulls have shaped generations of fans here. The point was to show basketball as more than a sport in Chicago. It\'s part of the city\'s identity.',
-      'It\'s a storytelling-driven commercial about how far the Bulls\' influence reaches, all the way down to the city\'s playgrounds and neighborhood courts.',
-    ],
+      "A merchandise campaign seen through childhood imagination and Chicago's neighborhood courts. The film connects the Bulls' identity to the places where fans first make basketball their own.",
+      "Produced through XPOSURE for the Chicago Bulls, Mitchell & Ness, and Just Don's Fall 2024 collection."
+],
+    role: "Producer",
     vimeoId: '1171416564',
     thumbnail: '/thumbnails/chicago-bulls.png',
   },
@@ -234,9 +237,10 @@ export const projects: Project[] = [
     title: 'BURIED ALIVE',
     subtitle: 'Chance the Rapper · Music Video',
     body: [
-      '"Buried Alive" is an official music video from Chance the Rapper\'s 2024 Star Line project. It leans into the pressure and perseverance that run through the record.',
-      'Vaughn was the lead producer on the video and ran it from planning through final delivery.',
-    ],
+      "“Buried Alive” gives visual form to the pressure and perseverance running through Chance the Rapper's song.",
+      "Led production from planning through final delivery, bringing the concept, crew, and finished film into alignment."
+],
+    role: "Lead Producer",
     youtubeId: '8BjfkpgbAEY',
     thumbnail: '/thumbnails/buried-alive-armor-v2.jpg',
   },
@@ -246,10 +250,10 @@ export const projects: Project[] = [
     title: 'BAD BOYS 2',
     subtitle: 'Chance the Rapper ft. Joey Purp · Music Video',
     body: [
-      '"Bad Boys 2," featuring fellow Chicago artist Joey Purp, is an official music video from Chance the Rapper\'s 2024 Star Line project. The collaboration speaks to the Chicago roots at the heart of the album.',
-      'Vaughn was the lead producer on the video, handling crew coordination and location scouting and editing the final cut.',
-      'Vaughn also designed the cover art for the "Bad Boys 2" single.',
-    ],
+      "Chance the Rapper and Joey Purp bring their Chicago connection into “Bad Boys 2,” a music video and single-artwork project within the Star Line rollout.",
+      "Production, location scouting, editing, and cover design carried the collaboration from the shoot to its release."
+],
+    role: "Lead Producer · Editor · Cover Art",
     youtubeId: '_uFMbBVPPWg',
     thumbnail: '/thumbnails/bad-boys-2.jpg',
     galleryLabel: 'Cover Art',
@@ -262,9 +266,10 @@ export const projects: Project[] = [
     title: 'THE HIGHS & THE LOWS',
     subtitle: 'Chance the Rapper ft. Joey Bada$$ · Music Video',
     body: [
-      '"The Highs & The Lows," featuring Joey Bada$$, is an official music video from the Star Line project. It puts together two of the most distinctive voices in independent hip-hop.',
-      'Edited the video and shaped the final cut and its rhythm.',
-    ],
+      "Chance the Rapper and Joey Bada$$ share the frame in “The Highs & The Lows.”",
+      "The edit shapes the exchange between their performances, giving the song's changing rhythms a visual pace."
+],
+    role: "Editor",
     youtubeId: 'uCEv2NMr46E',
     thumbnail: '/thumbnails/highs-and-lows-mv.jpg',
   },
@@ -275,9 +280,10 @@ export const projects: Project[] = [
     titleLine2: 'LIVE PERFORMANCE',
     subtitle: 'Chance the Rapper · Live Performance',
     body: [
-      'A live performance of "Together," the single produced by DJ Premier for Chance the Rapper\'s Star Line project. It brings the song\'s themes of family and community into a live setting.',
-      'Vaughn was the lead producer on the performance video and oversaw the shoot through final delivery.',
-    ],
+      "A live setting gives “Together” a direct, shared expression of its themes of family and community.",
+      "Led production of the performance film from the shoot through final delivery."
+],
+    role: "Lead Producer",
     youtubeId: 'bSYYrydVXBs',
     thumbnail: '/thumbnails/together-live.jpg',
   },
@@ -288,9 +294,10 @@ export const projects: Project[] = [
     titleLine2: 'LIVE FROM NEW YORK',
     subtitle: 'Chance the Rapper · Virtual Concert (SiriusXM)',
     body: [
-      'A virtual concert for SiriusXM\'s Hip Hop Nation, filmed live from New York. The set brought Chance the Rapper\'s music to a broadcast and streaming audience in an intimate, performance-focused format.',
-      'Worked as a camera operator and editor, capturing the live set and assembling the final edit.',
-    ],
+      "Filmed live in New York for SiriusXM's Hip Hop Nation, this concert brings Chance the Rapper's performance into an intimate screen format.",
+      "Camera coverage and editing keep the focus on the live set for audiences watching beyond the room."
+],
+    role: "Camera Operator · Editor",
     youtubeId: 'zvVkUPhocEw',
     thumbnail: '/thumbnails/hip-hop-nation.jpg',
   },
@@ -301,9 +308,11 @@ export const projects: Project[] = [
     titleLine2: 'FESTIVAL · ACCRA',
     subtitle: 'Festival Documentation',
     body: [
-      'Footage from the first Black Star Line Festival, the free concert in Accra, Ghana that brought together music, art, and the African diaspora on an international stage. It grew out of Chance the Rapper\'s work connecting his creative life to Ghana.',
-      'Vaughn was the on-site producer in Accra and brought on a full crew of Ghanaian filmmakers to document it. The coverage ran the whole week, including a conversation between Chance and Dave Chappelle at the University of Ghana.',
-    ],
+      "The first Black Star Line Festival called for a record of the whole gathering, beyond the concert alone.",
+      "Assembled a crew of Ghanaian filmmakers and produced a week of on-site documentation in Accra, including Chance the Rapper's conversation with Dave Chappelle at the University of Ghana. The coverage holds the performances, conversations, and encounters within the same record."
+],
+    role: "On-site Documentation Producer",
+    context: {"text":"Festival context · Free gathering in Accra, with 52,000 attendees reported by Pollstar.","sourceLabel":"Pollstar","sourceUrl":"https://news.pollstar.com/2023/03/01/miracle-man-how-chance-the-rapper-produced-a-free-festival-in-ghana-for-52k-fans/"},
     youtubeId: 'cXmS3nC1WVU',
     thumbnail: '/thumbnails/black-star-line-fest-boat.jpg',
   },
@@ -314,9 +323,10 @@ export const projects: Project[] = [
     titleLine2: '10 YEAR DOCUMENTARY',
     subtitle: 'Chance the Rapper · Documentary',
     body: [
-      'A documentary marking ten years of "Same Drugs," one of the most loved songs in Chance the Rapper\'s catalog. The film looks back on the decade since the song came out and what it has meant to him and to the people who grew up with it.',
-      'The documentary uses live concert footage that Vaughn directed and produced at Chance\'s earlier arena shows.',
-    ],
+      "Concert documentation becomes part of a longer cultural record in this tenth-anniversary look at “Same Drugs.”",
+      "Live footage Directed and produced at Chance the Rapper's earlier arena shows gives the documentary a way to revisit the song through its performance and audience."
+],
+    role: "Director · Producer, featured concert footage",
     youtubeId: '7JEDHWBd3WI',
     thumbnail: '/thumbnails/same-drugs-10yr.jpg',
   },
@@ -327,9 +337,11 @@ export const projects: Project[] = [
     titleLine2: 'eTV · EPISODE 2',
     subtitle: 'Enigma · Episodic Series',
     body: [
-      '"The Donda Sessions" is the second episode of eTV, an episodic series produced through Enigma that goes behind the scenes on a defining creative moment. The episode documents the people in the room and how the sessions came together.',
-      'Worked as a camera operator and editor on the episode, helping capture the sessions and assemble the final cut.',
-    ],
+      "The second episode of Enigma's eTV series documents the people and working process behind the Donda sessions.",
+      "Camera and editing work helped carry that behind-the-scenes material into the finished episode."
+],
+    role: "Camera Operator · Editor",
+    context: {"text":"Album context · Donda became Kanye West’s tenth No. 1 album on the Billboard 200.","sourceLabel":"Pitchfork","sourceUrl":"https://pitchfork.com/news/kanye-west-donda-debuts-at-no-1-in-biggest-week-for-any-album-in-2021/"},
     youtubeId: 'jVRz5KWyqcA',
     thumbnail: '/thumbnails/donda-sessions-card.png',
   },
@@ -340,10 +352,10 @@ export const projects: Project[] = [
     titleLine2: 'A STAR LINE LISTENING EXPERIENCE',
     subtitle: 'Chance the Rapper · Listening Experience · Documentary',
     body: [
-      'Writings on the Wall was an experimental Star Line listening experience Chance the Rapper hosted from 2024 through 2025. The tour ran more than twenty shows across the country for his most dedicated fans, with tickets given out through geolocated activations on his Community text platform.',
-      'Vaughn helped develop the concept and documented the full tour. This short piece is a trailer for the larger documentary that came out of it.',
-      'Vaughn also hired local crews in each city and led the creative direction and design for all of the flyers and branding.',
-    ],
+      "We turned unreleased music into a shared physical experience. Across more than 20 shows in 2024, Writings on the Wall paired sound, visuals, and beanbag seating in an immersive listening environment.",
+      "New Bible Belt's creative community helped crew the tour city by city, connecting the music to local filmmakers and audiences. Helped develop the concept, documented the tour, and led its creative direction and branding."
+],
+    role: "Concept Development · Documentary Production · Creative Direction",
     youtubeId: 'wueSv3Kl8Mo',
     thumbnail: '/thumbnails/writings-on-the-wall.jpg',
     galleryLabel: 'Flyers',
@@ -366,9 +378,9 @@ export const projects: Project[] = [
     titleLine2: 'FESTIVAL · POSTER DESIGN',
     subtitle: 'Poster Design · Creative Direction · Art Direction',
     body: [
-      'Designed the official poster for the first Black Star Line Festival, the landmark free concert held in Accra, Ghana, headlined by Chance the Rapper and Vic Mensa alongside Erykah Badu, T-Pain, Jeremih, Sarkodie, Tobe Nwigwe, M.anifest, the Asakaa Boys, and more.',
-      'Led the creative direction and art direction for the poster, building a bold typographic identity around the festival\'s Black Star symbolism and its mission of connecting the African diaspora.',
-    ],
+      "The Black Star becomes a shared visual anchor for the festival's lineup and diasporic purpose. Typography and art direction organize a wide range of performers into one identity for the inaugural free gathering in Accra."
+],
+    role: "Poster Design · Creative Direction · Art Direction",
     thumbnail: '/thumbnails/bslf-poster-full.jpg',
     cardImage: '/thumbnails/bslf-poster-card.jpg',  // Full poster centered on its yellow ground so no text is cropped
     posterAspect: '1200 / 1500',
@@ -381,9 +393,9 @@ export const projects: Project[] = [
     titleLine2: 'GRAMMYs · FOR YOUR CONSIDERATION',
     subtitle: 'Billboard Design · Creative Direction',
     body: [
-      'Created the billboard campaign for Chance the Rapper\'s "For Your Consideration" GRAMMYs push behind his 2025 album Star Line, designing the out-of-home creative that carried the album into awards season.',
-      'The For Your Consideration campaign put billboards up across Nashville, Chicago, New York, and Los Angeles, bringing the Star Line visual world and its Album of the Year case to each city.',
-    ],
+      "Star Line's visual identity is adapted for the scale and reading distance of outdoor media. The For Your Consideration campaign carries the album's artwork and message onto billboards in Nashville, Chicago, New York, and Los Angeles."
+],
+    role: "Billboard Design · Creative Direction",
     thumbnail: '/thumbnails/grammys-fyc.jpg',  // Detail-page poster — stays the billboard image
     cardImage: '/thumbnails/grammys-fyc-card.jpg',  // Homepage card — Star Line FYC artwork only
     posterAspect: '2200 / 1229',
@@ -399,10 +411,11 @@ export const projects: Project[] = [
     titleLine2: 'POP-UP ACTIVATION · 3D DESIGN + CONCEPT',
     subtitle: '3D Design · Concept Development · Activation Design',
     body: [
-      'Vaughn was one of the lead developers on the design and concept work for the Yeezy Stem Player pop-up activations in 2022, the retail experiences built around Kanye West\'s Stem Player music device.',
-      'The work covered the 3D product renders, the spatial concept, and the design of the activation environments, taking the Stem Player\'s circular, tactile form and turning it into a physical and visual language for the pop-up spaces.',
-      'The concept centered on a cruciform layout, with sculptural booth structures and a controlled lighting program that echoed the device\'s glowing interface. The renders and concept studies guided how visitors would move through the space and use the Stem Player in person.',
-    ],
+      "The Stem Player's interface became the starting point for a space people could enter. Its circular form, tactile controls, and illuminated surface informed the 2022 pop-up concept.",
+      "Explored through 3D renders, sculptural booth studies, and a cruciform layout how the product's visual language could guide movement and hands-on interaction."
+],
+    role: "3D Design · Spatial Concept Development",
+    context: {"text":"Device recognition · Stem Player received a Special Mention in TIME’s Best Inventions of 2022.","sourceLabel":"TIME","sourceUrl":"https://time.com/collections/best-inventions-2022/6230491/stem-player/"},
     thumbnail: '/yeezy/01-product.jpg',
     posterAspect: '16 / 9',
     posterMaxWidth: 900,
@@ -424,11 +437,11 @@ export const projects: Project[] = [
     titleLine2: 'CINCINNATI',
     subtitle: 'City of Cincinnati · Documentary',
     body: [
-      'Bearing Witness: Cincinnati is a documentary Vaughn directed and produced for the City of Cincinnati over four months. The film follows families who have lost a loved one to gun violence, and the victim advocates who walk with them through what comes after.',
-      'The work makes visible the labor of accompaniment, the people who refuse to let a victim be reduced to a case number, and the slow work of carrying a grief that does not resolve. It also shows how victim protection and assistance programs provide ongoing services to the families left behind.',
-      'The film premiered at the Ohio Attorney General\'s Two Days in May Conference on Victim Assistance, the state\'s thirty-fourth annual gathering of victim advocates. It was shown during the session led by the City of Cincinnati Police Department Victims Assistance Liaison Unit, before an audience of advocates, prosecutors, law enforcement, and state officials.',
-      'Directed and produced by Vaughn Robison, with co-producer Emma Mitsch and the Cincinnati Police Department.',
-    ],
+      "Bearing Witness: Cincinnati follows families who have lost a loved one to violence and the advocates who stay beside them afterward.",
+      "Produced with the Cincinnati Police Department and co-producer Emma Mitsch, the documentary makes the daily work of victim assistance visible through the people receiving and providing that care.",
+      "The film was presented during the department's session at Ohio's Two Days in May Conference on Victim Assistance, bringing those experiences before professionals who support survivors."
+],
+    role: "Director · Producer",
     thumbnail: '/thumbnails/bearing-witness-cincinnati.jpg',
     link: 'https://www.linkedin.com/posts/vaughn-robison-783ab61b0_my-most-recent-documentary-bearing-witness-activity-7464646679997231104-0aHw',
     linkLabel: 'Vaughn’s documentary announcement',

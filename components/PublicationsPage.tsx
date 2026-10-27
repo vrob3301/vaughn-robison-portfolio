@@ -131,7 +131,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
               color: 'rgba(74,50,38,0.55)',
               margin: '0 0 18px',
             }}>
-              Press &amp; Features
+              Selected coverage
             </p>
             <h1 style={{
               fontFamily: 'var(--font-editorial)',
@@ -144,6 +144,7 @@ export default function PublicationsPage({ onClose }: PublicationsPageProps) {
             }}>
               PUBLICATIONS
             </h1>
+            <p style={{fontFamily:"var(--font-inter)",fontSize:13,lineHeight:1.7,marginTop:24}}>Selected coverage of projects, releases, and cultural events connected to the work.</p>
           </div>
 
           {/* Article list */}

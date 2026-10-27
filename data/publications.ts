@@ -15,7 +15,7 @@ export const publications: Publication[] = [
     url: 'https://www.rollingstone.com/music/music-features/kanye-west-documentary-box-office-numbers-opening-weekend-1235433638/',
     image: '/thumbnails/in-whose-name.png',
     excerpt:
-      'Rolling Stone reports the six-year Kanye West documentary opened to a strong $776K across nearly 500 theaters, a standout result for a self-released film.',
+      "Coverage of the film’s opening theatrical weekend.",
   },
   {
     outlet: 'Los Angeles Times',
@@ -24,7 +24,7 @@ export const publications: Publication[] = [
     url: 'https://www.latimes.com/entertainment-arts/movies/story/2025-12-05/best-movies-2025-where-to-find-them-sinners-hedda-eddington-one-battle-naked-gun-sirat',
     image: '/thumbnails/in-whose-name-sun.jpg',
     excerpt:
-      'Critic Amy Nicholson names In Whose Name? one of the ten best films of the year, ranking it among 2025’s most essential cinema.',
+      "Amy Nicholson’s year-end list places In Whose Name? at No. 8.",
   },
   {
     outlet: 'Variety',
@@ -33,7 +33,7 @@ export const publications: Publication[] = [
     url: 'https://variety.com/2025/film/reviews/in-whose-name-review-kanye-west-1236523453/',
     image: '/thumbnails/in-whose-name-night.jpg',
     excerpt:
-      'Variety reviews the documentary cut from more than 3,000 hours of footage, calling it a rare unguarded portrait of one of music’s most scrutinized figures.',
+      "Variety’s review of Nico Ballesteros’s documentary.",
   },
   {
     outlet: 'Deadline',
@@ -42,7 +42,7 @@ export const publications: Publication[] = [
     url: 'https://deadline.com/2025/12/kanye-west-doc-in-whose-name-global-streaming-debut-1236647983/',
     image: '/thumbnails/in-whose-name-service.jpg',
     excerpt:
-      'Deadline notes the film opened on roughly 1,000 screens and held the No. 1 documentary spot for two weeks before its global streaming release.',
+      "Coverage of the documentary’s streaming release.",
   },
   {
     outlet: 'Billboard',
@@ -51,7 +51,7 @@ export const publications: Publication[] = [
     url: 'https://www.billboard.com/music/rb-hip-hop/chance-the-rapper-vic-mensas-black-star-line-festival-ghana-recap-1235195561/',
     image: '/thumbnails/black-star-line-fest-boat.jpg',
     excerpt:
-      'Billboard recaps the inaugural Accra festival that drew 52,000 fans to Black Star Square, with a lineup spanning Erykah Badu, Dave Chappelle and T-Pain.',
+      "A recap of Chance the Rapper and Vic Mensa’s festival in Accra.",
   },
   {
     outlet: 'Rolling Stone',
@@ -60,7 +60,7 @@ export const publications: Publication[] = [
     url: 'https://www.rollingstone.com/music/music-album-reviews/chance-the-rapper-star-line-review-1235411038/',
     image: '/thumbnails/grammys-fyc-card.jpg',
     excerpt:
-      'Rolling Stone praises Star Line as a remarkable return to form, the album rooted in Chance the Rapper’s Ghana journey and the Black Star Line vision.',
+      "Rolling Stone’s review of Chance the Rapper’s Star Line.",
   },
   {
     outlet: 'Rolling Stone',
@@ -69,7 +69,7 @@ export const publications: Publication[] = [
     url: 'https://www.rollingstone.com/music/music-news/chance-the-rapper-performs-yah-know-the-tonight-show-1234691825/',
     image: '/thumbnails/yah-know.png',
     excerpt:
-      'Rolling Stone covers the Tonight Show debut of “Yah Know,” tying the single to the Black Star Line Festival billed as the largest concert event ever held in Ghana.',
+      "Coverage of Chance the Rapper’s Yah Know performance on The Tonight Show.",
   },
   {
     outlet: 'Rolling Stone',
@@ -78,7 +78,7 @@ export const publications: Publication[] = [
     url: 'https://www.rollingstone.com/music/music-news/chance-the-rapper-the-highs-the-lows-1369989/',
     image: '/thumbnails/highs-and-lows-press.jpg',
     excerpt:
-      'Rolling Stone premieres “The Highs & The Lows,” the Joey Bada$$ collaboration and visual that first debuted during Art Basel.',
+      "Coverage of the single and video featuring Joey Bada$$.",
   },
   {
     outlet: 'Uproxx',
@@ -87,7 +87,7 @@ export const publications: Publication[] = [
     url: 'https://uproxx.com/music/vic-mensa-victor-review/',
     image: '/thumbnails/victor.png',
     excerpt:
-      'Uproxx awards its highest album honor to Victor, calling Vic Mensa’s sophomore record his most cohesive and revealing work to date.',
+      "Uproxx’s review of Vic Mensa’s Victor.",
   },
   {
     outlet: 'Hypebeast',
@@ -96,6 +96,6 @@ export const publications: Publication[] = [
     url: 'https://hypebeast.com/2024/8/chance-the-rapper-x-joey-purp-bad-boys-2-single-stream-music-video',
     image: '/thumbnails/bad-boys-2.jpg',
     excerpt:
-      'Hypebeast spotlights the Chicago-shot single and music video, a glossy reunion between Chance the Rapper and Joey Purp.',
+      "Coverage of Chance the Rapper and Joey Purp’s single and music video.",
   },
 ]

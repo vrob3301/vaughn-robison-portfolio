@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { profileUrls } from '@/lib/seo'
 
 type Section = 'overview' | 'education' | 'faith'
 
@@ -22,72 +23,26 @@ const bodyStyle: React.CSSProperties = {
 }
 
 function OverviewContent() {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-      <p style={bodyStyle}>
-        Vaughn Robison is a film producer and creative director whose work spans film, live events,
-        and music. His projects bring artists and audiences together through creative work rooted in
-        culture and community.
-      </p>
-      <p style={bodyStyle}>
-        In recent years, Vaughn has worked closely with Chance the Rapper, producing music videos
-        and contributing creatively to tours and cultural events. His work includes contributions to
-        projects such as the <em>Black Star Line Festival</em> in Ghana and the{' '}
-        <em>Acid Rap 10-Year Anniversary Tour</em>, as well as producing <em>In Whose Name</em>,
-        a theatrical documentary exploring the cultural and spiritual influence surrounding Kanye West.
-      </p>
-      <p style={bodyStyle}>
-        Across film, music, and live production, Vaughn&rsquo;s work seeks to create moments that
-        resonate beyond the screen. He builds his projects on collaboration and cultural storytelling,
-        and on the belief that creative work can bring people together.
-      </p>
-    </div>
-  )
+  return <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+    <p style={bodyStyle}>Film, design, and live experiences that give people something to gather around, think through, and carry forward.</p>
+    <p style={bodyStyle}>Producer and creative director working with artists, brands, and public institutions. Projects range from Chance the Rapper’s music and live experiences to In Whose Name? and Bearing Witness: Cincinnati, a documentary about families affected by violence and the advocates who stand beside them.</p>
+    <p style={bodyStyle}>Build teams around a creative idea, shape the work, and carry it through to an audience.</p>
+    <nav className="profile-links" aria-label="Vaughn’s profiles">{profileUrls.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer" aria-label={`${['LinkedIn','Instagram','X','YouTube','IMDb'][index]}, opens in a new tab`}><span aria-hidden="true">{[<LinkedInIcon key="li"/>,<InstagramIcon key="ig"/>,<XIcon key="x"/>,<YoutubeIcon key="yt"/>,<span key="imdb" className="imdb-icon"/>][index]}</span></a>)}</nav>
+  </div>
 }
 
 function EducationContent() {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-      <p style={bodyStyle}>
-        Vaughn Robison was born in Akron, Ohio and raised in Cincinnati, at the heart of Midwestern
-        culture. From an early age he showed a curiosity for entrepreneurship and storytelling,
-        interests that gradually grew into a passion for filmmaking and the creative arts.
-      </p>
-      <p style={bodyStyle}>
-        In 2017, Vaughn launched his YouTube channel VRob, where he began speaking about subjects
-        that interested him, including culture, sports, filmmaking, education, and religion.
-      </p>
-      <p style={bodyStyle}>
-        In 2020 he enrolled at Xavier University through the Digital Innovation, Film, and
-        Television (DIFT) program. During his time there he was selected for Xavier&rsquo;s
-        Community Engaged Fellowship, a program focused on connecting creative work with service
-        and civic impact.
-      </p>
-      <p style={bodyStyle}>
-        At the end of 2021, after a year and a half of study, Vaughn chose to leave the university
-        to pursue his creative career in Chicago. The decision marked a turning point in his path,
-        prioritizing real-world experience and collaboration as his primary education. He describes
-        it simply as pursuing exposure as the highest form of learning.
-      </p>
-    </div>
-  )
+  return <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+    <p style={bodyStyle}>Explored culture, sports, film, and faith through the VRob YouTube channel. Studied Digital Innovation, Film, and Television at Xavier University and joined the Community Engaged Fellowship.</p>
+    <p style={bodyStyle}>Learn through direct experience: work alongside people, take responsibility, and stay open to what each project can teach.</p>
+  </div>
 }
 
 function FaithContent() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-      <p style={bodyStyle}>
-        Vaughn&rsquo;s Catholic faith is the foundation of his life and work. For him, faith
-        provides the root from which creative work grows, shaping the purpose behind his projects
-        and the way he approaches the people he works with.
-      </p>
-      <p style={bodyStyle}>
-        He often describes the relationship simply: faith is the root, and the work is the branch
-        that grows from it.
-      </p>
-      <p style={bodyStyle}>
-        A prayer that has guided his life and work is the Prayer of Saint Francis of Assisi:
-      </p>
+      <p style={bodyStyle}>Catholic faith grounds the work in a responsibility to listen carefully, serve generously, and treat people with dignity.</p>
+      <p style={bodyStyle}>The Prayer of Saint Francis guides life and work.</p>
 
       {/* Prayer stanzas */}
       <div style={{
@@ -232,7 +187,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
           maxWidth: 1280,
           width: '100%',
           // clamp: min 72px → centers Overview at ~480px viewport → caps at 160px on tall screens
-          padding: 'clamp(72px, calc(50vh - 210px), 160px) 64px 100px',
+          padding: 'clamp(72px, calc(50vh - 210px), 160px) clamp(24px, 8vw, 64px) 100px',
         }}
       >
         {/* ── Section tab pills ── */}
@@ -262,6 +217,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
                   border: `1px solid ${isActive ? '#4A3226' : 'rgba(74,50,38,0.28)'}`,
                   borderRadius: 999,
                   padding: '10px 24px',
+                  minHeight: 44,
                   background: isActive ? 'rgba(74,50,38,0.07)' : 'transparent',
                   cursor: 'pointer',
                   transition: 'background 0.18s ease, border-color 0.18s ease, opacity 0.18s ease',
@@ -296,7 +252,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
             }}>
               Vaughn Robison / V-Rob
             </p>
-            <h1 style={{
+            <h1 className="about-title" style={{
               fontFamily: 'var(--font-editorial)',
               fontSize: 76,
               fontWeight: 400,
@@ -305,7 +261,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
               color: '#4A3226',
               margin: 0,
             }}>
-              ABOUT
+              ABOUT <img className="tau-icon" src="/brands/tau-brown.png" width={24} height={28} alt="" aria-hidden="true"/>
             </h1>
           </div>
 
@@ -354,5 +310,42 @@ export default function AboutPage({ onClose }: AboutPageProps) {
         }
       `}</style>
     </motion.div>
+  )
+}
+
+function LinkedInIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function XIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.26 5.632 5.903-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  )
+}
+
+function YoutubeIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+      <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+    </svg>
   )
 }
