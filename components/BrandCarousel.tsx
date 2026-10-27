@@ -9,7 +9,7 @@ export default function BrandCarousel({width}: {width?: number}) {
   const opener = useRef<HTMLButtonElement | null>(null)
   const [selected, setSelected] = useState<(typeof brands)[number] | null>(null)
   const close = () => { dialog.current?.close(); opener.current?.focus() }
-  const mark = (brand: (typeof brands)[number]) => brand.asset ? <span aria-hidden="true" className="brand-mark" style={{height:brand.height,maskImage:`url("${brand.asset}")`,WebkitMaskImage:`url("${brand.asset}")`}}/> : <span aria-hidden="true" className="brand-name">{brand.name}</span>
+  const mark = (brand: (typeof brands)[number]) => brand.asset ? ('direct' in brand && brand.direct ? <img aria-hidden="true" alt="" draggable="false" className="brand-image" src={brand.asset} width="64" height={brand.height} style={{height:brand.height}}/> : <span aria-hidden="true" className="brand-mark" style={{height:brand.height,maskImage:`url("${brand.asset}")`,WebkitMaskImage:`url("${brand.asset}")`}}/>) : <span aria-hidden="true" className="brand-name">{brand.name}</span>
   return <>
     <div className="brand-window" style={{width:width || '14em'}} aria-label="Selected work and project contexts">
       <div className="brand-track" style={{'--loop-time': `${brands.length * 78 / 13.2}s`} as CSSProperties}>

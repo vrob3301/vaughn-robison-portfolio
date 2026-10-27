@@ -261,7 +261,7 @@ export default function AboutPage({ onClose }: AboutPageProps) {
               color: '#4A3226',
               margin: 0,
             }}>
-              ABOUT
+              ABOUT <img className="tau-icon" src="/brands/direct/tau.svg" width="24" height="28" alt="" aria-hidden="true" draggable="false"/>
             </h1>
           </div>
 
