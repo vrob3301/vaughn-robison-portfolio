@@ -130,11 +130,12 @@
   {
     "name": "Chance the Rapper",
     "slug": "chance-the-rapper",
-    "asset": null,
-    "height": 10,
+    "asset": "/brands/chance-brown.png",
+    "height": 18,
     "context": "Music, live experiences and visual documentation.",
     "href": "/work/chance-the-rapper",
-    "source": "Typeset entity name; not an official logo."
+    "source": "User-supplied transparent numeral 3 artwork; Library libfile_acb9530110188191b1d8d9fbdb4de713. Original raster alpha preserved; RGB recolored #4A3226.",
+    "direct": true
   },
   {
     "name": "ESPN",

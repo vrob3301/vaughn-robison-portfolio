@@ -54,3 +54,7 @@ The supplied iPhone screenshot (Library libfile_b8b62614ade0819180a1c4839c8e407e
 Replaced only the Tau renderer with a precomputed 452×505 transparent PNG, derived from the original 612×612 supplied artwork: luminance becomes inverse alpha, RGB is exactly #4A3226, and transparent margins are cropped. No tracing or changed geometry. The browser now displays a plain img at 24×28 CSS pixels without filters or masks. The original source and prior SVG remain available. A two-layer CSS mask candidate was inspected and rejected before publication because its small-size rendering remained rough.
 
 Validated local 320, 390, 430, and 1280 widths; all three About tabs load the PNG, preserve layout, and use filter:none/mask:none. Webpack production build and TypeScript passed (34 generated routes). Actual iPhone confirmation remains pending; browser screenshots are JPEG and are not physical-device proof. No other logo or production deployment is changed by this candidate.
+
+## Supplied Chance mark
+
+Replaced the Chance typeset placeholder with the user-supplied transparent numeral 3 (Library libfile_acb9530110188191b1d8d9fbdb4de713). Original 1258×1656 raster alpha is preserved byte for byte; RGB is uniformly #4A3226. Direct PNG img, 18px visible height, no mask/filter. Checked actual mobile context at DPR1 and native DPR2, plus 18/36/54px sampling specimens (not a physical DPR3 test). The single strip width, animation, 48px height and accessible relationship context are unchanged. Tau remains unchanged after user confirmation.
