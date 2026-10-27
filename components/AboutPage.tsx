@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { profileUrls } from '@/lib/seo'
 
 type Section = 'overview' | 'education' | 'faith'
 
@@ -22,72 +23,26 @@ const bodyStyle: React.CSSProperties = {
 }
 
 function OverviewContent() {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-      <p style={bodyStyle}>
-        Vaughn Robison is a film producer and creative director whose work spans film, live events,
-        and music. His projects bring artists and audiences together through creative work rooted in
-        culture and community.
-      </p>
-      <p style={bodyStyle}>
-        In recent years, Vaughn has worked closely with Chance the Rapper, producing music videos
-        and contributing creatively to tours and cultural events. His work includes contributions to
-        projects such as the <em>Black Star Line Festival</em> in Ghana and the{' '}
-        <em>Acid Rap 10-Year Anniversary Tour</em>, as well as producing <em>In Whose Name</em>,
-        a theatrical documentary exploring the cultural and spiritual influence surrounding Kanye West.
-      </p>
-      <p style={bodyStyle}>
-        Across film, music, and live production, Vaughn&rsquo;s work seeks to create moments that
-        resonate beyond the screen. He builds his projects on collaboration and cultural storytelling,
-        and on the belief that creative work can bring people together.
-      </p>
-    </div>
-  )
+  return <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+    <p style={bodyStyle}>Creative work shapes what people notice, remember, and imagine together. My work brings film, design, and live experiences to that responsibility.</p>
+    <p style={bodyStyle}>I’m Vaughn Robison, a producer and creative director working with artists, brands, and public institutions. Projects range from Chance the Rapper’s music and live experiences to In Whose Name? and Bearing Witness: Cincinnati, a documentary about families affected by violence and the advocates who stand beside them.</p>
+    <p style={bodyStyle}>I bring the creative idea and the practical work of making it happen into the same conversation: assembling teams, shaping the work, and carrying it through to an audience.</p>
+    <nav className="profile-links" aria-label="Vaughn’s profiles">{profileUrls.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer" aria-label={`${['LinkedIn','Instagram','X','YouTube','IMDb'][index]}, opens in a new tab`}>{['LinkedIn','Instagram','X','YouTube','IMDb'][index]}</a>)}</nav>
+  </div>
 }
 
 function EducationContent() {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-      <p style={bodyStyle}>
-        Vaughn Robison was born in Akron, Ohio and raised in Cincinnati, at the heart of Midwestern
-        culture. From an early age he showed a curiosity for entrepreneurship and storytelling,
-        interests that gradually grew into a passion for filmmaking and the creative arts.
-      </p>
-      <p style={bodyStyle}>
-        In 2017, Vaughn launched his YouTube channel VRob, where he began speaking about subjects
-        that interested him, including culture, sports, filmmaking, education, and religion.
-      </p>
-      <p style={bodyStyle}>
-        In 2020 he enrolled at Xavier University through the Digital Innovation, Film, and
-        Television (DIFT) program. During his time there he was selected for Xavier&rsquo;s
-        Community Engaged Fellowship, a program focused on connecting creative work with service
-        and civic impact.
-      </p>
-      <p style={bodyStyle}>
-        At the end of 2021, after a year and a half of study, Vaughn chose to leave the university
-        to pursue his creative career in Chicago. The decision marked a turning point in his path,
-        prioritizing real-world experience and collaboration as his primary education. He describes
-        it simply as pursuing exposure as the highest form of learning.
-      </p>
-    </div>
-  )
+  return <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+    <p style={bodyStyle}>My early work explored culture, sports, film, and faith through the VRob YouTube channel. At Xavier University, I studied Digital Innovation, Film, and Television and joined the Community Engaged Fellowship.</p>
+    <p style={bodyStyle}>Learning through direct experience remains central to my practice: working alongside people, taking responsibility for the work, and staying open to what each project can teach.</p>
+  </div>
 }
 
 function FaithContent() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
-      <p style={bodyStyle}>
-        Vaughn&rsquo;s Catholic faith is the foundation of his life and work. For him, faith
-        provides the root from which creative work grows, shaping the purpose behind his projects
-        and the way he approaches the people he works with.
-      </p>
-      <p style={bodyStyle}>
-        He often describes the relationship simply: faith is the root, and the work is the branch
-        that grows from it.
-      </p>
-      <p style={bodyStyle}>
-        A prayer that has guided his life and work is the Prayer of Saint Francis of Assisi:
-      </p>
+      <p style={bodyStyle}>My Catholic faith grounds the work and the way I approach the people who make it possible. It gives me a responsibility to listen carefully, serve generously, and treat people with dignity.</p>
+      <p style={bodyStyle}>The Prayer of Saint Francis is a guide I return to in life and work.</p>
 
       {/* Prayer stanzas */}
       <div style={{

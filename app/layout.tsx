@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Site from '@/components/Site'
@@ -9,6 +9,8 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 })
+
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, viewportFit: 'cover', themeColor: '#f8f8f6' }
 
 export const metadata: Metadata = {
   title: 'Vaughn Robison — Producer, Director, Creative Strategist',

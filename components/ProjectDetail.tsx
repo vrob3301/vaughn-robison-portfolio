@@ -246,11 +246,13 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             animate="visible"
             exit="exit"
           >
-            {project.body.slice(0, 4).map((paragraph, i) => (
+            {project.role && <p className="project-role">{project.role}</p>}
+            {project.body.map((paragraph, i) => (
               <motion.p key={i} variants={lineVariant} style={styles.bodyText}>
                 {paragraph}
               </motion.p>
             ))}
+            {project.context && <a className="project-context" href={project.context.sourceUrl} target="_blank" rel="noopener noreferrer"><span>{project.context.text}</span><small>{project.context.sourceLabel} · Opens in a new tab</small></a>}
           </motion.div>
 
         </div>

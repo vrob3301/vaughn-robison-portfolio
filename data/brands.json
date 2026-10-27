@@ -1,0 +1,200 @@
+[
+  {
+    "name": "The Walt Disney Company",
+    "slug": "disney",
+    "asset": "/brands/disney.svg",
+    "height": 14,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Disney_wordmark.svg"
+  },
+  {
+    "name": "NBC",
+    "slug": "nbc",
+    "asset": "/brands/nbc.svg",
+    "height": 18,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "https://commons.wikimedia.org/wiki/File:NBC_2023_white_logo.svg"
+  },
+  {
+    "name": "NBA",
+    "slug": "nba",
+    "asset": "/brands/nba.svg",
+    "height": 20,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "https://commons.wikimedia.org/wiki/File:National_Basketball_Association_logo_2017-present.svg"
+  },
+  {
+    "name": "Yeezy",
+    "slug": "yeezy",
+    "asset": "/brands/yeezy.png",
+    "height": 12,
+    "context": "Yeezy Stem Player \u00b7 Spatial concept development.",
+    "href": "/work/yeezy-stem-player",
+    "source": "Artwork supplied by Vaughn Robison."
+  },
+  {
+    "name": "Stem",
+    "slug": "stem",
+    "asset": "/brands/stem.svg",
+    "height": 17,
+    "context": "Stem Player \u00b7 Spatial concept development.",
+    "href": "/work/yeezy-stem-player",
+    "source": "https://www.stem.fm/logo.svg"
+  },
+  {
+    "name": "Stem / YZY \u2014 supplied reference",
+    "slug": "supplied-cross",
+    "asset": "/brands/supplied-cross.svg",
+    "height": 17,
+    "context": "Stem / YZY project reference.",
+    "href": "/work/yeezy-stem-player",
+    "source": "Artwork supplied by Vaughn Robison."
+  },
+  {
+    "name": "Pepsi",
+    "slug": "pepsi",
+    "asset": "/brands/pepsi.svg",
+    "height": 18,
+    "context": "Pepsi \u00d7 Just Don campaign",
+    "href": "/work/pepsi-just-don",
+    "source": "https://commons.wikimedia.org/wiki/File:Pepsi_2023.svg"
+  },
+  {
+    "name": "Just Don",
+    "slug": "just-don",
+    "asset": "/brands/just-don.png",
+    "height": 10,
+    "context": "Chicago Bulls / Just Don campaign",
+    "href": "/work/chicago-bulls-just-don",
+    "source": "https://justdon.com/"
+  },
+  {
+    "name": "Chicago Bulls",
+    "slug": "chicago-bulls",
+    "asset": "/brands/chicago-bulls.svg",
+    "height": 18,
+    "context": "Chicago Bulls campaign",
+    "href": "/work/chicago-bulls-just-don",
+    "source": "https://en.wikipedia.org/wiki/File:Chicago_Bulls_logo.svg"
+  },
+  {
+    "name": "Roc Nation",
+    "slug": "roc-nation",
+    "asset": "/brands/roc-nation.svg",
+    "height": 8,
+    "context": "Victor album trailer rollout",
+    "href": "/work/victor",
+    "source": "https://www.rocnation.com/"
+  },
+  {
+    "name": "SiriusXM",
+    "slug": "siriusxm",
+    "asset": "/brands/siriusxm.svg",
+    "height": 8,
+    "context": "Hip Hop Nation virtual concert",
+    "href": "/work/hip-hop-nation",
+    "source": "https://www.siriusxm.com/"
+  },
+  {
+    "name": "AMC",
+    "slug": "amc",
+    "asset": "/brands/amc.svg",
+    "height": 12,
+    "context": "Theatrical exhibition \u00b7 In Whose Name?",
+    "href": "/work/in-whose-name",
+    "source": "https://commons.wikimedia.org/wiki/File:AMC_Theatres_logo_(2).svg"
+  },
+  {
+    "name": "Apple TV",
+    "slug": "apple-tv",
+    "asset": "/brands/apple-tv.svg",
+    "height": 16,
+    "context": "Film availability \u00b7 In Whose Name?",
+    "href": "/work/in-whose-name",
+    "source": "https://tv.apple.com/"
+  },
+  {
+    "name": "Cinemark",
+    "slug": "cinemark",
+    "asset": "/brands/cinemark.svg",
+    "height": 8,
+    "context": "Theatrical exhibition context.",
+    "href": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Cinemark_Logo.svg"
+  },
+  {
+    "name": "Chance the Rapper",
+    "slug": "chance-the-rapper",
+    "asset": null,
+    "height": 10,
+    "context": "Music, live experiences and visual documentation.",
+    "href": "/work/chance-the-rapper",
+    "source": "Typeset entity name; not an official logo."
+  },
+  {
+    "name": "ESPN",
+    "slug": "espn",
+    "asset": "/brands/espn.svg",
+    "height": 12,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/2f/ESPN_wordmark.svg"
+  },
+  {
+    "name": "AMSI Entertainment",
+    "slug": "amsi-entertainment",
+    "asset": null,
+    "height": 10,
+    "context": "Distribution \u00b7 In Whose Name?",
+    "href": "/work/in-whose-name",
+    "source": "Typeset entity name; not an official logo."
+  },
+  {
+    "name": "SeatGeek",
+    "slug": "seatgeek",
+    "asset": "/brands/seatgeek.svg",
+    "height": 12,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "https://brand.seatgeek.com/logo"
+  },
+  {
+    "name": "BET Awards",
+    "slug": "bet-awards",
+    "asset": null,
+    "height": 10,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "Typeset entity name; not an official logo."
+  },
+  {
+    "name": "Revolt",
+    "slug": "revolt",
+    "asset": null,
+    "height": 10,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "Typeset entity name; not an official logo."
+  },
+  {
+    "name": "The Shade Room",
+    "slug": "the-shade-room",
+    "asset": null,
+    "height": 10,
+    "context": "Selected project and media context.",
+    "href": null,
+    "source": "Typeset entity name; not an official logo."
+  },
+  {
+    "name": "Live Nation",
+    "slug": "live-nation",
+    "asset": "/brands/live-nation.svg",
+    "height": 12,
+    "context": "Selected professional work.",
+    "href": null,
+    "source": "https://www.livenation.com/assets/logo/ln-logo-white.svg"
+  }
+]
