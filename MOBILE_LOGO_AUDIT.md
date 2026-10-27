@@ -46,3 +46,11 @@ Preview only; production remains on hold. Supersedes the temporary Tau-removal c
 - Browser viewport tests are DPR 1; native desktop is DPR 2. Audit sheet includes 1×, 2× and 3× sample sizes. The available browser control does not expose arbitrary DPR, so this is not a claim of physical 3× phone validation.
 - Browser screenshots are JPEG, not lossless pixel proof. Fine details should be judged in the interactive preview on the user's phone. No physical phone is attached for Safari/Android hardware verification.
 - Continuous nonessential motion retains the previously noted accessibility tradeoff; no visible toggle was added per the user's design request.
+
+## Actual iPhone feedback and targeted Tau candidate
+
+The supplied iPhone screenshot (Library libfile_b8b62614ade0819180a1c4839c8e407e) shows a soft/pixelated Tau beside sharp ABOUT text. This contradicts the earlier emulated-view assessment. SVG-filter rasterization on iOS is a suspected cause, not conclusively proven.
+
+Replaced only the Tau renderer with a precomputed 452×505 transparent PNG, derived from the original 612×612 supplied artwork: luminance becomes inverse alpha, RGB is exactly #4A3226, and transparent margins are cropped. No tracing or changed geometry. The browser now displays a plain img at 24×28 CSS pixels without filters or masks. The original source and prior SVG remain available. A two-layer CSS mask candidate was inspected and rejected before publication because its small-size rendering remained rough.
+
+Validated local 320, 390, 430, and 1280 widths; all three About tabs load the PNG, preserve layout, and use filter:none/mask:none. Webpack production build and TypeScript passed (34 generated routes). Actual iPhone confirmation remains pending; browser screenshots are JPEG and are not physical-device proof. No other logo or production deployment is changed by this candidate.
