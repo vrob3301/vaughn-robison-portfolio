@@ -121,7 +121,9 @@ export default function ProjectCard({
             className="object-cover"
             style={{
               objectPosition: project.thumbnailPosition ?? 'center',
-              transform: project.thumbnailScale ? `scale(${project.thumbnailScale})` : undefined,
+              transform: project.thumbnailScale || project.thumbnailOffsetX
+                ? `translateX(${project.thumbnailOffsetX ?? 0}%) scale(${project.thumbnailScale ?? 1})`
+                : undefined,
               transformOrigin: 'top center',
             }}
             sizes={variant === 'featured' ? '600px' : '360px'}

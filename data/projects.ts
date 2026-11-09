@@ -18,6 +18,7 @@ export interface Project {
   detailAspect?: string      // Detail hero aspect for video projects (e.g. '2.39 / 1' theatrical); letterbox-clips the 16:9 player
   thumbnailPosition?: string // CSS object-position for the thumbnail (default 'center')
   thumbnailScale?: number    // Zoom the homepage thumbnail (anchored top) to crop edges (default 1)
+  thumbnailOffsetX?: number  // Horizontal thumbnail shift as a percentage of card width (default 0)
   posterAspect?: string      // Image-only detail frame aspect (default '2049 / 2561' portrait)
   posterMaxWidth?: number    // Image-only detail frame max width in px (default 500)
   gallery?: string[]         // Image-only detail page: stacked stills shown below the text
@@ -121,6 +122,7 @@ export const projects: Project[] = [
     vimeoHash: 'bd3b14bcf0',
     thumbnail: '/thumbnails/nba-experience.jpg',
     thumbnailScale: 1.52, // Fill the homepage card without the source thumbnail's letterbox bars
+    thumbnailOffsetX: 10, // Move Jack and Vaughn subtly right within the rounded card
   },
 
   {
