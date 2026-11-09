@@ -7,6 +7,7 @@ export interface Project {
   role?: string
   context?: { text: string; sourceLabel: string; sourceUrl: string }
   vimeoId?: string    // Vimeo — enables silent hover video preview on homepage
+  vimeoHash?: string  // Optional Vimeo privacy hash supplied with the embed
   youtubeId?: string  // YouTube — detail page embed; also enables silent hover video preview on homepage when no vimeoId is set
   thumbnail: string
   cardImage?: string  // Optional separate image for the homepage card (defaults to thumbnail)
@@ -106,6 +107,21 @@ export const projects: Project[] = [
   },
 
   // ── New Additions ─────────────────────────────────────────────────────────
+
+  {
+    id: 'nba-experience',
+    title: 'NBA EXPERIENCE',
+    titleLine2: 'JACK & VAUGHN',
+    subtitle: 'Disney · NBA · Brand Film',
+    body: [
+      "Basketball becomes a shared language for siblings Jack and Vaughn in this Disney Parks film for NBA Experience."
+    ],
+    role: 'Talent & Writer',
+    vimeoId: '1245220828',
+    vimeoHash: 'bd3b14bcf0',
+    thumbnail: '/thumbnails/nba-experience.jpg',
+    thumbnailScale: 1.52, // Fill the homepage card without the source thumbnail's letterbox bars
+  },
 
   {
     id: 'stars-out',

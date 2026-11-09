@@ -143,7 +143,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           */}
           {project.vimeoId ? (
             <iframe
-              src={`https://player.vimeo.com/video/${project.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&byline=0&title=0&portrait=0&color=4A3226&autoplay=1&muted=1`}
+              src={`https://player.vimeo.com/video/${project.vimeoId}?${project.vimeoHash ? `h=${encodeURIComponent(project.vimeoHash)}&` : ''}badge=0&autopause=0&player_id=0&app_id=58479&byline=0&title=0&portrait=0&color=4A3226&autoplay=1&muted=1`}
               allow="autoplay; fullscreen; picture-in-picture"
               style={isTheatrical ? theatricalIframe : {
                 position: 'absolute', inset: 0,

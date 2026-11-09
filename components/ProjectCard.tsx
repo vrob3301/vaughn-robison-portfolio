@@ -146,7 +146,7 @@ export default function ProjectCard({
               overflow:hidden clip. 16:10 → scale(10/9), 16:7 → scale(9/7)
             */}
             <iframe
-              src={`https://player.vimeo.com/video/${project.vimeoId}?background=1&autoplay=1&loop=1&muted=1&controls=0&byline=0&title=0&portrait=0`}
+              src={`https://player.vimeo.com/video/${project.vimeoId}?${project.vimeoHash ? `h=${encodeURIComponent(project.vimeoHash)}&` : ''}background=1&autoplay=1&loop=1&muted=1&controls=0&byline=0&title=0&portrait=0`}
               allow="autoplay; fullscreen"
               style={{
                 position: 'absolute',
