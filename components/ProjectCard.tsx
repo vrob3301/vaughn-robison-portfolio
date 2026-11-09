@@ -129,6 +129,9 @@ export default function ProjectCard({
             sizes={variant === 'featured' ? '600px' : '360px'}
             priority={priority || variant === 'featured'}
           />
+          {project.thumbnailGrain ? (
+            <span aria-hidden="true" className="thumbnail-grain" style={{ opacity: project.thumbnailGrain }} />
+          ) : null}
         </motion.div>
 
         {/* Vimeo silent hover preview — Vimeo projects only.

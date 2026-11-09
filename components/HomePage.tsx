@@ -48,6 +48,7 @@ export default function HomePage({ projects }: Props) {
   function card(project: Project, featured = false) {
     return <Link href={`/work/${project.id}`} scroll={false} className={`focus-card${featured ? ' focus-hero' : ''}`} aria-label={projectImageAlt(project)}>
       <Image src={project.cardImage || project.thumbnail} alt={projectImageAlt(project)} fill sizes={featured ? '(max-width: 700px) calc(100vw - 48px), 650px' : '(max-width: 600px) calc(100vw - 48px), 202px'} priority={featured} style={{objectFit:'cover',objectPosition:project.thumbnailPosition || 'center',transform:project.thumbnailScale || project.thumbnailOffsetX ? `translateX(${project.thumbnailOffsetX ?? 0}%) scale(${project.thumbnailScale ?? 1})` : undefined}} />
+      {project.thumbnailGrain ? <span aria-hidden="true" className="thumbnail-grain" style={{opacity:project.thumbnailGrain}} /> : null}
     </Link>
   }
   return <>
